@@ -3,20 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>2016 计划... | Veidy空间 | 没伞的孩子要拼命的跑</title>
+  <title>(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion | Veidy空间 | 没伞的孩子要拼命的跑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="">
-  <meta name="description" content="2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…">
+  <meta name="keywords" content="compileSdkVersion,minSdkVersion,targetSdkVersion">
+  <meta name="description" content="compileSdkVersion
+minSdkVersion
+targetSdkVersion
+1.翻译原文:如何选择 compileSdkVersion, minSdkVersion 和 targetSdkVersion 2.英文原文：Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion 3.Android t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2016 计划...">
-<meta property="og:url" content="http://www.veidy.net/2015/12/25/2016计划/index.html">
+<meta property="og:title" content="(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion">
+<meta property="og:url" content="http://www.veidy.net/2016/01/19/如何选择compileSdkVersion-minSdkVersion和targetSdkVersion/index.html">
 <meta property="og:site_name" content="Veidy空间">
-<meta property="og:description" content="2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…">
-<meta property="og:updated_time" content="2016-01-26T08:35:09.000Z">
+<meta property="og:description" content="compileSdkVersion
+minSdkVersion
+targetSdkVersion
+1.翻译原文:如何选择 compileSdkVersion, minSdkVersion 和 targetSdkVersion 2.英文原文：Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion 3.Android t">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f24cn316vaj21a609q0vs.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/509927e5gw1f24cnkwqi8j21a00lm7b7.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f24dfnum24j219k0s4k2g.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/509927e5gw1f24doahzhmj20mk0b8ae7.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f24dfwc2mbj21g80yo12h.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/509927e5gw1f24dga3mjzj21dg0pm44m.jpg">
+<meta property="og:updated_time" content="2016-03-21T04:41:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2016 计划...">
-<meta name="twitter:description" content="2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…">
+<meta name="twitter:title" content="(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion">
+<meta name="twitter:description" content="compileSdkVersion
+minSdkVersion
+targetSdkVersion
+1.翻译原文:如何选择 compileSdkVersion, minSdkVersion 和 targetSdkVersion 2.英文原文：Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion 3.Android t">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f24cn316vaj21a609q0vs.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Veidy空间" type="application/atom+xml">
   
@@ -104,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">2016 计划...</div>
+        <div class="flex-col header-title ellipsis">(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion</div>
         
         <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
             <i class="icon icon-lg icon-share-alt"></i>
@@ -114,24 +130,26 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">2016 计划...</h1>
-    <h5 class="subtitle">2015-12-25</h5>
+    <h1 class="author">(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion</h1>
+    <h5 class="subtitle">2016-01-19</h5>
   </div>
 </header>
 
     <div class="container body-wrap">
       
-  <article id="post-2016计划" class="article article-type-post" itemscope itemprop="blogPost">
+  <article id="post-如何选择compileSdkVersion-minSdkVersion和targetSdkVersion" class="article article-type-post" itemscope itemprop="blogPost">
     
       <div class="post-meat flex-row">
-        <div class="flex-col"></div>
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compileSdkVersion/">compileSdkVersion</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/minSdkVersion/">minSdkVersion</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/targetSdkVersion/">targetSdkVersion</a></li></ul>
+</div>
       </div>
       <div class="post-body">
 
         <aside class="post-widget" id="post-widget">
 
           
-          <div class="post-share" id="post-share" data-title="2016 计划..." data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.&lt;br /&gt;&lt;br&gt;2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…&lt;br&gt;" data-url="http://www.veidy.net/2015/12/25/2016计划/index.html">
+          <div class="post-share" id="post-share" data-title="(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2016/01/19/如何选择compileSdkVersion-minSdkVersion和targetSdkVersion/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -171,27 +189,36 @@
 
           
           <nav class="post-toc-wrap" id="post-toc">
-            
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#compileSdkVersion"><span class="post-toc-text">compileSdkVersion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#minSdkVersion"><span class="post-toc-text">minSdkVersion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#targetSdkVersion"><span class="post-toc-text">targetSdkVersion</span></a></li></ol>
           </nav>
           
         </aside>
 
         <div class="post-main">
 
-            <div class="post-content" itemprop="postContent"><p>2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.<br><br>2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…<br>  <a id="more"></a></p>
-<p><br><br><br></p><br>2016 要整理的几个干货。。。<br><br><br><br><p><br>&nbsp; &nbsp; &nbsp;1.图片加载框架 &nbsp;<a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank">Android-Universal-Image-Loader</a>&nbsp;&nbsp;<br></p><br><p><br><span>&nbsp; &nbsp; &nbsp;2.图片加载框架 &nbsp;<a href="https://github.com/facebook/fresco" target="_blank">fresco</a></span><br></p><br><p><br>&nbsp; &nbsp; &nbsp;3.orm 框架 &nbsp;<a href="https://github.com/greenrobot/greenDAO" target="_blank">GreenDao</a><span></span><br></p><br><p><br>&nbsp; &nbsp; &nbsp;4.网络请求框架&nbsp;<span></span><a href="https://github.com/loopj/android-async-http" target="_blank">android-async-http<span><span></span></span></a><br></p><br><p><br>&nbsp; &nbsp; &nbsp;5.网络请求框架&nbsp;<a href="https://github.com/square/okhttp" target="_blank">okhttp</a><br></p><br><p><br>&nbsp; &nbsp; &nbsp; 6.VRefreshView &nbsp; &nbsp; 基于google官方SpipeRefershLayout自定义的&nbsp;下拉刷新，上拉加载更多view.<br></p><br><p><br>&nbsp; &nbsp; &nbsp; 7.VCycleViewPager 自定义ViewPager,可以用于引导页，轮播广告自动循环播放<span></span><br></p><br><p><br>&nbsp; &nbsp; &nbsp; 8.VRichTextEditText 自定义EditText ，可以图文混排显示和编辑<span></span><br></p><br><p><br>&nbsp; &nbsp; &nbsp; 9.VScrollViewContainer &nbsp;自定义View，效果就是现在很多商城APP图文详情那种，上拉查看图文详情<span></span><br></p><br><p><br>&nbsp; &nbsp; &nbsp; 10.<span></span>&nbsp;VAsyncImageUpload &nbsp;通过使用线程池&nbsp;异步多张图片上传<br></p><br><p><br>&nbsp; &nbsp; &nbsp; …待续<br></p><br><p><br><br><br></p></div>
+            <div class="post-content" itemprop="postContent"><p><img src="http://ww1.sinaimg.cn/large/509927e5gw1f24cn316vaj21a609q0vs.jpg" alt="Alt text"></p>
+<h3 id="compileSdkVersion"><a href="#compileSdkVersion" class="headerlink" title="compileSdkVersion"></a>compileSdkVersion</h3><p><img src="http://ww4.sinaimg.cn/large/509927e5gw1f24cnkwqi8j21a00lm7b7.jpg" alt="Alt text"></p>
+<h3 id="minSdkVersion"><a href="#minSdkVersion" class="headerlink" title="minSdkVersion"></a>minSdkVersion</h3><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f24dfnum24j219k0s4k2g.jpg" alt="Alt text"></p>
+<h3 id="targetSdkVersion"><a href="#targetSdkVersion" class="headerlink" title="targetSdkVersion"></a>targetSdkVersion</h3><p><img src="http://ww4.sinaimg.cn/large/509927e5gw1f24doahzhmj20mk0b8ae7.jpg" alt="Alt text"><br><img src="http://ww2.sinaimg.cn/large/509927e5gw1f24dfwc2mbj21g80yo12h.jpg" alt="Alt text"><br><img src="http://ww3.sinaimg.cn/large/509927e5gw1f24dga3mjzj21dg0pm44m.jpg" alt="Alt text"></p>
+<p></p><p>1.翻译原文:如何选择 <a href="http://chinagdg.org/2016/01/picking-your-compilesdkversion-minsdkversion-targetsdkversion/" target="_blank">compileSdkVersion, minSdkVersion 和 targetSdkVersion</a> <br><br>2.英文原文：<a href="https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd#.b489du4vn" target="_blank">Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion</a> <br><br>3.<a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0118/3881.html" target="_blank">Android targetSdkVersion 原理</a></p><div id="wmd-preview-section-footnotes" class="preview-content"></div><p></p>
+</div>
 
             
 <nav class="post-nav flex-row">
   <div class="flex-col waves-block prev">
     
-      <a href="/2016/01/19/如何选择compileSdkVersion-minSdkVersion和targetSdkVersion/" title="(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion" id="post-prev" class="post-nav-link">
+      <a href="/2016/01/21/android-studio/" title="Android Studio 使用心得" id="post-prev" class="post-nav-link">
         <i class="icon icon-chevron-left"></i>
         <span class="article-nav-title">上一篇</span>
       </a>
     
   </div>
   <div class="flex-col waves-block next">
+    
+      <a href="/2015/12/25/2016计划/" title="2016 计划..." id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
     
   </div>
 
@@ -202,7 +229,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016计划" data-title="2016 计划..." data-url="http://www.veidy.net/2015/12/25/2016计划/index.html"></div>
+	<div class="ds-thread" data-thread-key="如何选择compileSdkVersion-minSdkVersion和targetSdkVersion" data-title="(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion" data-url="http://www.veidy.net/2016/01/19/如何选择compileSdkVersion-minSdkVersion和targetSdkVersion/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -239,7 +266,7 @@
 <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<div class="global-share" id="global-share" data-title="2016 计划..." data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.&lt;br /&gt;&lt;br&gt;2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…&lt;br&gt;" data-url="http://www.veidy.net/2015/12/25/2016计划/index.html">
+<div class="global-share" id="global-share" data-title="(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2016/01/19/如何选择compileSdkVersion-minSdkVersion和targetSdkVersion/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
