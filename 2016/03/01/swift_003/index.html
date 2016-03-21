@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift学习笔记之UILabel(二) | Veidy空间 | 没伞的孩子要拼命的跑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="UILabel,UITapGestureRecognizer">
+  <meta name="description" content="UILabel添加点击事件一.知识点 1.UITapGestureRecognizer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift学习笔记之UILabel(二)">
+<meta property="og:url" content="http://www.veidy.net/2016/03/01/swift_003/index.html">
+<meta property="og:site_name" content="Veidy空间">
+<meta property="og:description" content="UILabel添加点击事件一.知识点 1.UITapGestureRecognizer">
+<meta property="og:updated_time" content="2016-03-21T03:45:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift学习笔记之UILabel(二)">
+<meta name="twitter:description" content="UILabel添加点击事件一.知识点 1.UITapGestureRecognizer">
+  
+    <link rel="alternative" href="/atom.xml" title="Veidy空间" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="./" class="avatar"><img src="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Veidy</h5>
+        <a href="mailto:undefined" title="answer_gwl@163.com" class="mail">answer_gwl@163.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            Home
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/veidy" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://www.weibo.com/gwlaibenben" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://my.oschina.net/aibenben"  >
+            <i class="icon icon-lg icon-link"></i>
+            开源中国
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Veidy空间 &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">swift学习笔记之UILabel(二)</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">swift学习笔记之UILabel(二)</h1>
+    <h5 class="subtitle">2016-03-01</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-swift_003" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UILabel/">UILabel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UITapGestureRecognizer/">UITapGestureRecognizer</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="swift学习笔记之UILabel(二)" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;UILabel添加点击事件&quot;&gt;&lt;a href=&quot;#UILabel添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;UILabel添加点击事件&quot;&gt;&lt;/a&gt;UILabel添加点击事件&lt;/h3&gt;&lt;h2 id=&quot;一-知识点&quot;&gt;&lt;a href=&quot;#一-知识点&quot; class=&quot;headerlink&quot; title=&quot;一.知识点&quot;&gt;&lt;/a&gt;一.知识点&lt;/h2&gt;&lt;p&gt; 1.UITapGestureRecognizer&lt;/p&gt;" data-url="http://www.veidy.net/2016/03/01/swift_003/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UILabel添加点击事件"><span class="post-toc-text">UILabel添加点击事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一-知识点"><span class="post-toc-text">一.知识点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二-demo场景"><span class="post-toc-text">二.demo场景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三-代码"><span class="post-toc-text">三.代码</span></a>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>
+
+<h3 id="UILabel添加点击事件"><a href="#UILabel添加点击事件" class="headerlink" title="UILabel添加点击事件"></a>UILabel添加点击事件</h3><h2 id="一-知识点"><a href="#一-知识点" class="headerlink" title="一.知识点"></a>一.知识点</h2><p> 1.UITapGestureRecognizer</p>
+<a id="more"></a>
+<h2 id="二-demo场景"><a href="#二-demo场景" class="headerlink" title="二.demo场景"></a>二.demo场景</h2><p>   点击UILabel 响应自定义方法 tapLabel()， tapLabel()里面输出日志打印</p><p></p>
+<h2 id="三-代码"><a href="#三-代码" class="headerlink" title="三.代码"></a>三.代码</h2><p><pre class="prettyprint hljs-dark"><code class="hljs swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecondViewController</span> :<span class="hljs-title">UIViewController</span> </span>{<br><br><span class="hljs-keyword">override</span> <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">viewDidLoad</span><span class="hljs-params">()</span></span> {<br>    <span class="hljs-keyword">super</span>.viewDidLoad()<br><br>    <span class="hljs-keyword">let</span> mLabel:<span class="hljs-type">UILabel</span>=<span class="hljs-type">UILabel</span>.<span class="hljs-keyword">init</span>(frame: <span class="hljs-type">CGRectMake</span>(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>))<br>    mLabel.text=<span class="hljs-string">“点我”</span><br>    mLabel.textAlignment=<span class="hljs-type">NSTextAlignment</span>.<span class="hljs-type">Center</span><br>    mLabel.backgroundColor=<span class="hljs-type">UIColor</span>.redColor()<br>    <span class="hljs-comment">//用户交互功能打开状态</span><br>    mLabel.userInteractionEnabled=<span class="hljs-literal">true</span><br>    <span class="hljs-comment">//点击事件</span><br>    <span class="hljs-keyword">let</span> tap = <span class="hljs-type">UITapGestureRecognizer</span>.<span class="hljs-keyword">init</span>(target: <span class="hljs-keyword">self</span>, action: <span class="hljs-type">Selector</span>.<span class="hljs-keyword">init</span>(<span class="hljs-string">“tapLabel”</span>))<br>    <span class="hljs-comment">//绑定tap</span><br>    mLabel.addGestureRecognizer(tap)<br><br>    <span class="hljs-keyword">self</span>.view.addSubview(mLabel)<br><br>}<br><br><span class="hljs-comment">//定义方法，mLabel点击后调用此方法</span><br><span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">tapLabel</span><span class="hljs-params">()</span></span>{<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">“tap the label”</span>)<br><br>}}<br></code></pre><div id="wmd-preview-section-60" class="wmd-preview-section preview-content"></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></p>
+</div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+      <a href="/2016/03/11/swift_004/" title="swift学习笔记之界面之间的跳转" id="post-prev" class="post-nav-link">
+        <i class="icon icon-chevron-left"></i>
+        <span class="article-nav-title">上一篇</span>
+      </a>
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/02/12/swift_02/" title="Swift学习笔记之UIButton(一)" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="swift_003" data-title="swift学习笔记之UILabel(二)" data-url="http://www.veidy.net/2016/03/01/swift_003/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"veidy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="swift学习笔记之UILabel(二)" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;UILabel添加点击事件&quot;&gt;&lt;a href=&quot;#UILabel添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;UILabel添加点击事件&quot;&gt;&lt;/a&gt;UILabel添加点击事件&lt;/h3&gt;&lt;h2 id=&quot;一-知识点&quot;&gt;&lt;a href=&quot;#一-知识点&quot; class=&quot;headerlink&quot; title=&quot;一.知识点&quot;&gt;&lt;/a&gt;一.知识点&lt;/h2&gt;&lt;p&gt; 1.UITapGestureRecognizer&lt;/p&gt;" data-url="http://www.veidy.net/2016/03/01/swift_003/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1258009955' style='display:none' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258009955%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+
+
+
+</body>
+</html>
