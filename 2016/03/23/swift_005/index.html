@@ -6,31 +6,22 @@
   <title>swift学习笔记之UITableView | Veidy空间 | 没伞的孩子要拼命的跑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="">
+  <meta name="keywords" content="UITableView">
   <meta name="description" content="UITableView的简单使用
-一、知识点:UITableView集合for循环使用二、效果图：
-三、我的理解1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.
-
-2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要">
+一、知识点:UITableView集合for循环使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swift学习笔记之UITableView">
 <meta property="og:url" content="http://www.veidy.net/2016/03/23/swift_005/index.html">
 <meta property="og:site_name" content="Veidy空间">
 <meta property="og:description" content="UITableView的简单使用
-一、知识点:UITableView集合for循环使用二、效果图：
-三、我的理解1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.
-
-2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要">
+一、知识点:UITableView集合for循环使用">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/509927e5gw1f25rv2jqylj21cw0lytij.jpg">
-<meta property="og:updated_time" content="2016-03-23T02:57:06.000Z">
+<meta property="og:updated_time" content="2016-03-23T02:59:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift学习笔记之UITableView">
 <meta name="twitter:description" content="UITableView的简单使用
-一、知识点:UITableView集合for循环使用二、效果图：
-三、我的理解1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.
-
-2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要">
+一、知识点:UITableView集合for循环使用">
 <meta name="twitter:image" content="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Veidy空间" type="application/atom+xml">
@@ -139,14 +130,19 @@
   <article id="post-swift_005" class="article article-type-post" itemscope itemprop="blogPost">
     
       <div class="post-meat flex-row">
-        <div class="flex-col"></div>
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UITableView/">UITableView</a></li></ul>
+</div>
       </div>
       <div class="post-body">
 
         <aside class="post-widget" id="post-widget">
 
           
-          <div class="post-share" id="post-share" data-title="swift学习笔记之UITableView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2016/03/23/swift_005/index.html">
+          <div class="post-share" id="post-share" data-title="swift学习笔记之UITableView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;UITableView的简单使用&lt;/p&gt;
+&lt;h2 id=&quot;一、知识点&quot;&gt;&lt;a href=&quot;#一、知识点&quot; class=&quot;headerlink&quot; title=&quot;一、知识点:&quot;&gt;&lt;/a&gt;一、知识点:&lt;/h2&gt;&lt;h3 id=&quot;UITableView&quot;&gt;&lt;a href=&quot;#UITableView&quot; class=&quot;headerlink&quot; title=&quot;UITableView&quot;&gt;&lt;/a&gt;UITableView&lt;/h3&gt;&lt;h3 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h3&gt;&lt;h3 id=&quot;for循环使用&quot;&gt;&lt;a href=&quot;#for循环使用&quot; class=&quot;headerlink&quot; title=&quot;for循环使用&quot;&gt;&lt;/a&gt;for循环使用&lt;/h3&gt;" data-url="http://www.veidy.net/2016/03/23/swift_005/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -196,7 +192,8 @@
             <div class="post-content" itemprop="postContent"><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>
 
 <p>UITableView的简单使用</p>
-<h2 id="一、知识点"><a href="#一、知识点" class="headerlink" title="一、知识点:"></a>一、知识点:</h2><h3 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h3><h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><h3 id="for循环使用"><a href="#for循环使用" class="headerlink" title="for循环使用"></a>for循环使用</h3><h2 id="二、效果图："><a href="#二、效果图：" class="headerlink" title="二、效果图："></a>二、效果图：</h2><p><img src="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg" alt="Alt text"></p>
+<h2 id="一、知识点"><a href="#一、知识点" class="headerlink" title="一、知识点:"></a>一、知识点:</h2><h3 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h3><h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><h3 id="for循环使用"><a href="#for循环使用" class="headerlink" title="for循环使用"></a>for循环使用</h3><a id="more"></a>
+<h2 id="二、效果图："><a href="#二、效果图：" class="headerlink" title="二、效果图："></a>二、效果图：</h2><p><img src="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg" alt="Alt text"></p>
 <h2 id="三、我的理解"><a href="#三、我的理解" class="headerlink" title="三、我的理解"></a>三、我的理解</h2><p>1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.</p>
 <hr>
 <p>2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要的一个东西(之前弄OC的时候ios开发的同事跟我这样说)，swift 里面的协议其实和android java里面的接口 功能类似，重要！所以有关协议和委托代理 的使用 准备单独整理成一篇文章</p>
@@ -448,7 +445,10 @@ class UITableViewSwift: UIViewController,UITableViewDelegate,UITableViewDataSour
 <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<div class="global-share" id="global-share" data-title="swift学习笔记之UITableView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2016/03/23/swift_005/index.html">
+<div class="global-share" id="global-share" data-title="swift学习笔记之UITableView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;UITableView的简单使用&lt;/p&gt;
+&lt;h2 id=&quot;一、知识点&quot;&gt;&lt;a href=&quot;#一、知识点&quot; class=&quot;headerlink&quot; title=&quot;一、知识点:&quot;&gt;&lt;/a&gt;一、知识点:&lt;/h2&gt;&lt;h3 id=&quot;UITableView&quot;&gt;&lt;a href=&quot;#UITableView&quot; class=&quot;headerlink&quot; title=&quot;UITableView&quot;&gt;&lt;/a&gt;UITableView&lt;/h3&gt;&lt;h3 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h3&gt;&lt;h3 id=&quot;for循环使用&quot;&gt;&lt;a href=&quot;#for循环使用&quot; class=&quot;headerlink&quot; title=&quot;for循环使用&quot;&gt;&lt;/a&gt;for循环使用&lt;/h3&gt;" data-url="http://www.veidy.net/2016/03/23/swift_005/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
