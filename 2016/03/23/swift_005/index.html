@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift学习笔记之UITableView | Veidy空间 | 没伞的孩子要拼命的跑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="">
+  <meta name="description" content="UITableView的简单使用
+一、知识点:UITableView集合for循环使用二、效果图：
+三、我的理解1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.
+
+2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift学习笔记之UITableView">
+<meta property="og:url" content="http://www.veidy.net/2016/03/23/swift_005/index.html">
+<meta property="og:site_name" content="Veidy空间">
+<meta property="og:description" content="UITableView的简单使用
+一、知识点:UITableView集合for循环使用二、效果图：
+三、我的理解1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.
+
+2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/509927e5gw1f25rv2jqylj21cw0lytij.jpg">
+<meta property="og:updated_time" content="2016-03-23T02:57:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift学习笔记之UITableView">
+<meta name="twitter:description" content="UITableView的简单使用
+一、知识点:UITableView集合for循环使用二、效果图：
+三、我的理解1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.
+
+2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Veidy空间" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="./" class="avatar"><img src="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Veidy</h5>
+        <a href="mailto:undefined" title="answer_gwl@163.com" class="mail">answer_gwl@163.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            Home
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/veidy" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://www.weibo.com/gwlaibenben" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://my.oschina.net/aibenben"  >
+            <i class="icon icon-lg icon-link"></i>
+            开源中国
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Veidy空间 &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">swift学习笔记之UITableView</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">swift学习笔记之UITableView</h1>
+    <h5 class="subtitle">2016-03-23</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-swift_005" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col"></div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="swift学习笔记之UITableView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2016/03/23/swift_005/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、知识点"><span class="post-toc-text">一、知识点:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UITableView"><span class="post-toc-text">UITableView</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#集合"><span class="post-toc-text">集合</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for循环使用"><span class="post-toc-text">for循环使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、效果图："><span class="post-toc-text">二、效果图：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、我的理解"><span class="post-toc-text">三、我的理解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、代码块"><span class="post-toc-text">四、代码块</span></a></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>
+
+<p>UITableView的简单使用</p>
+<h2 id="一、知识点"><a href="#一、知识点" class="headerlink" title="一、知识点:"></a>一、知识点:</h2><h3 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h3><h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><h3 id="for循环使用"><a href="#for循环使用" class="headerlink" title="for循环使用"></a>for循环使用</h3><h2 id="二、效果图："><a href="#二、效果图：" class="headerlink" title="二、效果图："></a>二、效果图：</h2><p><img src="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg" alt="Alt text"></p>
+<h2 id="三、我的理解"><a href="#三、我的理解" class="headerlink" title="三、我的理解"></a>三、我的理解</h2><p>1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.</p>
+<hr>
+<p>2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要的一个东西(之前弄OC的时候ios开发的同事跟我这样说)，swift 里面的协议其实和android java里面的接口 功能类似，重要！所以有关协议和委托代理 的使用 准备单独整理成一篇文章</p>
+<hr>
+<p>3.在使用UITabView的时候，controller必须要继承UITableViewDataSource<br>当你继承UITableViewDataSource的时候xcode会提示错误，因为需要我们实现其必须要实现的方法，进入源码可以看到有两个<br><img src="http://ww4.sinaimg.cn/large/509927e5gw1f25rv2jqylj21cw0lytij.jpg" alt="Alt text"></p>
+<pre class="prettyprint">
+@available(iOS 2.0, *)
+public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+</pre> 
+
+<p>这个方法可以理解为android 里面BaseAdapter 的 getcount方法,不用多说，直接返回集合的大小即可</p>
+<hr>
+<pre class="prettyprint">
+@available(iOS 2.0, *) 
+public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+</pre>
+
+<p>这个方法可以理解为android 里面BaseAdapter 的 getView方法</p>
+<hr>
+<blockquote>
+<p>tip:如何知道协议的哪些方法必须要实现：public前面并没有加上 optional 就说明是必须要实现的。(这一点还是没有java的ide做得好，必须要实现的方法没实现快捷键会立刻实现)</p>
+</blockquote>
+<hr>
+<p>4.demo中我还继承了一个UITableViewDelegate类，委托代理，看源码发现也是继承NSObjectProtocol，也可以理解为是一个协议(先这么理解吧)，如果要实现列表的cell点击事件，就得继承UITableViewDelegate，然后实现其一个方法</p>
+<pre class="prettyprint">
+optional public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+</pre>
+
+<p>这个方法和android 里面的onItemClick 类似</p>
+<pre class="prettyprint">
+public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+</pre>
+
+<hr>
+<p>5.? 和 ！ 很有意思的两个东西<br>？ 当我们声明一个变量的时候，我们并不确定给其初始化的时候就可以这么干<br>如： </p>
+<pre class="prettyprint">
+var tableView:UITableView?
+</pre> 
+
+<p>声明一个tableView,如果var tableView:UITableView 这样声明会报错，加上？就不报错了。<br>为什么呢？</p>
+<blockquote>
+<p>Swift语言使用var定义变量，但和别的语言不同，Swift里不会自动给变量赋初始值，也就是说变量不会有默认值，所以要求使用变量之前必须要对其初始化。如果在使用变量之前不进行初始化就会报错</p>
+</blockquote>
+<p>为什么加上？就不报错了，这里又得提到swift里面的一个新东西Optional ，这是个神马玩意儿，看源码发现就是一个enum！！！</p>
+<pre class="prettyprint">
+public enum Optional<wrapped> : _Reflectable, NilLiteralConvertible {
+case None
+case Some(Wrapped)
+}
+</wrapped></pre> 
+var tableView:UITableView? 就是 var tableView: Optional<uitableview>
+这句话我们正确的解读是：声明了一个Optional类型值，它可能包含一个UITableView值，也可能什么都不包含。本来是声明一个UITabView变成了声明了一个Optional类型。
+一旦声明为Optional的，如果不显式的赋值就会有个默认值nil，所以就不报错啦！
+
+
+！这个东西就是非空判断
+<pre class="prettyprint">
+self.tableView!.delegate=self
+</pre> 
+
+<p>表示我的tableView非空的</p>
+<p>####### 关于？和！暂时就这样理解了，以后再单独整理一篇文章深入了解</p>
+<p>6.for循环遍历</p>
+<blockquote>
+<p>swift 里面的for循环有两种遍历方式，一看便知道区别</p>
+</blockquote>
+<p>第一种：</p>
+<pre class="prettyprint">
+ for index in 0...15{  
+            print(index)
+            let joke:Joke=Joke()
+            joke.content="swift_ios_\(index)";
+            self.jokeList.append(joke)  
+        }
+</pre>
+
+<p>打印出:</p>
+<blockquote>
+<p>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15</p>
+</blockquote>
+<p>等于集合大小为 16</p>
+<p>第二种：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for var i=0;i&lt;15;i++ &#123;</span><br><span class="line">              print(i)</span><br><span class="line">            let joke:Joke=Joke()</span><br><span class="line">            joke.content=&quot;swift_ios_\(i)&quot;;</span><br><span class="line">            self.jokeList.append(joke)</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p> 打印出：</p>
+<blockquote>
+<p>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p>
+</blockquote>
+<p>等于集合大小为 15</p>
+<p>区别显而易见了吧。</p>
+<h2 id="四、代码块"><a href="#四、代码块" class="headerlink" title="四、代码块"></a>四、代码块</h2><p>Joke 是我自定义的一个实体</p>
+<pre class="prettyprint">
+class Joke: NSObject {
+var content:String?;
+var url:String?;
+
+}
+</pre>
+
+<p>由于莫名的排版问题，我先把给集合的循环赋值贴出来</p>
+<p>//初始化数据<br>for var i=0; i&lt;15; i++ {</p>
+<p>let joke:Joke=Joke()<br>joke.content=”swift<em>ios</em>(i)”;<br>self.jokeList.append(joke)</p>
+<p>}</p>
+<pre class="prettyprint">
+//
+//  UITableViewSwift.swift
+//  VeidySwiftDemo
+//
+//  Created by veidy on 16/3/21.
+//  Copyright © 2016年 veidy. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class UITableViewSwift: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
+    var tableView:UITableView?
+    //定义一个集合
+    var jokeList = [Joke]();
+
+
+    override func loadView() {
+        super.loadView()
+           }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
+
+        for index in 0...15{
+
+            print(index)
+            let joke:Joke=Joke()
+            joke.content="swift_ios_\(index)";
+            self.jokeList.append(joke)
+
+        }
+        print("第一种循环遍历后 count=\(self.jokeList.count)")
+
+        //清空数组
+        self.jokeList.removeAll();
+        print("清空之后,count=\(self.jokeList.count)")
+
+        //初始化数据
+        //...
+        print("第二种循环遍历后 count=\(self.jokeList.count)")
+
+        self.tableView=UITableView(frame: self.view.frame, style: .Grouped)
+         //指定代理对象
+        self.tableView!.delegate=self
+        //指定代理对象
+        self.tableView!.dataSource=self;
+        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "swift_cell")
+        self.view.addSubview(self.tableView!)
+
+    }
+
+
+    //UITableViewDataSource 委托回调方法 必须需要实现的方法 , 可以理解为android 里面BaseAdapter 的 getView方法
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+
+        let id_cell="swift_cell"
+
+        //通过id去取cell，这样的做法和android 里面的ViewHoler类似功能
+        //注意这里之所以能取是前面先注册过 self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "swift_cell")
+        let cell=tableView.dequeueReusableCellWithIdentifier(id_cell, forIndexPath: indexPath)
+        //根据位置取到joke 相当于android里面的getItem(int position)
+        let data=self.jokeList[indexPath.row]
+        //给textLabel赋值
+        cell.textLabel?.text=data.content
+
+        return cell;
+    }
+    //UITableViewDataSource 必须需要实现的方法 可以理解为android 里面BaseAdapter 的 getcount方法
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+      return self.jokeList.count;
+    }
+
+    //UITableViewDelegate 可以实现方法   cell点击事件，相当于android 里面listview的 onItemClick方法
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let joke=self.jokeList[indexPath.row]
+        print("点击 ："+joke.content!)
+    }
+
+
+}
+</pre>
+
+<blockquote>
+<p>显然，这只是简单的使用UITableView,真正项目中是不够的，下一遍文章准备记录如何使用自定义cell。</p>
+</blockquote>
+</uitableview></div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/03/21/veidy-01/" title="程序出错后，程序员给测试人员的20条高频回复" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="swift_005" data-title="swift学习笔记之UITableView" data-url="http://www.veidy.net/2016/03/23/swift_005/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"veidy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="swift学习笔记之UITableView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2016/03/23/swift_005/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1258009955' style='display:none' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258009955%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+
+
+
+</body>
+</html>
