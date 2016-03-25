@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift学习笔记之自定义UITableViewCell | Veidy空间 | 没伞的孩子要拼命的跑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="UITableViewCell">
+  <meta name="description" content="知识点：UITableView 自定义cellcell高度自定义">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift学习笔记之自定义UITableViewCell">
+<meta property="og:url" content="http://www.veidy.net/2016/03/25/swift-006/index.html">
+<meta property="og:site_name" content="Veidy空间">
+<meta property="og:description" content="知识点：UITableView 自定义cellcell高度自定义">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f297oxjx6kj20k00zktar.jpg">
+<meta property="og:updated_time" content="2016-03-25T10:24:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift学习笔记之自定义UITableViewCell">
+<meta name="twitter:description" content="知识点：UITableView 自定义cellcell高度自定义">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f297oxjx6kj20k00zktar.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Veidy空间" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="./" class="avatar"><img src="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Veidy</h5>
+        <a href="mailto:undefined" title="answer_gwl@163.com" class="mail">answer_gwl@163.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            Home
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/veidy" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://www.weibo.com/gwlaibenben" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://my.oschina.net/aibenben"  >
+            <i class="icon icon-lg icon-link"></i>
+            开源中国
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Veidy空间 &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">swift学习笔记之自定义UITableViewCell</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">swift学习笔记之自定义UITableViewCell</h1>
+    <h5 class="subtitle">2016-03-25</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-swift-006" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UITableViewCell/">UITableViewCell</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="swift学习笔记之自定义UITableViewCell" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&quot;知识点：&quot;&gt;&lt;a href=&quot;#知识点：&quot; class=&quot;headerlink&quot; title=&quot;知识点：&quot;&gt;&lt;/a&gt;知识点：&lt;/h2&gt;&lt;h3 id=&quot;UITableView-自定义cell&quot;&gt;&lt;a href=&quot;#UITableView-自定义cell&quot; class=&quot;headerlink&quot; title=&quot;UITableView 自定义cell&quot;&gt;&lt;/a&gt;UITableView 自定义cell&lt;/h3&gt;&lt;h3 id=&quot;cell高度自定义&quot;&gt;&lt;a href=&quot;#cell高度自定义&quot; class=&quot;headerlink&quot; title=&quot;cell高度自定义&quot;&gt;&lt;/a&gt;cell高度自定义&lt;/h3&gt;" data-url="http://www.veidy.net/2016/03/25/swift-006/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#知识点："><span class="post-toc-text">知识点：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UITableView-自定义cell"><span class="post-toc-text">UITableView 自定义cell</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cell高度自定义"><span class="post-toc-text">cell高度自定义</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#效果图"><span class="post-toc-text">效果图:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#唠叨"><span class="post-toc-text">唠叨:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么要自定义cell？"><span class="post-toc-text">为什么要自定义cell？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义cell"><span class="post-toc-text">自定义cell</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#然后就是定义控件布局"><span class="post-toc-text">然后就是定义控件布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setData-joke-Joke"><span class="post-toc-text">setData(joke:Joke)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么用JokeCell"><span class="post-toc-text">怎么用JokeCell</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码块："><span class="post-toc-text">代码块：</span></a></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><p><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script></p>
+<h2 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h2><h3 id="UITableView-自定义cell"><a href="#UITableView-自定义cell" class="headerlink" title="UITableView 自定义cell"></a>UITableView 自定义cell</h3><h3 id="cell高度自定义"><a href="#cell高度自定义" class="headerlink" title="cell高度自定义"></a>cell高度自定义</h3><a id="more"></a>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图:"></a>效果图:</h2><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f297oxjx6kj20k00zktar.jpg" alt="Alet text"></p>
+<h2 id="唠叨"><a href="#唠叨" class="headerlink" title="唠叨:"></a>唠叨:</h2><blockquote>
+<p>第一次弄这个自定义cell…宝宝心里苦啊。。。。</p>
+</blockquote>
+<h3 id="为什么要自定义cell？"><a href="#为什么要自定义cell？" class="headerlink" title="为什么要自定义cell？"></a>为什么要自定义cell？</h3><p>因为系统的cell就一个label和一个image，在项目里面是不够的。</p>
+<h3 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h3><p>首先得新建一个类，继承UITableViewCell，并重写init方法</p>
+<pre class="prettyprint">
+class JokeCell: UITableViewCell {
+    //必须重写
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}
+</pre>
+
+<h3 id="然后就是定义控件布局"><a href="#然后就是定义控件布局" class="headerlink" title="然后就是定义控件布局"></a>然后就是定义控件布局</h3><p>我要放两个Label,那就定义两个Label</p>
+<pre class="prettyprint">
+    var mContent:UILabel?
+    var mTime:UILabel?
+</pre>
+
+<p>然后，我们要在哪里初始化这些控件呢？<br>1.先定义一个方法setUI()，把初始化这些东西都在setUI()里面处理</p>
+<pre class="prettyprint">
+    func setUI(){
+        if(self.mContent==nil){
+
+            self.mContent=UILabel()
+            self.mContent!.frame=CGRect.init(x: 10, y: 0, width: 100, height: 50)
+            self.addSubview(self.mContent!)
+
+        }
+        if(self.mTime==nil){
+
+            self.mTime=UILabel()
+            self.mTime!.frame=CGRect.init(x: 0, y: 60, width: self.frame.size.width, height: 50)
+            mTime!.textAlignment=NSTextAlignment.Right
+            mTime!.textColor=UIColor.redColor()
+            self.addSubview(mTime!)
+
+        }
+
+        //50+10+50 ==110 ,所以cell高度可以设置为110
+
+    }
+</pre>
+
+<blockquote>
+<p>当我们在设置控件坐标的时候就能算出这个cell的高度了。mContent Y的起点为0，高度为50，mTime的Y为60，高度为50,所以就是这个cell的高度就是 60+50=110。</p>
+</blockquote>
+<p>在哪里设置cell的高度呢？目前我知道的有两种方法，第一种好简单，回到UIViewController</p>
+<pre class="prettyprint">
+  //统一设置 tableView  行高
+   self.tableView?.rowHeight=110;
+ </pre>
+
+<p> 第二种也很好玩:</p>
+<p> 在UITableViewDelegate里面找到一个方法 </p>
+<pre class="prettyprint">
+func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat 
+ </pre>
+
+<p> 重写ok</p>
+<p> 这种更适合在cell有多种布局的时候，最常用的就是聊天的界面。。。有单个的文字cell，有单个的图片cell</p>
+<p> 好了，回到前面讲的setUI()，在哪里调用这个方法呢？</p>
+<p> 我找到一个好地方，在自定义cell里面重写另外一个方法<br> <pre class="prettyprint"><br>    //可选重写，但是建议这么玩，把UI初始化放里面更方便<br>    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {<br>        super.init(style: style, reuseIdentifier: reuseIdentifier)<br>        setUI()<br>    }<br>  </pre></p>
+<h3 id="setData-joke-Joke"><a href="#setData-joke-Joke" class="headerlink" title="setData(joke:Joke)"></a>setData(joke:Joke)</h3><p>把setUI()放在这个里面，不用再管了。然后再定义一个赋值的方法setData(joke:Joke)</p>
+  <pre class="prettyprint">
+      //设置数据
+     func setData(joke:Joke){
+        mTime!.text=joke.time
+        mContent!.text=joke.content
+    }
+ </pre>
+
+<p> 那么setData(joke:Joke)方法我们在哪里调呢？？？<br> 这样自定义的JokeCell就搞定了不用管了，只有一个setData()被调用了。</p>
+<h3 id="怎么用JokeCell"><a href="#怎么用JokeCell" class="headerlink" title="怎么用JokeCell"></a>怎么用JokeCell</h3><p>回到UIViewController，<br> UITabView 初始化什么的就过了，可以看上一篇文章<a href="http://www.veidy.net/2016/03/23/swift_005/">swift学习笔记之UITableView</a>，但是使用自定义的时候有两个地方需要注意<br> 第一个地方是cell注册的时候：<br> <pre class="prettyprint"><br>    self.tableView!.registerClass(JokeCell.self, forCellReuseIdentifier: “swift_cell”)<br>    </pre></p>
+<blockquote>
+<p>要用哪个cell就注册哪个，这里一定要记得改啊，别一直用UITableViewCell.self</p>
+</blockquote>
+<p>第二个注意的地方当然就是</p>
+<pre class="prettyprint">
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+ </pre>
+
+<p> 这个方法里面取cell的时候<br> <pre class="prettyprint"><br>  //如果是自定义cell，记得在注册的时候改成自定义cell。<br>  let cell=tableView.dequeueReusableCellWithIdentifier(id_cell,forIndexPath: indexPath) as? JokeCell<br>  </pre></p>
+<p>  swift语法真是骚。。。  as? JokeCell<br> 这样我们就拿到了自定义cell JokeCell.<br> 接着就是给cell赋值了<br> <pre class="prettyprint"><br>  //记得取的时候 as ? JokeCell,不要问我为什么，宝宝心里苦<br>   cell!.setData(data)<br></pre></p>
+<p> command+R  搞定收工！</p>
+<h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2> <pre class="prettyprint">
+//
+//  UITableViewSwift.swift
+//  VeidySwiftDemo
+//
+//  Created by veidy on 16/3/21.
+//  Copyright © 2016年 veidy. All rights reserved.
+//
+import Foundation
+import UIKit
+
+class UITableViewSwift: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    var tableView:UITableView?
+    //定义一个集合
+    var jokeList = [Joke]();
+    override func loadView() {
+        super.loadView()
+           }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
+        for index in 0...15{
+            print(index)
+           let joke:Joke=Joke()
+            joke.time="2016-03-2\(i)"
+            joke.content="swift_ios_\(i)";
+            self.jokeList.append(joke)
+        }
+        self.tableView=UITableView(frame: self.view.frame, style: .Grouped)
+         //指定代理对象
+        self.tableView!.delegate=self
+        //指定代理对象
+        self.tableView!.dataSource=self;
+        self.tableView!.registerClass(JokeCell.self, forCellReuseIdentifier: "swift_cell")
+        self.view.addSubview(self.tableView!)
+        //统一设置 tableView cell 高度
+        self.tableView?.rowHeight=110;
+    }
+    //UITableViewDataSource 委托回调方法 必须需要实现的方法 , 可以理解为android 里面BaseAdapter 的 getView方法
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        let id_cell="swift_cell"
+        //根据位置取到joke 相当于android里面的getItem(int position)
+        let data=self.jokeList[indexPath.row]
+        //通过id去取cell，这样的做法和android 里面的ViewHoler类似功能
+        //如果是自定义cell，记得在注册的时候改成自定义cell。
+         let cell=tableView.dequeueReusableCellWithIdentifier(id_cell, forIndexPath: indexPath) as? JokeCell
+         print("\(indexPath.row)"+data.content!)
+        //记得取的时候语 as ? JokeCell,不要问我为什么，宝宝心里苦
+         cell!.setData(data)
+        return cell!;
+    }
+    //UITableViewDataSource 必须需要实现的方法 可以理解为android 里面BaseAdapter 的 getcount方法
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+      return self.jokeList.count;
+    }
+    //UITableViewDelegate 可以实现方法   cell点击事件，相当于android 里面listview的 onItemClick方法
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let joke=self.jokeList[indexPath.row]
+        print("点击 ："+joke.content!)
+    }
+      //动态计算cell高度
+//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
+//      
+//        return 110；
+//    }
+}
+</pre></div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/03/25/veidy-002/" title="520-程序员的浪漫表达方式" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="swift-006" data-title="swift学习笔记之自定义UITableViewCell" data-url="http://www.veidy.net/2016/03/25/swift-006/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"veidy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="swift学习笔记之自定义UITableViewCell" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&quot;知识点：&quot;&gt;&lt;a href=&quot;#知识点：&quot; class=&quot;headerlink&quot; title=&quot;知识点：&quot;&gt;&lt;/a&gt;知识点：&lt;/h2&gt;&lt;h3 id=&quot;UITableView-自定义cell&quot;&gt;&lt;a href=&quot;#UITableView-自定义cell&quot; class=&quot;headerlink&quot; title=&quot;UITableView 自定义cell&quot;&gt;&lt;/a&gt;UITableView 自定义cell&lt;/h3&gt;&lt;h3 id=&quot;cell高度自定义&quot;&gt;&lt;a href=&quot;#cell高度自定义&quot; class=&quot;headerlink&quot; title=&quot;cell高度自定义&quot;&gt;&lt;/a&gt;cell高度自定义&lt;/h3&gt;" data-url="http://www.veidy.net/2016/03/25/swift-006/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1258009955' style='display:none' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258009955%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+
+
+
+</body>
+</html>
