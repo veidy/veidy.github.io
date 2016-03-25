@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Veidy空间">
 <meta property="og:description" content="知识点：UITableView 自定义cellcell高度自定义">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f297oxjx6kj20k00zktar.jpg">
-<meta property="og:updated_time" content="2016-03-25T10:24:11.000Z">
+<meta property="og:updated_time" content="2016-03-25T10:34:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift学习笔记之自定义UITableViewCell">
 <meta name="twitter:description" content="知识点：UITableView 自定义cellcell高度自定义">
@@ -272,7 +272,104 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
 <p> 这个方法里面取cell的时候<br> <pre class="prettyprint"><br>  //如果是自定义cell，记得在注册的时候改成自定义cell。<br>  let cell=tableView.dequeueReusableCellWithIdentifier(id_cell,forIndexPath: indexPath) as? JokeCell<br>  </pre></p>
 <p>  swift语法真是骚。。。  as? JokeCell<br> 这样我们就拿到了自定义cell JokeCell.<br> 接着就是给cell赋值了<br> <pre class="prettyprint"><br>  //记得取的时候 as ? JokeCell,不要问我为什么，宝宝心里苦<br>   cell!.setData(data)<br></pre></p>
 <p> command+R  搞定收工！</p>
-<h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2> <pre class="prettyprint">
+<h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2><p>实体Joke</p>
+<pre class="prettyprint">
+//
+//  Joke.swift
+//  VeidySwiftDemo
+//
+//  Created by veidy on 16/3/21.
+//  Copyright © 2016年 veidy. All rights reserved.
+//
+
+import Foundation
+
+class Joke: NSObject {
+var content:String?;
+var url:String?;
+var time:String?;
+
+}
+
+</pre>
+
+
+<p>自定义cell JokeCell</p>
+ <pre class="prettyprint">
+//
+//  JokeCell.swift
+//  VeidySwiftDemo
+//
+//  Created by veidy on 16/3/25.
+//  Copyright © 2016年 veidy. All rights reserved.
+//
+
+import UIKit
+
+class JokeCell: UITableViewCell {
+
+var mContent:UILabel?
+var mTime:UILabel?
+
+
+//必须重写
+required init?(coder aDecoder: NSCoder) {
+super.init(coder: aDecoder)
+}
+
+//可选重写，但是建议这么玩，把UI初始化放里面更方便
+override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+
+super.init(style: style, reuseIdentifier: reuseIdentifier)
+setUI()
+}
+
+//初始化UI
+func setUI(){
+
+
+if(self.mContent==nil){
+
+self.mContent=UILabel()
+self.mContent!.frame=CGRect.init(x: 10, y: 0, width: 100, height: 50)
+self.addSubview(self.mContent!)
+
+}
+if(self.mTime==nil){
+
+self.mTime=UILabel()
+self.mTime!.frame=CGRect.init(x: 0, y: 60, width: self.frame.size.width, height: 50)
+mTime!.textAlignment=NSTextAlignment.Right
+mTime!.textColor=UIColor.redColor()
+self.addSubview(mTime!)
+
+}
+
+//50+10+50 ==110 ,所以cell高度可以设置为110
+
+}
+
+//设置数据
+func setData(joke:Joke){
+
+mTime!.text=joke.time
+
+mContent!.text=joke.content
+}
+
+
+override func setSelected(selected: Bool, animated: Bool) {
+super.setSelected(selected, animated: animated)
+}
+
+
+}
+
+</pre>
+
+
+<p>UITableViewSwift.swift</p>
+ <pre class="prettyprint">
 //
 //  UITableViewSwift.swift
 //  VeidySwiftDemo
