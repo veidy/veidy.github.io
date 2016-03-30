@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift学习笔记之数据持久化(属性列表) | Veidy空间 | 没伞的孩子要拼命的跑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="NSUserDefaults">
+  <meta name="description" content="知识点沙箱NSUserDefaultsUITextField基本使用软键盘的关闭静态类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift学习笔记之数据持久化(属性列表)">
+<meta property="og:url" content="http://www.veidy.net/2016/03/30/swift-007/index.html">
+<meta property="og:site_name" content="Veidy空间">
+<meta property="og:description" content="知识点沙箱NSUserDefaultsUITextField基本使用软键盘的关闭静态类">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f2f1dx8ec8j20hs0wsq3q.jpg">
+<meta property="og:updated_time" content="2016-03-30T09:57:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift学习笔记之数据持久化(属性列表)">
+<meta name="twitter:description" content="知识点沙箱NSUserDefaultsUITextField基本使用软键盘的关闭静态类">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f2f1dx8ec8j20hs0wsq3q.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Veidy空间" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="./" class="avatar"><img src="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Veidy</h5>
+        <a href="mailto:undefined" title="answer_gwl@163.com" class="mail">answer_gwl@163.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            Home
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/veidy" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://www.weibo.com/gwlaibenben" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://my.oschina.net/aibenben"  >
+            <i class="icon icon-lg icon-link"></i>
+            开源中国
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Veidy空间 &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">swift学习笔记之数据持久化(属性列表)</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">swift学习笔记之数据持久化(属性列表)</h1>
+    <h5 class="subtitle">2016-03-30</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-swift-007" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSUserDefaults/">NSUserDefaults</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="swift学习笔记之数据持久化(属性列表)" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h3&gt;&lt;h4 id=&quot;沙箱&quot;&gt;&lt;a href=&quot;#沙箱&quot; class=&quot;headerlink&quot; title=&quot;沙箱&quot;&gt;&lt;/a&gt;沙箱&lt;/h4&gt;&lt;h4 id=&quot;NSUserDefaults&quot;&gt;&lt;a href=&quot;#NSUserDefaults&quot; class=&quot;headerlink&quot; title=&quot;NSUserDefaults&quot;&gt;&lt;/a&gt;NSUserDefaults&lt;/h4&gt;&lt;h4 id=&quot;UITextField基本使用&quot;&gt;&lt;a href=&quot;#UITextField基本使用&quot; class=&quot;headerlink&quot; title=&quot;UITextField基本使用&quot;&gt;&lt;/a&gt;UITextField基本使用&lt;/h4&gt;&lt;h4 id=&quot;软键盘的关闭&quot;&gt;&lt;a href=&quot;#软键盘的关闭&quot; class=&quot;headerlink&quot; title=&quot;软键盘的关闭&quot;&gt;&lt;/a&gt;软键盘的关闭&lt;/h4&gt;&lt;h4 id=&quot;静态类&quot;&gt;&lt;a href=&quot;#静态类&quot; class=&quot;headerlink&quot; title=&quot;静态类&quot;&gt;&lt;/a&gt;静态类&lt;/h4&gt;" data-url="http://www.veidy.net/2016/03/30/swift-007/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#知识点"><span class="post-toc-text">知识点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#沙箱"><span class="post-toc-text">沙箱</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#NSUserDefaults"><span class="post-toc-text">NSUserDefaults</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#UITextField基本使用"><span class="post-toc-text">UITextField基本使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#软键盘的关闭"><span class="post-toc-text">软键盘的关闭</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#静态类"><span class="post-toc-text">静态类</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#效果图"><span class="post-toc-text">效果图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#理解"><span class="post-toc-text">理解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#沙箱-1"><span class="post-toc-text">沙箱</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#plist文件"><span class="post-toc-text">.plist文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#NSUserDefaults-1"><span class="post-toc-text">NSUserDefaults</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#静态类-1"><span class="post-toc-text">静态类</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码块"><span class="post-toc-text">代码块</span></a></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><p><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script></p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="沙箱"><a href="#沙箱" class="headerlink" title="沙箱"></a>沙箱</h4><h4 id="NSUserDefaults"><a href="#NSUserDefaults" class="headerlink" title="NSUserDefaults"></a>NSUserDefaults</h4><h4 id="UITextField基本使用"><a href="#UITextField基本使用" class="headerlink" title="UITextField基本使用"></a>UITextField基本使用</h4><h4 id="软键盘的关闭"><a href="#软键盘的关闭" class="headerlink" title="软键盘的关闭"></a>软键盘的关闭</h4><h4 id="静态类"><a href="#静态类" class="headerlink" title="静态类"></a>静态类</h4><a id="more"></a>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f2f1dx8ec8j20hs0wsq3q.jpg" alt=""></p>
+<h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3><p>这里只写写有关存储的属性列表，关于UITextField的看代码的注释吧</p>
+<blockquote>
+<p>ios数据持久化方式有: 属性列表，对象归档，SQLite,Core Data</p>
+</blockquote>
+<h5 id="沙箱-1"><a href="#沙箱-1" class="headerlink" title="沙箱"></a>沙箱</h5><blockquote>
+<p>沙箱目录是一种数据安全策略，ios有一套完整的数据安全体系，ios应用程序只能访问自己的目录，这个目录称为沙箱目录。</p>
+</blockquote>
+<p>沙箱目录里面有几个特定的文件夹</p>
+<pre class="prettyprint">
+
+|---Documents
+|
+|---Library
+|     ---Caches
+|     ---Preferences
+|---tmp
+
+</pre>
+
+<p>这几个文件夹需要注意的是tmp文件夹，其它文件夹里面的数据都不会自己清空，除非程序卸载掉，但是tmp文件夹里面的内容是程序每次重启都会清空的</p>
+<pre class="prettyprint">
+    //获取Document目录
+    let documentsDirectory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,NSSearchPathDomainMask.UserDomainMask, true)
+    let paths = documentsDirectory[0] as String
+        </pre>
+
+   <pre class="prettyprint">
+  //获取Library目录
+ let paths = NSSearchPathForDirectoriesInDomains( NSSearchPathDirectory.LibraryDirectory,NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+   </pre>
+
+ <pre class="prettyprint">
+ //获取Cache目录 程序退出不会清空
+ let paths=NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+ </pre>
+
+
+ <pre class="prettyprint">
+ //获取tmp文件夹路径 
+let paths=NSTemporaryDirectory()
+</pre>
+
+<h5 id="plist文件"><a href="#plist文件" class="headerlink" title=".plist文件"></a>.plist文件</h5><p>理解为就是一个xml文件，键值对的形式存储数据，但是对数据类型有限制了，只能是以下数据类型<br> <pre class="prettyprint"><br>NSArray;<br>NSMutableArray;<br>NSDictionary;<br>NSMutableDictionary;<br>NSData;<br>NSMutableData;<br>NSString;<br>NSMutableString;<br>NSNumber;<br>NSDate;<br></pre> </p>
+<p>创建一个plist文件，存放 NSDictionary，调用writeToFile(path, atomically: true)</p>
+ <pre class="prettyprint">
+  //新建一个plist文件
+  Helper.createPlistFile("veidyplist")
+  //创建一个plist文件
+    static func createPlistFile(name:String){
+        let dict = NSDictionary.init(object: "plist", forKey: "name")
+        let path=DocumentsPath()+"/"+name+".plist"
+        dict.writeToFile(path, atomically: true)
+    } 
+ </pre>
+
+<p> 打印出路径，前往文件夹就能找到这个plist文件</p>
+<p> 读取plist<br> <pre class="prettyprint"><br>    let dic:NSDictionary = NSDictionary.init(contentsOfFile: Helper.DocumentsPath()+”/veidyplist.plist”)!<br>        let value = dic.valueForKey(“name”)<br>        if (value != nil) {<br>            print(“VALUE=”+(value as! String))<br>        }<br>   </pre> </p>
+<h4 id="NSUserDefaults-1"><a href="#NSUserDefaults-1" class="headerlink" title="NSUserDefaults"></a>NSUserDefaults</h4><p>NSUserDefaults也是一个plist文件,它在Library/Preferenes 下面<br>其实我们一般使用这个来存储一些配置信息就够用了，不需要自己再创建一个plist文件</p>
+<p>存储使用：<br> <pre class="prettyprint"><br>   let userDefault=NSUserDefaults.standardUserDefaults()<br>    userDefault.setObject(“uservalue”, forKey: “key”)<br>    //同步<br>    userDefault.synchronize()<br>   </pre> </p>
+<p> 获取存储数据：<br> <pre class="prettyprint"><br>   let userDefault=NSUserDefaults.standardUserDefaults()<br>   let value = username?.objectForKey(“key”) as! String<br></pre>  </p>
+<p>全文下来还没提到 属性列表 这四个字。。。其实就是指的plist文件了</p>
+<h4 id="静态类-1"><a href="#静态类-1" class="headerlink" title="静态类"></a>静态类</h4><p>和java 没什么区别， static func name()，然后直接用类名调方法</p>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>这里是以一个登录界面做为例子。用户进入登录界面，先帮用户查询是否有过登录记录，有则直接加载显示，没有则在用户点击登录的时候保存以便下次可以读取</p>
+<p>先贴出一个静态帮助类Helper.swift</p>
+<pre class="prettyprint">
+//
+//  Helper.swift
+//  VeidySwiftDemo
+//
+//  Created by veidy on 16/3/29.
+//  Copyright © 2016年 veidy. All rights reserved.
+//
+import Foundation
+class Helper: NSObject {
+    static func getHomePath()->String{   
+        let homepath=NSHomeDirectory()
+         return homepath
+    }
+    //Documents目录 苹果建议将程序中建立的或在程序中浏览到的文件数据保存在该目录下，iTunes备份和恢复的时候会包含此目录
+    static func DocumentsPath()->String{
+ let documentsDirectory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,NSSearchPathDomainMask.UserDomainMask, true)
+        let paths = documentsDirectory[0] as String
+        print("paths="+paths)
+        return paths
+    }
+    //Library目录 这个目录下有2个子目录：Caches缓存 , Preferences偏好设置,不应该直接创建偏好设置文件而使用NSUserDefaults类
+    static func LibraryPath()->String{ 
+        let paths = NSSearchPathForDirectoriesInDomains( NSSearchPathDirectory.LibraryDirectory,NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+        return paths
+    }
+    //Cache目录 程序退出不会清空
+    static func cachePath()->String{
+        let paths=NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+        return paths 
+    }
+    //tmp目录 存放临时文件，程序再次启动会清空
+    static func tmpPath()->String{
+    let paths=NSTemporaryDirectory()
+    return paths
+  }
+    //创建一个文件夹
+    static func createFileDirectory(path:String){
+        let fileManager=NSFileManager.defaultManager()
+        if !fileManager.fileExistsAtPath(path){
+             print("创建文件夹")
+       try! fileManager.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+        }else{
+          print("文件夹已经存在")
+        }
+    }
+    //创建一个plist文件
+    static func createPlistFile(name:String){
+        let dict = NSDictionary.init(object: "plist", forKey: "name")
+       let path=DocumentsPath()+"/"+name+".plist"
+        dict.writeToFile(path, atomically: true)
+        }
+}
+</pre>
+
+
+
+
+<p>登录界面</p>
+<pre class="prettyprint">
+//
+//  LoginController.swift
+//  VeidySwiftDemo
+//
+//  Created by veidy on 16/3/29.
+//  Copyright © 2016年 veidy. All rights reserved.
+//
+
+import Foundation
+import UIKit
+class LoginController: UIViewController,UITextFieldDelegate {
+    var mUsername:UITextField?
+    var mPassword:UITextField?
+    var mLogin:UIButton?
+    override func viewDidLoad() {
+      super.viewDidLoad()
+        self.view.backgroundColor=UIColor.whiteColor()
+        initDirConfig()
+        mUsername=UITextField.init(frame: CGRect.init(x: (self.view.frame.size.width/2)-130, y: 100, width: 260, height: 30))
+        mUsername?.backgroundColor=UIColor.whiteColor()
+        //设置提示语
+        mUsername?.placeholder="手机号"
+        //自定义字体
+//        mUsername?.font=UIFont.init(name: "STHeitiSC-Medium", size: 14)
+        //使用系统字体
+        mUsername?.font=UIFont.systemFontOfSize(14)
+        mUsername?.textAlignment=NSTextAlignment.Center
+        //自定义颜色 r:71 g:194 b:73
+        mUsername?.textColor=UIColor.init(red: 175/255, green:  175/255, blue:  175/255, alpha: 1.0)
+        //设置边框样式
+        mUsername?.borderStyle=UITextBorderStyle.RoundedRect
+        //设置弹出键盘样式
+        mUsername?.keyboardType=UIKeyboardType.PhonePad;
+         mUsername?.clearButtonMode=UITextFieldViewMode.WhileEditing;
+        mPassword=UITextField.init(frame:CGRect.init(x: (self.view.frame.size.width/2)-130, y: 140, width: 260, height: 30) )
+        mPassword?.backgroundColor=UIColor.whiteColor()
+        mPassword?.placeholder="密码"
+        mPassword?.textAlignment=NSTextAlignment.Center
+        mPassword?.textColor=UIColor.init(red: 175/255, green:  175/255, blue:  175/255, alpha: 1.0)
+        mPassword?.borderStyle=UITextBorderStyle.RoundedRect
+        //密码输入
+        mPassword?.secureTextEntry=true;
+        //右边出现一个可清空的按钮
+        mPassword?.clearButtonMode=UITextFieldViewMode.WhileEditing;
+        mPassword?.delegate=self;
+         mLogin=UIButton.init(frame: CGRect.init(x: (self.view.frame.size.width/2)-130, y:180, width: 260, height: 30) )
+        mLogin?.frame=CGRect.init(x: (self.view.frame.size.width/2)-130, y:180, width: 260, height: 30)
+        mLogin?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)
+        mLogin?.setTitle("登录", forState: UIControlState.Normal)
+        //设置圆角
+        mLogin?.layer.cornerRadius=6
+        mLogin?.highlighted=true
+        //设置文字大小
+        mLogin?.titleLabel?.font=UIFont.systemFontOfSize(14)
+        mLogin?.addTarget(self, action: #selector(loginOnclick), forControlEvents: .TouchUpInside)
+        self.view.addSubview(mUsername!)
+        self.view.addSubview(mPassword!)
+        self.view.addSubview(mLogin!)
+        readInfo()
+    }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("监听 textFieldDidBeginEditing 点击输入框")
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+         print("监听  textFieldDidEndEditing 离开输入框")
+    }
+    func loginOnclick(){
+      //首先关闭软键盘
+      self.view.endEditing(true)
+        saveInfo()
+        let UITableVC=UITableViewSwift()
+       self.presentViewController(UITableVC, animated: true, completion: nil) 
+    }
+    //放弃第一响应者
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        print("textFieldShouldReturn")
+        textField.resignFirstResponder()
+        return true  
+    }
+   override func viewWillAppear(animated: Bool){
+        //注册通知
+    }
+  override func viewWillDisappear(animated: Bool) {
+       //解除通知
+    }
+       //保存配置信息 Preference
+    func saveInfo(){
+        let userDefault=NSUserDefaults.standardUserDefaults()
+        userDefault.setObject(mUsername?.text, forKey: "username")
+        userDefault.setObject(mPassword?.text, forKey: "password")
+        //同步
+        userDefault.synchronize()
+    }
+   //读取配置信息 Preference
+    func readInfo(){
+     let userDefault=NSUserDefaults.standardUserDefaults()
+     let username=userDefault.objectForKey("username")
+     let password=userDefault.objectForKey("password")
+     if (username != nil){
+     mUsername?.text=username as? String
+    }
+    if (password != nil) {
+        mPassword?.text=password as? String
+    }
+   }
+ func initDirConfig(){
+        print("getHomePath() "+Helper.getHomePath())
+        print("DocumentsPath() "+Helper.DocumentsPath())
+        print("LibraryPath() "+Helper.LibraryPath())
+        print("初始化目录。。。")
+        //新建一个plist文件
+        Helper.createPlistFile("veidyplist")
+        let dic:NSDictionary = NSDictionary.init(contentsOfFile: Helper.DocumentsPath()+"/veidyplist.plist")!
+        let value = dic.valueForKey("name")
+        if (value != nil) {
+           print("VALUE="+(value as! String))
+        }
+        }
+}
+
+</pre></div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/03/25/swift-006/" title="swift学习笔记之自定义UITableViewCell" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="swift-007" data-title="swift学习笔记之数据持久化(属性列表)" data-url="http://www.veidy.net/2016/03/30/swift-007/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"veidy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="swift学习笔记之数据持久化(属性列表)" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h3&gt;&lt;h4 id=&quot;沙箱&quot;&gt;&lt;a href=&quot;#沙箱&quot; class=&quot;headerlink&quot; title=&quot;沙箱&quot;&gt;&lt;/a&gt;沙箱&lt;/h4&gt;&lt;h4 id=&quot;NSUserDefaults&quot;&gt;&lt;a href=&quot;#NSUserDefaults&quot; class=&quot;headerlink&quot; title=&quot;NSUserDefaults&quot;&gt;&lt;/a&gt;NSUserDefaults&lt;/h4&gt;&lt;h4 id=&quot;UITextField基本使用&quot;&gt;&lt;a href=&quot;#UITextField基本使用&quot; class=&quot;headerlink&quot; title=&quot;UITextField基本使用&quot;&gt;&lt;/a&gt;UITextField基本使用&lt;/h4&gt;&lt;h4 id=&quot;软键盘的关闭&quot;&gt;&lt;a href=&quot;#软键盘的关闭&quot; class=&quot;headerlink&quot; title=&quot;软键盘的关闭&quot;&gt;&lt;/a&gt;软键盘的关闭&lt;/h4&gt;&lt;h4 id=&quot;静态类&quot;&gt;&lt;a href=&quot;#静态类&quot; class=&quot;headerlink&quot; title=&quot;静态类&quot;&gt;&lt;/a&gt;静态类&lt;/h4&gt;" data-url="http://www.veidy.net/2016/03/30/swift-007/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1258009955' style='display:none' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258009955%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+
+
+
+</body>
+</html>
