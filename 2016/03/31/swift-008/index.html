@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift学习笔记之UIImageView | Veidy空间 | 没伞的孩子要拼命的跑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="NSURLSession,UIImageView">
+  <meta name="description" content="知识点1.UIImage2.NSURLSession3.UIImageView添加点击事件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift学习笔记之UIImageView">
+<meta property="og:url" content="http://www.veidy.net/2016/03/31/swift-008/index.html">
+<meta property="og:site_name" content="Veidy空间">
+<meta property="og:description" content="知识点1.UIImage2.NSURLSession3.UIImageView添加点击事件">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f2g3vbonoqj20hs0wsadb.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f2g3d3gi39j21kw0ol78x.jpg">
+<meta property="og:updated_time" content="2016-03-31T08:04:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift学习笔记之UIImageView">
+<meta name="twitter:description" content="知识点1.UIImage2.NSURLSession3.UIImageView添加点击事件">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f2g3vbonoqj20hs0wsadb.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Veidy空间" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="./" class="avatar"><img src="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Veidy</h5>
+        <a href="mailto:undefined" title="answer_gwl@163.com" class="mail">answer_gwl@163.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            Home
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/veidy" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://www.weibo.com/gwlaibenben" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://my.oschina.net/aibenben"  >
+            <i class="icon icon-lg icon-link"></i>
+            开源中国
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Veidy空间 &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">swift学习笔记之UIImageView</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">swift学习笔记之UIImageView</h1>
+    <h5 class="subtitle">2016-03-31</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-swift-008" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSURLSession/">NSURLSession</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UIImageView/">UIImageView</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="swift学习笔记之UIImageView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h3&gt;&lt;h4 id=&quot;1-UIImage&quot;&gt;&lt;a href=&quot;#1-UIImage&quot; class=&quot;headerlink&quot; title=&quot;1.UIImage&quot;&gt;&lt;/a&gt;1.UIImage&lt;/h4&gt;&lt;h4 id=&quot;2-NSURLSession&quot;&gt;&lt;a href=&quot;#2-NSURLSession&quot; class=&quot;headerlink&quot; title=&quot;2.NSURLSession&quot;&gt;&lt;/a&gt;2.NSURLSession&lt;/h4&gt;&lt;h4 id=&quot;3-UIImageView添加点击事件&quot;&gt;&lt;a href=&quot;#3-UIImageView添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;3.UIImageView添加点击事件&quot;&gt;&lt;/a&gt;3.UIImageView添加点击事件&lt;/h4&gt;" data-url="http://www.veidy.net/2016/03/31/swift-008/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#知识点"><span class="post-toc-text">知识点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-UIImage"><span class="post-toc-text">1.UIImage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-NSURLSession"><span class="post-toc-text">2.NSURLSession</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-UIImageView添加点击事件"><span class="post-toc-text">3.UIImageView添加点击事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#效果图"><span class="post-toc-text">效果图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#唠叨"><span class="post-toc-text">唠叨</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码块"><span class="post-toc-text">代码块</span></a></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><p><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script></p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="1-UIImage"><a href="#1-UIImage" class="headerlink" title="1.UIImage"></a>1.UIImage</h4><h4 id="2-NSURLSession"><a href="#2-NSURLSession" class="headerlink" title="2.NSURLSession"></a>2.NSURLSession</h4><h4 id="3-UIImageView添加点击事件"><a href="#3-UIImageView添加点击事件" class="headerlink" title="3.UIImageView添加点击事件"></a>3.UIImageView添加点击事件</h4><a id="more"></a>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://ww1.sinaimg.cn/large/509927e5gw1f2g3vbonoqj20hs0wsadb.jpg" alt=""></p>
+<h3 id="唠叨"><a href="#唠叨" class="headerlink" title="唠叨"></a>唠叨</h3><p>UIImageView 要显示图片就必须得用到UIImage，和android里面的ImageView 和Bitmap类似</p>
+<pre class="prettyprint">
+ //加载本地资源图片
+  mImageView.image = UIImage.init(named: "icon")
+</pre>
+
+<p>会不会太简单，“icon”就是图片的名字，但是它放在哪里呢</p>
+<p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f2g3d3gi39j21kw0ol78x.jpg" alt=""></p>
+<blockquote>
+<p>添加图片到资源文件： 点击Assets.xcassets,然后把要放入的图片直接往右边拖进去就好了</p>
+</blockquote>
+<p>加载本地图片太简单，再尝试下加载网络，用到系统API-&gt;  NSURLSession</p>
+<blockquote>
+<p>NSURLSession是iOS7中新的网络接口</p>
+</blockquote>
+<p>就是封装的一套网络请求，可以请求基本的接口返回数据，也可以下载文件，也可以上传文件，同步，异步皆可。。。完美，比安卓的api要不要好太多</p>
+<p>这里先看一下怎么用这个加载图片，后面再详细了解NSURLSession吧</p>
+<pre class="prettyprint">
+        //创建NSURL对象
+        let myimgUrl=NSURL(string: "http://f.hiphotos.baidu.com/image/pic/item/b17eca8065380cd70c5150cba444ad345982814d.jpg")
+        //创建请求对象
+        let request:NSURLRequest=NSURLRequest(URL: myimgUrl!)
+        //获取NSURLSession
+        let mySession=NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        //进行一个异步任务
+        let dataTask=mySession.dataTaskWithRequest(request) { (imagedata, response, error) -> Void in
+            //UIImageView展示
+            mImage.image=UIImage(data: imagedata!)
+
+        }
+        //启动任务
+        dataTask.resume()
+</pre>
+
+
+
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><pre class="prettyprint">
+import Foundation
+import UIKit
+
+class ImageSwift: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.view.backgroundColor = UIColor.whiteColor()
+
+        let mImageView=UIImageView()
+         mImageView.frame=CGRectMake(0, 25, 300, 450)
+
+        //加载本地资源图片
+        mImageView.image = UIImage.init(named: "icon")
+
+        self.view.addSubview(mImageView)
+        //添加交互
+        mImageView.userInteractionEnabled=true;
+        let tap=UITapGestureRecognizer.init(target: self, action: #selector(ImageSwift.imgtap))
+        mImageView.addGestureRecognizer(tap)
+
+        //加载网络图片
+        showNetImg(mImageView)
+
+
+    }
+
+    func imgtap(){
+
+        let mVC=UITableViewSwift()
+        self.presentViewController(mVC, animated: false, completion: nil)
+
+    }
+
+
+  //异步加载网络图片
+    func showNetImg(mImage:UIImageView){
+
+        //创建NSURL对象
+        let myimgUrl=NSURL(string: "http://f.hiphotos.baidu.com/image/pic/item/b17eca8065380cd70c5150cba444ad345982814d.jpg")
+        //创建请求对象
+        let request:NSURLRequest=NSURLRequest(URL: myimgUrl!)
+        //获取NSURLSession
+        let mySession=NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        //进行一个异步任务
+        let dataTask=mySession.dataTaskWithRequest(request) { (imagedata, response, error) -> Void in
+            //UIImageView展示
+            mImage.image=UIImage(data: imagedata!)
+
+        }
+        //启动任务
+        dataTask.resume()
+
+    }
+}
+</pre></div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/03/30/swift-007/" title="swift学习笔记之数据持久化(属性列表)" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="swift-008" data-title="swift学习笔记之UIImageView" data-url="http://www.veidy.net/2016/03/31/swift-008/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"veidy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="swift学习笔记之UIImageView" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h3&gt;&lt;h4 id=&quot;1-UIImage&quot;&gt;&lt;a href=&quot;#1-UIImage&quot; class=&quot;headerlink&quot; title=&quot;1.UIImage&quot;&gt;&lt;/a&gt;1.UIImage&lt;/h4&gt;&lt;h4 id=&quot;2-NSURLSession&quot;&gt;&lt;a href=&quot;#2-NSURLSession&quot; class=&quot;headerlink&quot; title=&quot;2.NSURLSession&quot;&gt;&lt;/a&gt;2.NSURLSession&lt;/h4&gt;&lt;h4 id=&quot;3-UIImageView添加点击事件&quot;&gt;&lt;a href=&quot;#3-UIImageView添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;3.UIImageView添加点击事件&quot;&gt;&lt;/a&gt;3.UIImageView添加点击事件&lt;/h4&gt;" data-url="http://www.veidy.net/2016/03/31/swift-008/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1258009955' style='display:none' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258009955%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+
+
+
+</body>
+</html>
