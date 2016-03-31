@@ -15,7 +15,7 @@
 <meta property="og:description" content="知识点1.UIImage2.NSURLSession3.UIImageView添加点击事件">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f2g3vbonoqj20hs0wsadb.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/509927e5gw1f2g3d3gi39j21kw0ol78x.jpg">
-<meta property="og:updated_time" content="2016-03-31T08:04:49.000Z">
+<meta property="og:updated_time" content="2016-03-31T10:15:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift学习笔记之UIImageView">
 <meta name="twitter:description" content="知识点1.UIImage2.NSURLSession3.UIImageView添加点击事件">
@@ -221,8 +221,28 @@
         dataTask.resume()
 </pre>
 
+<blockquote>
+<p>上面的代码有一个bug,如果使用上面的代码去加载网络图片，会发现图片要加载很久才显示，为什么呢，线程阻塞！</p>
+</blockquote>
+<pre class="prettyprint">
+    //进行一个异步任务
+   let dataTask=mySession.dataTaskWithRequest(request) { (imagedata, response, error) -> Void in
+            //UIImageView展示
+            mImage.image=UIImage(data: imagedata!)  
+        }
+</pre>
+这个方法其实是处于子线程了，和android一线，子线程不能更新UI线程的东西。。。向我们IOS开发大神求救得到一种方法，比我们android的handler不要好太多....
+<pre class="prettyprint">
+   //当前处于子线程，需要回到主线程才能更新UI
+            dispatch_async(dispatch_get_main_queue(), {
+                 mImage.image=UIImage(data: imagedata!)
+            })
+</pre>
 
 
+<blockquote>
+<p>如何判断当前处于子线程还是主线程：<br> <pre class="prettyprint"><br>    print(NSThread.currentThread())<br> </pre><br>打印出的name为main就是主线程！</p>
+</blockquote>
 <h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><pre class="prettyprint">
 import Foundation
 import UIKit
@@ -271,8 +291,10 @@ class ImageSwift: UIViewController {
         let mySession=NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         //进行一个异步任务
         let dataTask=mySession.dataTaskWithRequest(request) { (imagedata, response, error) -> Void in
-            //UIImageView展示
-            mImage.image=UIImage(data: imagedata!)
+          //当前处于子线程，需要回到主线程才能更新UI
+            dispatch_async(dispatch_get_main_queue(), {
+                 mImage.image=UIImage(data: imagedata!)
+            })
 
         }
         //启动任务
