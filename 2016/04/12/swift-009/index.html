@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Veidy代码块">
 <meta property="og:description" content="知识点：1.UILabel多行显示2.NSURLSession get post请求3.异步线程与主线程的切换">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f2tzk41b46j20hs0ws410.jpg">
-<meta property="og:updated_time" content="2016-04-12T08:20:37.000Z">
+<meta property="og:updated_time" content="2016-04-12T08:29:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift学习笔记之网络请求NSURLSession">
 <meta name="twitter:description" content="知识点：1.UILabel多行显示2.NSURLSession get post请求3.异步线程与主线程的切换">
@@ -176,7 +176,7 @@
 
           
           <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#知识点："><span class="post-toc-text">知识点：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-UILabel多行显示"><span class="post-toc-text">1.UILabel多行显示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-NSURLSession-get-post请求"><span class="post-toc-text">2.NSURLSession get post请求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-异步线程与主线程的切换"><span class="post-toc-text">3.异步线程与主线程的切换</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#知识点："><span class="post-toc-text">知识点：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-UILabel多行显示"><span class="post-toc-text">1.UILabel多行显示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-NSURLSession-get-post请求"><span class="post-toc-text">2.NSURLSession get post请求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-异步线程与主线程的切换"><span class="post-toc-text">3.异步线程与主线程的切换</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#效果图："><span class="post-toc-text">效果图：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#理解："><span class="post-toc-text">理解：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码块："><span class="post-toc-text">代码块：</span></a></li></ol>
           </nav>
           
         </aside>
@@ -185,8 +185,8 @@
 
             <div class="post-content" itemprop="postContent"><p><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script></p>
 <h3 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h3><h4 id="1-UILabel多行显示"><a href="#1-UILabel多行显示" class="headerlink" title="1.UILabel多行显示"></a>1.UILabel多行显示</h4><h4 id="2-NSURLSession-get-post请求"><a href="#2-NSURLSession-get-post请求" class="headerlink" title="2.NSURLSession get post请求"></a>2.NSURLSession get post请求</h4><h4 id="3-异步线程与主线程的切换"><a href="#3-异步线程与主线程的切换" class="headerlink" title="3.异步线程与主线程的切换"></a>3.异步线程与主线程的切换</h4><a id="more"></a>
-<p>###效果图：<br><img src="http://ww1.sinaimg.cn/large/509927e5gw1f2tzk41b46j20hs0ws410.jpg" alt=""><br>理解：</p>
-<p>先说说NSURLSession</p>
+<h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h3><p><img src="http://ww1.sinaimg.cn/large/509927e5gw1f2tzk41b46j20hs0ws410.jpg" alt=""></p>
+<h3 id="理解："><a href="#理解：" class="headerlink" title="理解："></a>理解：</h3><p>先说说NSURLSession</p>
 <blockquote>
 <p>NSURLSession是iOS7中新的网络接口</p>
 </blockquote>
@@ -195,8 +195,121 @@
 <p> 光设置这个还不够，还需要动态计算Label的高度<br> <pre class="prettyprint"><br>        mLabelGet?.text=strContent;<br>        //根据Label上的内容计算size<br>        let newSize:CGSize=(mLabelGet?.sizeThatFits((mLabelGet?.frame.size)!))!<br>        //重新设置Label的frame<br>        mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)<br> </pre></p>
 <p> 最后说说子线程通知UI线程<br> android里面子线程不能直接操作UI线程的东西，ios一样，android里面子线程通知主线程是通过handler来完成的，在ios里面，也是有api能做的<br>  <pre class="prettyprint"><br> public func dispatch_async(queue: dispatch_queue<em>t, </em> block: dispatch_block_t)<br>  </pre></p>
 <p>  直接看代码吧。。。代码里面是通过URLSession 进行get,post请求</p>
-<p>###代码块：<br> <pre class="prettyprint"><br> //<br>//  NSURLSessionController.swift<br>//  VeidySwiftDemo<br>//<br>//  Created by veidy on 16/3/31.<br>//  Copyright © 2016年 veidy. All rights reserved.<br>//<br>import Foundation<br>import UIKit<br>import Alamofire<br>class NSURLSessionController: UIViewController {<br>    var mLabelGet:UILabel?<br>    var mButtonGet:UIButton?<br>    var mButtonPost:UIButton?<br>    var strContent:String?<br>    var mLabelWidth:CGFloat?<br>    var mButton_Y:CGFloat=170<br>    override func viewDidLoad() {<br>        super.viewDidLoad()<br>        self.view.backgroundColor=UIColor.whiteColor()<br>        mLabelWidth=CGFloat(self.view.frame.size.width-20)<br>        mLabelGet=UILabel(frame:CGRect(x: 10, y: 10, width: mLabelWidth!, height: 100))<br>        mLabelGet?.textColor=UIColor.redColor()<br>        mLabelGet?.backgroundColor=UIColor.blueColor()<br>        mLabelGet?.font=UIFont.systemFontOfSize(14)<br>        //设置无限换行<br>        mLabelGet?.numberOfLines=0<br>        strContent=”开始xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs挑选换行xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgsxxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs结束”<br>        mLabelGet?.text=strContent;<br>        //根据Label上的内容计算size<br>        let newSize:CGSize=(mLabelGet?.sizeThatFits((mLabelGet?.frame.size)!))!<br>        //重新设置Label的frame<br>        mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)<br>        mButton_Y=25+(mLabelGet?.frame.height)!+10<br>        mButtonGet=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y, width: 100, height: 30))<br>        mButtonGet?.setTitle(“get请求”, forState: UIControlState.Normal)<br>        mButtonGet?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)<br>        mButtonGet?.layer.cornerRadius=6;<br>        mButtonGet?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)<br>        mButtonPost=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y+40, width: 100, height: 30))<br>        mButtonPost?.setTitle(“post请求”, forState: UIControlState.Normal)<br>        mButtonPost?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)<br>        mButtonPost?.layer.cornerRadius=6;<br>        mButtonPost?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)<br>        self.view.addSubview(mLabelGet!)<br>        self.view.addSubview(mButtonGet!)<br>        self.view.addSubview(mButtonPost!)<br>        mButtonGet?.addTarget(self, action: #selector(NSURLSessionController.sessionGet), forControlEvents: UIControlEvents.TouchUpInside)<br>        mButtonPost?.addTarget(self, action: #selector(NSURLSessionController.sessionPOST), forControlEvents: UIControlEvents.TouchUpInside)<br>    }<br>    //get请求<br>    func sessionGet() {<br>        let urlString:String = “<a href="http://www.weather.com.cn/data/sk/101010100.html" target="_blank" rel="external">http://www.weather.com.cn/data/sk/101010100.html</a>“<br>        let url:NSURL=NSURL(string: urlString)!<br>        //创建请求<br>        let request:NSURLRequest=NSURLRequest(URL: url)<br>       //获取SESSION<br>        let session=NSURLSession.sharedSession()<br>         //异步任务<br>        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in<br>            if error != nil{<br>              print(error?.code)<br>              print(error?.description)<br>            }else{<br>              let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String<br>               print(“服务器返回数据:”+str)<br>                print(NSThread.currentThread())<br>                //异步切到主线程<br>                dispatch_async(dispatch_get_main_queue(), {<br>                    print(NSThread.currentThread())<br>                    self.mLabelGet?.text=str<br>                    //重新计算label高度<br>                    let newSize:CGSize=(self.mLabelGet?.sizeThatFits((self.mLabelGet?.frame.size)!))!<br>                    self.mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)<br>                    self.mButton_Y=25+(self.mLabelGet?.frame.height)!+10<br>                    self.mButtonGet?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y, width: 100, height: 30)<br>                    self.mButtonPost?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y+40, width: 100, height: 30)<br>                })<br>//                print(NSThread.currentThread())<br>            }<br>        }<br>        dataTask.resume()<br>    }<br>    //post请求<br>    func sessionPOST() {<br>        let urlString:String = “<a href="http://v.juhe.cn/weixin/query" target="_blank" rel="external">http://v.juhe.cn/weixin/query</a>“<br>        let url:NSURL=NSURL(string: urlString)!<br>        //创建请求<br>        let request:NSMutableURLRequest=NSMutableURLRequest(URL: url)<br>        //设置请求方式<br>        request.HTTPMethod=”POST”<br>        //设置请求参数<br>        let body=”pno=1&amp;ps=15&amp;key=760a19928b2dad2e80083c19d289a566”<br>        //编码post数据<br>        let postdata=body.dataUsingEncoding(NSASCIIStringEncoding)<br>        //HTTPBody<br>        request.HTTPBody=postdata<br>        print(“请求url”+(request.URL?.absoluteString)!)<br>        //获取SESSION<br>        let session=NSURLSession.sharedSession()<br>        //异步任务<br>        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in<br>            if error != nil{<br>                print(error?.code)<br>                print(error?.description)<br>            }else{<br>                let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String<br>                print(“服务器返回数据:”+str)<br>            }<br>        }<br>        dataTask.resume()<br>    }<br>}<br>  </pre></p>
-</div>
+<h3 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h3> <pre class="prettyprint">
+ //
+//  NSURLSessionController.swift
+//  VeidySwiftDemo
+//
+//  Created by veidy on 16/3/31.
+//  Copyright © 2016年 veidy. All rights reserved.
+//
+import Foundation
+import UIKit
+import Alamofire
+class NSURLSessionController: UIViewController {
+    var mLabelGet:UILabel?
+    var mButtonGet:UIButton?
+    var mButtonPost:UIButton?
+    var strContent:String?
+    var mLabelWidth:CGFloat?
+    var mButton_Y:CGFloat=170
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor=UIColor.whiteColor()
+        mLabelWidth=CGFloat(self.view.frame.size.width-20)
+        mLabelGet=UILabel(frame:CGRect(x: 10, y: 10, width: mLabelWidth!, height: 100))
+        mLabelGet?.textColor=UIColor.redColor()
+        mLabelGet?.backgroundColor=UIColor.blueColor()
+        mLabelGet?.font=UIFont.systemFontOfSize(14)
+        //设置无限换行
+        mLabelGet?.numberOfLines=0
+        strContent="开始xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs挑选换行xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgsxxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs结束"
+        mLabelGet?.text=strContent;
+        //根据Label上的内容计算size
+        let newSize:CGSize=(mLabelGet?.sizeThatFits((mLabelGet?.frame.size)!))!
+        //重新设置Label的frame
+        mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)
+        mButton_Y=25+(mLabelGet?.frame.height)!+10
+        mButtonGet=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y, width: 100, height: 30))
+        mButtonGet?.setTitle("get请求", forState: UIControlState.Normal)
+        mButtonGet?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+        mButtonGet?.layer.cornerRadius=6;
+        mButtonGet?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)
+        mButtonPost=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y+40, width: 100, height: 30))
+        mButtonPost?.setTitle("post请求", forState: UIControlState.Normal)
+        mButtonPost?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+        mButtonPost?.layer.cornerRadius=6;
+        mButtonPost?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)
+        self.view.addSubview(mLabelGet!)
+        self.view.addSubview(mButtonGet!)
+        self.view.addSubview(mButtonPost!)
+        mButtonGet?.addTarget(self, action: #selector(NSURLSessionController.sessionGet), forControlEvents: UIControlEvents.TouchUpInside)
+        mButtonPost?.addTarget(self, action: #selector(NSURLSessionController.sessionPOST), forControlEvents: UIControlEvents.TouchUpInside) 
+    }
+    //get请求
+    func sessionGet() {
+        let urlString:String = "http://www.weather.com.cn/data/sk/101010100.html"
+        let url:NSURL=NSURL(string: urlString)!
+        //创建请求
+        let request:NSURLRequest=NSURLRequest(URL: url)
+       //获取SESSION
+        let session=NSURLSession.sharedSession()
+         //异步任务
+        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in
+            if error != nil{  
+              print(error?.code)
+              print(error?.description)
+            }else{
+              let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
+               print("服务器返回数据:"+str)
+                print(NSThread.currentThread())
+                //异步切到主线程
+                dispatch_async(dispatch_get_main_queue(), {
+                    print(NSThread.currentThread())
+                    self.mLabelGet?.text=str
+                    //重新计算label高度
+                    let newSize:CGSize=(self.mLabelGet?.sizeThatFits((self.mLabelGet?.frame.size)!))!
+                    self.mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)
+                    self.mButton_Y=25+(self.mLabelGet?.frame.height)!+10
+                    self.mButtonGet?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y, width: 100, height: 30)
+                    self.mButtonPost?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y+40, width: 100, height: 30)
+                })
+//                print(NSThread.currentThread())
+            }
+        }
+        dataTask.resume()
+    }
+    //post请求
+    func sessionPOST() {
+        let urlString:String = "http://v.juhe.cn/weixin/query"
+        let url:NSURL=NSURL(string: urlString)!
+        //创建请求
+        let request:NSMutableURLRequest=NSMutableURLRequest(URL: url)
+        //设置请求方式
+        request.HTTPMethod="POST"
+        //设置请求参数
+        let body="pno=1&ps=15&key=760a19928b2dad2e80083c19d289a566"
+        //编码post数据
+        let postdata=body.dataUsingEncoding(NSASCIIStringEncoding)
+        //HTTPBody
+        request.HTTPBody=postdata
+        print("请求url"+(request.URL?.absoluteString)!)
+        //获取SESSION
+        let session=NSURLSession.sharedSession()
+        //异步任务
+        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in
+            if error != nil{
+                print(error?.code)
+                print(error?.description) 
+            }else{
+                let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
+                print("服务器返回数据:"+str)
+            }
+        }
+        dataTask.resume()
+    }
+}
+  </pre></div>
 
             
 <nav class="post-nav flex-row">
