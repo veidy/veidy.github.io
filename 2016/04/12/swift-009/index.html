@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift学习笔记网络请求NSURLSession | Veidy代码块 | 没伞的孩子要拼命的跑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="NSURLSession,UILabel">
+  <meta name="description" content="知识点：1.UILabel多行显示2.NSURLSession get post请求3.异步线程与主线程的切换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift学习笔记网络请求NSURLSession">
+<meta property="og:url" content="http://www.veidy.net/2016/04/12/swift-009/index.html">
+<meta property="og:site_name" content="Veidy代码块">
+<meta property="og:description" content="知识点：1.UILabel多行显示2.NSURLSession get post请求3.异步线程与主线程的切换">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f2tzk41b46j20hs0ws410.jpg">
+<meta property="og:updated_time" content="2016-04-12T08:18:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift学习笔记网络请求NSURLSession">
+<meta name="twitter:description" content="知识点：1.UILabel多行显示2.NSURLSession get post请求3.异步线程与主线程的切换">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/509927e5gw1f2tzk41b46j20hs0ws410.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Veidy代码块" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="./" class="avatar"><img src="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Veidy</h5>
+        <a href="mailto:undefined" title="answer_gwl@163.com" class="mail">answer_gwl@163.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            Home
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/veidy" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://www.weibo.com/gwlaibenben" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://my.oschina.net/aibenben"  >
+            <i class="icon icon-lg icon-link"></i>
+            开源中国
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Veidy代码块 &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">swift学习笔记网络请求NSURLSession</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">swift学习笔记网络请求NSURLSession</h1>
+    <h5 class="subtitle">2016-04-12</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-swift-009" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSURLSession/">NSURLSession</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UILabel/">UILabel</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="swift学习笔记网络请求NSURLSession" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&quot;知识点：&quot;&gt;&lt;a href=&quot;#知识点：&quot; class=&quot;headerlink&quot; title=&quot;知识点：&quot;&gt;&lt;/a&gt;知识点：&lt;/h3&gt;&lt;h4 id=&quot;1-UILabel多行显示&quot;&gt;&lt;a href=&quot;#1-UILabel多行显示&quot; class=&quot;headerlink&quot; title=&quot;1.UILabel多行显示&quot;&gt;&lt;/a&gt;1.UILabel多行显示&lt;/h4&gt;&lt;h4 id=&quot;2-NSURLSession-get-post请求&quot;&gt;&lt;a href=&quot;#2-NSURLSession-get-post请求&quot; class=&quot;headerlink&quot; title=&quot;2.NSURLSession get post请求&quot;&gt;&lt;/a&gt;2.NSURLSession get post请求&lt;/h4&gt;&lt;h4 id=&quot;3-异步线程与主线程的切换&quot;&gt;&lt;a href=&quot;#3-异步线程与主线程的切换&quot; class=&quot;headerlink&quot; title=&quot;3.异步线程与主线程的切换&quot;&gt;&lt;/a&gt;3.异步线程与主线程的切换&lt;/h4&gt;" data-url="http://www.veidy.net/2016/04/12/swift-009/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#知识点："><span class="post-toc-text">知识点：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-UILabel多行显示"><span class="post-toc-text">1.UILabel多行显示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-NSURLSession-get-post请求"><span class="post-toc-text">2.NSURLSession get post请求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-异步线程与主线程的切换"><span class="post-toc-text">3.异步线程与主线程的切换</span></a></li></ol></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><p><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script></p>
+<h3 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h3><h4 id="1-UILabel多行显示"><a href="#1-UILabel多行显示" class="headerlink" title="1.UILabel多行显示"></a>1.UILabel多行显示</h4><h4 id="2-NSURLSession-get-post请求"><a href="#2-NSURLSession-get-post请求" class="headerlink" title="2.NSURLSession get post请求"></a>2.NSURLSession get post请求</h4><h4 id="3-异步线程与主线程的切换"><a href="#3-异步线程与主线程的切换" class="headerlink" title="3.异步线程与主线程的切换"></a>3.异步线程与主线程的切换</h4><a id="more"></a>
+<p>###效果图：<br><img src="http://ww1.sinaimg.cn/large/509927e5gw1f2tzk41b46j20hs0ws410.jpg" alt=""><br>理解：</p>
+<p>先说说NSURLSession</p>
+<blockquote>
+<p>NSURLSession是iOS7中新的网络接口</p>
+</blockquote>
+<p>没什么可说的了。。。</p>
+<p>再提提UILabel的多行显示，UILabel默认只显示两行，所以要想多行显示需要设置<br>   <pre class="prettyprint"><br>    //设置无限换行<br>    mLabelGet?.numberOfLines=0<br>    </pre></p>
+<p> 光设置这个还不够，还需要动态计算Label的高度<br> <pre class="prettyprint"><br>        mLabelGet?.text=strContent;<br>        //根据Label上的内容计算size<br>        let newSize:CGSize=(mLabelGet?.sizeThatFits((mLabelGet?.frame.size)!))!<br>        //重新设置Label的frame<br>        mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)<br> </pre></p>
+<p> 最后说说子线程通知UI线程<br> android里面子线程不能直接操作UI线程的东西，ios一样，android里面子线程通知主线程是通过handler来完成的，在ios里面，也是有api能做的<br>  <pre class="prettyprint"><br> public func dispatch_async(queue: dispatch_queue<em>t, </em> block: dispatch_block_t)<br>  </pre></p>
+<p>  直接看代码吧。。。代码里面是通过URLSession 进行get,post请求</p>
+<p>###代码块：<br> <pre class="prettyprint"><br> //<br>//  NSURLSessionController.swift<br>//  VeidySwiftDemo<br>//<br>//  Created by veidy on 16/3/31.<br>//  Copyright © 2016年 veidy. All rights reserved.<br>//<br>import Foundation<br>import UIKit<br>import Alamofire<br>class NSURLSessionController: UIViewController {<br>    var mLabelGet:UILabel?<br>    var mButtonGet:UIButton?<br>    var mButtonPost:UIButton?<br>    var strContent:String?<br>    var mLabelWidth:CGFloat?<br>    var mButton_Y:CGFloat=170<br>    override func viewDidLoad() {<br>        super.viewDidLoad()<br>        self.view.backgroundColor=UIColor.whiteColor()<br>        mLabelWidth=CGFloat(self.view.frame.size.width-20)<br>        mLabelGet=UILabel(frame:CGRect(x: 10, y: 10, width: mLabelWidth!, height: 100))<br>        mLabelGet?.textColor=UIColor.redColor()<br>        mLabelGet?.backgroundColor=UIColor.blueColor()<br>        mLabelGet?.font=UIFont.systemFontOfSize(14)<br>        //设置无限换行<br>        mLabelGet?.numberOfLines=0<br>        strContent=”开始xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs挑选换行xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgsxxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs结束”<br>        mLabelGet?.text=strContent;<br>        //根据Label上的内容计算size<br>        let newSize:CGSize=(mLabelGet?.sizeThatFits((mLabelGet?.frame.size)!))!<br>        //重新设置Label的frame<br>        mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)<br>        mButton_Y=25+(mLabelGet?.frame.height)!+10<br>        mButtonGet=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y, width: 100, height: 30))<br>        mButtonGet?.setTitle(“get请求”, forState: UIControlState.Normal)<br>        mButtonGet?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)<br>        mButtonGet?.layer.cornerRadius=6;<br>        mButtonGet?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)<br>        mButtonPost=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y+40, width: 100, height: 30))<br>        mButtonPost?.setTitle(“post请求”, forState: UIControlState.Normal)<br>        mButtonPost?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)<br>        mButtonPost?.layer.cornerRadius=6;<br>        mButtonPost?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)<br>        self.view.addSubview(mLabelGet!)<br>        self.view.addSubview(mButtonGet!)<br>        self.view.addSubview(mButtonPost!)<br>        mButtonGet?.addTarget(self, action: #selector(NSURLSessionController.sessionGet), forControlEvents: UIControlEvents.TouchUpInside)<br>        mButtonPost?.addTarget(self, action: #selector(NSURLSessionController.sessionPOST), forControlEvents: UIControlEvents.TouchUpInside)<br>    }<br>    //get请求<br>    func sessionGet() {<br>        let urlString:String = “<a href="http://www.weather.com.cn/data/sk/101010100.html" target="_blank" rel="external">http://www.weather.com.cn/data/sk/101010100.html</a>“<br>        let url:NSURL=NSURL(string: urlString)!<br>        //创建请求<br>        let request:NSURLRequest=NSURLRequest(URL: url)<br>       //获取SESSION<br>        let session=NSURLSession.sharedSession()<br>         //异步任务<br>        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in<br>            if error != nil{<br>              print(error?.code)<br>              print(error?.description)<br>            }else{<br>              let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String<br>               print(“服务器返回数据:”+str)<br>                print(NSThread.currentThread())<br>                //异步切到主线程<br>                dispatch_async(dispatch_get_main_queue(), {<br>                    print(NSThread.currentThread())<br>                    self.mLabelGet?.text=str<br>                    //重新计算label高度<br>                    let newSize:CGSize=(self.mLabelGet?.sizeThatFits((self.mLabelGet?.frame.size)!))!<br>                    self.mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)<br>                    self.mButton_Y=25+(self.mLabelGet?.frame.height)!+10<br>                    self.mButtonGet?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y, width: 100, height: 30)<br>                    self.mButtonPost?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y+40, width: 100, height: 30)<br>                })<br>//                print(NSThread.currentThread())<br>            }<br>        }<br>        dataTask.resume()<br>    }<br>    //post请求<br>    func sessionPOST() {<br>        let urlString:String = “<a href="http://v.juhe.cn/weixin/query" target="_blank" rel="external">http://v.juhe.cn/weixin/query</a>“<br>        let url:NSURL=NSURL(string: urlString)!<br>        //创建请求<br>        let request:NSMutableURLRequest=NSMutableURLRequest(URL: url)<br>        //设置请求方式<br>        request.HTTPMethod=”POST”<br>        //设置请求参数<br>        let body=”pno=1&amp;ps=15&amp;key=760a19928b2dad2e80083c19d289a566”<br>        //编码post数据<br>        let postdata=body.dataUsingEncoding(NSASCIIStringEncoding)<br>        //HTTPBody<br>        request.HTTPBody=postdata<br>        print(“请求url”+(request.URL?.absoluteString)!)<br>        //获取SESSION<br>        let session=NSURLSession.sharedSession()<br>        //异步任务<br>        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in<br>            if error != nil{<br>                print(error?.code)<br>                print(error?.description)<br>            }else{<br>                let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String<br>                print(“服务器返回数据:”+str)<br>            }<br>        }<br>        dataTask.resume()<br>    }<br>}<br>  </pre></p>
+</div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2016/04/02/video-001/" title="我不是程序猿-《小幸运》" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="swift-009" data-title="swift学习笔记网络请求NSURLSession" data-url="http://www.veidy.net/2016/04/12/swift-009/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"veidy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="swift学习笔记网络请求NSURLSession" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;p&gt;&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&quot;知识点：&quot;&gt;&lt;a href=&quot;#知识点：&quot; class=&quot;headerlink&quot; title=&quot;知识点：&quot;&gt;&lt;/a&gt;知识点：&lt;/h3&gt;&lt;h4 id=&quot;1-UILabel多行显示&quot;&gt;&lt;a href=&quot;#1-UILabel多行显示&quot; class=&quot;headerlink&quot; title=&quot;1.UILabel多行显示&quot;&gt;&lt;/a&gt;1.UILabel多行显示&lt;/h4&gt;&lt;h4 id=&quot;2-NSURLSession-get-post请求&quot;&gt;&lt;a href=&quot;#2-NSURLSession-get-post请求&quot; class=&quot;headerlink&quot; title=&quot;2.NSURLSession get post请求&quot;&gt;&lt;/a&gt;2.NSURLSession get post请求&lt;/h4&gt;&lt;h4 id=&quot;3-异步线程与主线程的切换&quot;&gt;&lt;a href=&quot;#3-异步线程与主线程的切换&quot; class=&quot;headerlink&quot; title=&quot;3.异步线程与主线程的切换&quot;&gt;&lt;/a&gt;3.异步线程与主线程的切换&lt;/h4&gt;" data-url="http://www.veidy.net/2016/04/12/swift-009/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1258009955' style='display:none' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258009955%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+
+
+
+</body>
+</html>
