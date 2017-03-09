@@ -3,20 +3,29 @@
 <head>
   <meta charset="utf-8">
   
-  <title>swift学习笔记之UILabel(二) | Veidy | 没伞的孩子要拼命的跑</title>
+  <title>混淆代码恢复 | Veidy | 没伞的孩子要拼命的跑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="UILabel,UITapGestureRecognizer">
-  <meta name="description" content="UILabel添加点击事件一.知识点 1.UITapGestureRecognizer">
+  <meta name="keywords" content="">
+  <meta name="description" content="proguard 相信已经不再陌生，但是混淆代码恢复估计玩得少。
+     混淆配置的时候会有这么一段，重要的文件就是 mapping.txt。注释写得很清楚，代码混淆前后的映射。   可能大家都有用过友盟sdk,里面有一个功能就是分析错误，针对每一个版本都会让我们上传一个mapping.txt文件，这样   收集到的错误就不会是混淆之后的代码a.b.c，而是我们真正的包名了~ 
+   怎">
 <meta property="og:type" content="article">
-<meta property="og:title" content="swift学习笔记之UILabel(二)">
-<meta property="og:url" content="http://www.veidy.net/2016/03/01/swift_003/index.html">
+<meta property="og:title" content="混淆代码恢复">
+<meta property="og:url" content="http://www.veidy.net/2017/03/09/retrace/index.html">
 <meta property="og:site_name" content="Veidy">
-<meta property="og:description" content="UILabel添加点击事件一.知识点 1.UITapGestureRecognizer">
-<meta property="og:updated_time" content="2016-03-21T03:45:24.000Z">
+<meta property="og:description" content="proguard 相信已经不再陌生，但是混淆代码恢复估计玩得少。
+     混淆配置的时候会有这么一段，重要的文件就是 mapping.txt。注释写得很清楚，代码混淆前后的映射。   可能大家都有用过友盟sdk,里面有一个功能就是分析错误，针对每一个版本都会让我们上传一个mapping.txt文件，这样   收集到的错误就不会是混淆之后的代码a.b.c，而是我们真正的包名了~ 
+   怎">
+<meta property="og:image" content="http://p1.bpimg.com/567571/e89b9d20fdb1b3b9.png">
+<meta property="og:image" content="http://p1.bqimg.com/567571/963ab216d6e5e23e.png">
+<meta property="og:updated_time" content="2017-03-09T06:29:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="swift学习笔记之UILabel(二)">
-<meta name="twitter:description" content="UILabel添加点击事件一.知识点 1.UITapGestureRecognizer">
+<meta name="twitter:title" content="混淆代码恢复">
+<meta name="twitter:description" content="proguard 相信已经不再陌生，但是混淆代码恢复估计玩得少。
+     混淆配置的时候会有这么一段，重要的文件就是 mapping.txt。注释写得很清楚，代码混淆前后的映射。   可能大家都有用过友盟sdk,里面有一个功能就是分析错误，针对每一个版本都会让我们上传一个mapping.txt文件，这样   收集到的错误就不会是混淆之后的代码a.b.c，而是我们真正的包名了~ 
+   怎">
+<meta name="twitter:image" content="http://p1.bpimg.com/567571/e89b9d20fdb1b3b9.png">
   
     <link rel="alternative" href="/atom.xml" title="Veidy" type="application/atom+xml">
   
@@ -104,7 +113,7 @@
         <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">swift学习笔记之UILabel(二)</div>
+        <div class="flex-col header-title ellipsis">混淆代码恢复</div>
         
         <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
             <i class="icon icon-lg icon-share-alt"></i>
@@ -114,28 +123,24 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">swift学习笔记之UILabel(二)</h1>
-    <h5 class="subtitle">2016-03-01</h5>
+    <h1 class="author">混淆代码恢复</h1>
+    <h5 class="subtitle">2017-03-09</h5>
   </div>
 </header>
 
     <div class="container body-wrap">
       
-  <article id="post-swift_003" class="article article-type-post" itemscope itemprop="blogPost">
+  <article id="post-retrace" class="article article-type-post" itemscope itemprop="blogPost">
     
       <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UILabel/">UILabel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UITapGestureRecognizer/">UITapGestureRecognizer</a></li></ul>
-</div>
+        <div class="flex-col"></div>
       </div>
       <div class="post-body">
 
         <aside class="post-widget" id="post-widget">
 
           
-          <div class="post-share" id="post-share" data-title="swift学习笔记之UILabel(二)" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;
-
-&lt;h3 id=&quot;UILabel添加点击事件&quot;&gt;&lt;a href=&quot;#UILabel添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;UILabel添加点击事件&quot;&gt;&lt;/a&gt;UILabel添加点击事件&lt;/h3&gt;&lt;h2 id=&quot;一-知识点&quot;&gt;&lt;a href=&quot;#一-知识点&quot; class=&quot;headerlink&quot; title=&quot;一.知识点&quot;&gt;&lt;/a&gt;一.知识点&lt;/h2&gt;&lt;p&gt; 1.UITapGestureRecognizer&lt;/p&gt;" data-url="http://www.veidy.net/2016/03/01/swift_003/index.html">
+          <div class="post-share" id="post-share" data-title="混淆代码恢复" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2017/03/09/retrace/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -175,7 +180,7 @@
 
           
           <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UILabel添加点击事件"><span class="post-toc-text">UILabel添加点击事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一-知识点"><span class="post-toc-text">一.知识点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二-demo场景"><span class="post-toc-text">二.demo场景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三-代码"><span class="post-toc-text">三.代码</span></a>
+            
           </nav>
           
         </aside>
@@ -184,25 +189,20 @@
 
             <div class="post-content" itemprop="postContent"><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>
 
-<h3 id="UILabel添加点击事件"><a href="#UILabel添加点击事件" class="headerlink" title="UILabel添加点击事件"></a>UILabel添加点击事件</h3><h2 id="一-知识点"><a href="#一-知识点" class="headerlink" title="一.知识点"></a>一.知识点</h2><p> 1.UITapGestureRecognizer</p>
-<a id="more"></a>
-<h2 id="二-demo场景"><a href="#二-demo场景" class="headerlink" title="二.demo场景"></a>二.demo场景</h2><p>   点击UILabel 响应自定义方法 tapLabel()， tapLabel()里面输出日志打印</p><p></p>
-<h2 id="三-代码"><a href="#三-代码" class="headerlink" title="三.代码"></a>三.代码</h2><p><pre class="prettyprint hljs-dark"><code class="hljs swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecondViewController</span> :<span class="hljs-title">UIViewController</span> </span>{<br><br><span class="hljs-keyword">override</span> <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">viewDidLoad</span><span class="hljs-params">()</span></span> {<br>    <span class="hljs-keyword">super</span>.viewDidLoad()<br><br>    <span class="hljs-keyword">let</span> mLabel:<span class="hljs-type">UILabel</span>=<span class="hljs-type">UILabel</span>.<span class="hljs-keyword">init</span>(frame: <span class="hljs-type">CGRectMake</span>(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>))<br>    mLabel.text=<span class="hljs-string">“点我”</span><br>    mLabel.textAlignment=<span class="hljs-type">NSTextAlignment</span>.<span class="hljs-type">Center</span><br>    mLabel.backgroundColor=<span class="hljs-type">UIColor</span>.redColor()<br>    <span class="hljs-comment">//用户交互功能打开状态</span><br>    mLabel.userInteractionEnabled=<span class="hljs-literal">true</span><br>    <span class="hljs-comment">//点击事件</span><br>    <span class="hljs-keyword">let</span> tap = <span class="hljs-type">UITapGestureRecognizer</span>.<span class="hljs-keyword">init</span>(target: <span class="hljs-keyword">self</span>, action: <span class="hljs-type">Selector</span>.<span class="hljs-keyword">init</span>(<span class="hljs-string">“tapLabel”</span>))<br>    <span class="hljs-comment">//绑定tap</span><br>    mLabel.addGestureRecognizer(tap)<br><br>    <span class="hljs-keyword">self</span>.view.addSubview(mLabel)<br><br>}<br><br><span class="hljs-comment">//定义方法，mLabel点击后调用此方法</span><br><span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">tapLabel</span><span class="hljs-params">()</span></span>{<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">“tap the label”</span>)<br><br>}}<br></code></pre><div id="wmd-preview-section-60" class="wmd-preview-section preview-content"></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></p>
-</div>
+<p>  proguard 相信已经不再陌生，但是混淆代码恢复估计玩得少。</p>
+<p>  <img src="http://p1.bpimg.com/567571/e89b9d20fdb1b3b9.png" alt=""><br>   混淆配置的时候会有这么一段，重要的文件就是 mapping.txt。注释写得很清楚，代码混淆前后的映射。<br>   可能大家都有用过友盟sdk,里面有一个功能就是分析错误，针对每一个版本都会让我们上传一个mapping.txt文件，这样<br>   收集到的错误就不会是混淆之后的代码a.b.c，而是我们真正的包名了~ </p>
+<p>   怎么做到的呢？一顿资料查找， ReTrace!在我们SDK目录里面就有这个工具。<br>   路径: sdk/tools/proguard/bin/proguardgui.sh<br>   运行后就会打开GUI工具了。<br>   选择左边最下面的ReTrace-&gt;选择apk混淆时生成的mapping.txt文件-&gt;在”Obfuscated stack trace” 里面贴出报错的代码-&gt;点击右下角的ReTrace!<br>    <img src="http://p1.bqimg.com/567571/963ab216d6e5e23e.png" alt=""></p>
+<pre><code>在&quot;De-obfuscated stack trace&quot; 里面就会恢复出真正的源码
+</code></pre></div>
 
             
 <nav class="post-nav flex-row">
   <div class="flex-col waves-block prev">
     
-      <a href="/2016/03/11/swift_004/" title="swift学习笔记之界面之间的跳转" id="post-prev" class="post-nav-link">
-        <i class="icon icon-chevron-left"></i>
-        <span class="article-nav-title">上一篇</span>
-      </a>
-    
   </div>
   <div class="flex-col waves-block next">
     
-      <a href="/2016/02/12/swift_02/" title="Swift学习笔记之UIButton(一)" id="post-next" class="post-nav-link">
+      <a href="/2016/04/15/rn-001/" title="React Native" id="post-next" class="post-nav-link">
         <span class="article-nav-title">下一篇</span>
         <i class="icon icon-chevron-right"></i>
       </a>
@@ -216,7 +216,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="swift_003" data-title="swift学习笔记之UILabel(二)" data-url="http://www.veidy.net/2016/03/01/swift_003/index.html"></div>
+	<div class="ds-thread" data-thread-key="retrace" data-title="混淆代码恢复" data-url="http://www.veidy.net/2017/03/09/retrace/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -253,9 +253,7 @@
 <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<div class="global-share" id="global-share" data-title="swift学习笔记之UILabel(二)" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;
-
-&lt;h3 id=&quot;UILabel添加点击事件&quot;&gt;&lt;a href=&quot;#UILabel添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;UILabel添加点击事件&quot;&gt;&lt;/a&gt;UILabel添加点击事件&lt;/h3&gt;&lt;h2 id=&quot;一-知识点&quot;&gt;&lt;a href=&quot;#一-知识点&quot; class=&quot;headerlink&quot; title=&quot;一.知识点&quot;&gt;&lt;/a&gt;一.知识点&lt;/h2&gt;&lt;p&gt; 1.UITapGestureRecognizer&lt;/p&gt;" data-url="http://www.veidy.net/2016/03/01/swift_003/index.html">
+<div class="global-share" id="global-share" data-title="混淆代码恢复" data-pic="http://ww3.sinaimg.cn/small/509927e5gw1eyixohfyzxj20hs0htq55.jpg" data-summary="null" data-url="http://www.veidy.net/2017/03/09/retrace/index.html">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
