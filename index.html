@@ -160,6 +160,97 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-aar-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/05/aar-01/">android 开发之aar——本地文件引用</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/05/aar-01/" class="archive-article-date">
+  	<time datetime="2017-07-05T07:05:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果你知道aar文件是个什么东西，直接切到“如何引用”吧</p>
+<h3 id="什么是aar文件："><a href="#什么是aar文件：" class="headerlink" title="什么是aar文件："></a>什么是aar文件：</h3><p><strong>官方</strong>解释:  </p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05105120_2fYT.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05104445_TSH1.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>我来总结一下:<br>aar首先它是一个后缀为.aar的文件，然后这个文件是在android项目里面使用的，它是一个android库文件，然后它比我们之前使用的.jar文件更强大！！！over~</p>
+<p>###如何生成：<br>首先得创建一个库，继续官方文档走起：<br><img src="https://static.oschina.net/uploads/img/201707/05110503_9XmH.png" alt="输入图片说明" title="在这里输入图片标题"><br>example:<br><img src="https://static.oschina.net/uploads/img/201707/05111002_PZjX.png" alt="输入图片说明" title="在这里输入图片标题">  </p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05111033_Kx6r.png" alt="选择&quot;Android Library&quot;" title="Android Library">  </p>
+<p><strong>Next</strong>一直到<strong>finish</strong>一个module就创建好了~  </p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05111241_6Fnd.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<blockquote>
+<p>接下来我在新建的aarlibrary 这个module里面写一个静态方法，然后在app module里面调用</p>
+</blockquote>
+<p>aarlibrary 的module:  </p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05111943_Ddv3.png" alt="输入图片说明" title="在这里输入图片标题">  </p>
+<p>app的module:  </p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05112305_GnLH.png" alt="输入图片说明" title="在这里输入图片标题">   </p>
+<p>压根找不到这个类，更别提方法了! 因为目前app没有对新建的 aarlibrary 进行<strong>依赖</strong>！  </p>
+<p><strong>官方</strong>文档继续走起！<br><img src="https://static.oschina.net/uploads/img/201707/05112603_wVfa.png" alt="输入图片说明" title="在这里输入图片标题"><br>但是这都不是这篇文章的重点，这篇文章主要是想分享如何单独引用.aar文件，oh,忘记了我们还没看到.aar文件在哪，说好的<strong>如何生成</strong>呢！！！不急，先看官网怎么说：</p>
+<blockquote>
+<p>如果希望单独共享 AAR 文件，则可以在 项目名称/模块名称/build/outputs/aar/ 中找到它，也可以通过点击 Build &gt; Make Project 的方式重新生成此文件。  </p>
+</blockquote>
+<p><img src="https://static.oschina.net/uploads/img/201707/05113230_nnPl.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>尼玛，<strong>如何生成 </strong>这么简单 上面绕了一大堆废话!</p>
+<p>###如何引用：</p>
+<p>第一步:<br>之前怎么导入的.jar文件，现在就怎么导入.aar文件喽!<br><img src="https://static.oschina.net/uploads/img/201707/05115221_C0Qi.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>第二步:在app的build.gradle里面加入下面配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">flatDir &#123;</span><br><span class="line">dirs &apos;libs&apos; //this way we can find the .aar file in libs folder</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05115901_hTR1.png" alt="输入图片说明" title="在这里输入图片标题">  </p>
+<p>第三步:在app的build.gradle的dependencies里面加下面配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile(name: &apos;aarlibrary-debug&apos;, ext: &apos;aar&apos;)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://static.oschina.net/uploads/img/201707/05120221_giw7.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>三步完成！接下来在app项目里面就可以正常使用aarlibrary里面的资源喽~~~~<br><img src="https://static.oschina.net/uploads/img/201707/05133838_d10C.png" alt="正常调用AarUtils类的方法" title="在这里输入图片标题"></p>
+<p>demo始终是demo,真正在项目中使用时会发现更多的问题<br>NO.1:<br>目前aarlibrary 里面可以写任意代码也可以引用任意资源文件  </p>
+<p>但是！<br>但是！<br>但是！<br>如果我们的aarlibrary 里面也有依赖另外一个module 如：otherLibrary，在app项目里面却无法调用otherLibrary 里面的内容!!!    </p>
+<p>怎么办？<br>看完下篇文章《android 开发之aar——本地仓库引用》之后咱们再看这个问题~</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">aar</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/05/aar-01/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-deepLinks" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1388,6 +1479,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
              
@@ -1408,14 +1507,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">presentViewController</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
               </li>
              
@@ -1424,11 +1515,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UIButton</a>
+                <a href="javascript:void(0)" class="js-tag color2">presentViewController</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Selector</a>
+                <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1436,7 +1527,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视频</a>
+                <a href="javascript:void(0)" class="js-tag color4">UIButton</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Selector</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1452,15 +1547,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">-deep-links</a>
+                <a href="javascript:void(0)" class="js-tag color3">视频</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" class="js-tag color4">aar</a>
               </li>
             
             <div class="clearfix"></div>
