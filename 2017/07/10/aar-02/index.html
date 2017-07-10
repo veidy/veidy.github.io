@@ -6,17 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.veidy.net">
-  <title>Tag: deep-links | Veidy</title>
+  <title>android 开发之aar——本地仓库发布和引用 | Veidy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Veidy">
-<meta property="og:url" content="http://www.veidy.net/tags/deep-links/index.html">
+  <meta name="description" content="在gradle 构建的android项目里面，有了一个爽得飞起的功能就是远程依赖。如:我想引入okhttp 这个第三方开源网络请求框架，在eclipse开发时代，我们都是在github上要么把打包好的.jar文件下载下来导入，要么就是直接把源文件下载下来导入，一旦okhttp 在github有版本更新，我们又得进行同样的下载、导入工作。烦！在android studio 这么高大上的IDE出现之后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android 开发之aar——本地仓库发布和引用">
+<meta property="og:url" content="http://www.veidy.net/2017/07/10/aar-02/index.html">
 <meta property="og:site_name" content="Veidy">
-<meta property="og:description">
+<meta property="og:description" content="在gradle 构建的android项目里面，有了一个爽得飞起的功能就是远程依赖。如:我想引入okhttp 这个第三方开源网络请求框架，在eclipse开发时代，我们都是在github上要么把打包好的.jar文件下载下来导入，要么就是直接把源文件下载下来导入，一旦okhttp 在github有版本更新，我们又得进行同样的下载、导入工作。烦！在android studio 这么高大上的IDE出现之后">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10141917_JM6U.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142039_XVEl.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142106_1lRF.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142147_HPMo.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142248_1lX2.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142319_wLOe.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142612_P92d.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142705_up7V.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142721_g9WN.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142937_aGhG.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142954_0Jp8.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10145144_cC40.jpg">
+<meta property="og:updated_time" content="2017-07-10T07:06:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Veidy">
-<meta name="twitter:description">
+<meta name="twitter:title" content="android 开发之aar——本地仓库发布和引用">
+<meta name="twitter:description" content="在gradle 构建的android项目里面，有了一个爽得飞起的功能就是远程依赖。如:我想引入okhttp 这个第三方开源网络请求框架，在eclipse开发时代，我们都是在github上要么把打包好的.jar文件下载下来导入，要么就是直接把源文件下载下来导入，一旦okhttp 在github有版本更新，我们又得进行同样的下载、导入工作。烦！在android studio 这么高大上的IDE出现之后">
+<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201707/10141917_JM6U.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -158,64 +172,218 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-aar-02" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/12/deepLinks/" class="archive-article-date">
-  	<time datetime="2017-06-12T06:58:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/12/deepLinks/">App开启深度链接</a>
+    <h1 class="article-title" itemprop="name">
+      android 开发之aar——本地仓库发布和引用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/10/aar-02/" class="archive-article-date">
+  	<time datetime="2017-07-10T07:01:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在gradle 构建的android项目里面，有了一个爽得飞起的功能就是远程依赖。<br>如:我想引入okhttp 这个第三方开源网络请求框架，在eclipse开发时代，我们都是在github上要么把打包好的.jar文件下载下来导入，要么就是直接把源文件下载下来导入，一旦okhttp 在github有版本更新，我们又得进行同样的下载、导入工作。烦！在android studio 这么高大上的IDE出现之后，我们就只需一行代码搞定喽！<br><a id="more"></a><br><img src="https://static.oschina.net/uploads/img/201707/10141917_JM6U.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>如有版本更新，只需要更新版本号然后同步更新即可！简直不能再爽！既然这么好玩，那我们自己动手也玩一玩儿~在本地创建一个仓库,然后依赖导入项目！</p>
+<blockquote>
+<p>第一步:创建一个moudle  “aarlibrary”<br>第二步:maven发布到本地仓库<br>第三步:gradle 引入  </p>
+</blockquote>
+<p>第一步就不讲了，会开发android的都会<br>第二、三步是重点，如何在android studio 里面发布本地仓库？gradle 给我们提供了一个插件 “maven”!呵呵~ 好玩的来了，我们打开 aarlibrary 的build.gradle文件开始撸代码</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/10142039_XVEl.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>如上配置之后，我们会发布右侧的gradle 面板有变化：</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/10142106_1lRF.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>多了一个<strong>upload-uploadArchives</strong>!<br>离发布就只最后一步了：双击“uploadArchives” 直到稍等片刻就发布好啦~<br>注释里面已经定义仓库的地址是”file:///Users/veidy/Desktop/aar_/aar”找到本地文件夹发现有货啦！</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/10142147_HPMo.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>开始在app moudle引用：<br>两步操作：</p>
+<p>第一步：在主项目的build.gradle里面引入仓库地址配置：</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/10142248_1lX2.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>第二步: 和其它包一样远程依赖：</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/10142319_wLOe.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>到这整个本地仓库的发布和引用就结束啦！然后就能愉快的引入aarlibrary里面的所有资源了~<br>记住是所有资源，真的是所有资源！所有资源！所有资源！就算是aarlibrary 里面有远程依赖其它的aar 一样没问题！<br>假如在aarlibrary 里面有 远程依赖  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;com.squareup.okhttp3:okhttp:3.8.1&apos;</span><br></pre></td></tr></table></figure>
+<p>如果像 android 开发之aar——本地文件引用 里面对aarlibrary进行打包然后导入到app moudle是找不到okhttp相关api的！但是如果以上面的形式发布到本地仓库然后依赖是没有问题的！</p>
+<hr>
+<p>如果是从上一篇文章最后抛出的问题来看这篇文章的，到这才算”正文”了!</p>
+<p>先理一下”aarlibrary里面也有依赖另外一个moudle 如:otherLibrary” 这里有三种情况：  </p>
+<h3 id="第一种-otherLibrary打包成一个-aar文件然后直接以文件的形式被导入到了aarlibrary-moudle的libs-文件夹"><a href="#第一种-otherLibrary打包成一个-aar文件然后直接以文件的形式被导入到了aarlibrary-moudle的libs-文件夹" class="headerlink" title="第一种:otherLibrary打包成一个.aar文件然后直接以文件的形式被导入到了aarlibrary moudle的libs 文件夹:"></a>第一种:otherLibrary打包成一个.aar文件然后直接以文件的形式被导入到了aarlibrary moudle的libs 文件夹:</h3><p><img src="https://static.oschina.net/uploads/img/201707/10142612_P92d.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3 id="第二种-otherLibrary以项目moudle的形式被导入到aarlibrary："><a href="#第二种-otherLibrary以项目moudle的形式被导入到aarlibrary：" class="headerlink" title="第二种:otherLibrary以项目moudle的形式被导入到aarlibrary："></a>第二种:otherLibrary以项目moudle的形式被导入到aarlibrary：</h3><p><img src="https://static.oschina.net/uploads/img/201707/10142705_up7V.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3 id="第三种-otherLibrary放在本地仓库或者仓库被导入到aarlibrary"><a href="#第三种-otherLibrary放在本地仓库或者仓库被导入到aarlibrary" class="headerlink" title="第三种:otherLibrary放在本地仓库或者仓库被导入到aarlibrary:"></a>第三种:otherLibrary放在本地仓库或者仓库被导入到aarlibrary:</h3><p><img src="https://static.oschina.net/uploads/img/201707/10142721_g9WN.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>对应第一种的解决办法:(又有三种情况)</p>
+<p>一、如果你的app moudle的 build.gradle里面是以project的形式引用aarlibrary，可以如下解决：<br>先在aarlibrary 的build.gradle里面添加  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">flatDir &#123;</span><br><span class="line">dirs &apos;libs&apos; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在app moudle 的build.gradle 里面  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">flatDir &#123;</span><br><span class="line">dirs &apos;libs&apos;,&apos;../aarlibrary/libs&apos; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>二、如果你的app moudle的build.gradle里面想以.aar文件形式引用aarlibrary，那不可能！就回到了NO.1这个问题  </p>
+<p>三、第二种情况不可能，那我们就可以用本文章的核心啊，发布本地仓库再依赖!但是,这里需要注意配置，否则，你会发现在远程依赖时失败~<br>上篇文章已经讲了怎么引用本地.aar文件:<br>先把otherlibrary-debug.aar文件放入aarlibrary的libs文件夹，然后在aarlibrary的build.gradle 的dependencies 里面新增下面配置:<br><img src="https://static.oschina.net/uploads/img/201707/10142937_aGhG.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在这，如果我们想把aarlibrary发布到本地仓库，并在app moudle里面远程依赖，需要额外添加两个配置：<br><img src="https://static.oschina.net/uploads/img/201707/10142954_0Jp8.png" alt="输入图片说明" title="在这里输入图片标题"><br>定义group和version！</p>
+<p>对应第二种的解决办法:  </p>
+<blockquote>
+<p>那就先把otherLibrary打包成.aar然后再引入到aarlibrary里面，再用上面的解决办法搞定~~哈哈哈</p>
+</blockquote>
+<p>对应第三种的解决办法:  </p>
+<blockquote>
+<p>那就是本篇文章的核心，直接把aarlibrary整个moudle发布到本地仓库!</p>
+</blockquote>
+<hr>
+<h3 id="源码-https-git-oschina-net-veidy-aar-git"><a href="#源码-https-git-oschina-net-veidy-aar-git" class="headerlink" title="源码: https://git.oschina.net/veidy/aar.git"></a>源码: <a href="https://git.oschina.net/veidy/aar.git" target="_blank" rel="external">https://git.oschina.net/veidy/aar.git</a></h3><blockquote>
+<p>ps:如果照着文章撸的还是要注意一下，如果你的gradle版本太旧可能有些方法找不到，本文是基于gradle3.3版本撸的~</p>
+</blockquote>
+<hr>
+<p>demo始终是demo,真正在项目中使用时会发现更多的问题<br>NO.2:<br>如标题“本地仓库引用”毕竟是本地，如果你们项目团队就你一个人那可以本地，反正是你自己一个人玩，但是如果不只一个人怎么办，难倒也要让别人都在本地创建一个仓库吗~~~显然不是！<br>怎么办？<br>看完下篇文章《android 开发之aar——远程仓库发布和引用》之后咱们再看这个问题~  </p>
+<hr>
+<p>最后贴一个二维码！注意不是求打赏的二维码，是本人撸了一个微信公众号！公众号会同步分享在osc上的所有文章！当然应该会有另外有趣的东西，有兴趣的可以扫描关注~</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/10145144_cC40.jpg" alt="输入图片说明" title="在这里输入图片标题"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">deep-links</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">aar</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">android studio</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.veidy.net/2017/07/10/aar-02/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/07/05/aar-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android 开发之aar——本地文件引用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://www.veidy.net/2017/07/10/aar-02/", 
+    sourceId: "aar-02",
+    productKey: "c149f9430c80434a955205d8e5909e05",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -238,9 +406,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
