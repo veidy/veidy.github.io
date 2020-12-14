@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Veidy</title>
+  
+  <subtitle>没伞的孩子要拼命的跑</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.veidy.net/"/>
+  <updated>2020-12-13T12:58:16.654Z</updated>
+  <id>http://www.veidy.net/</id>
+  
+  <author>
+    <name>Veidy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>港股打新神器</title>
+    <link href="http://www.veidy.net/2020/12/13/%E6%B8%AF%E8%82%A1%E6%89%93%E6%96%B0%E7%A5%9E%E5%99%A8/"/>
+    <id>http://www.veidy.net/2020/12/13/%E6%B8%AF%E8%82%A1%E6%89%93%E6%96%B0%E7%A5%9E%E5%99%A8/</id>
+    <published>2020-12-13T12:58:16.000Z</published>
+    <updated>2020-12-13T12:58:16.654Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>开个早会损失两千</title>
+    <link href="http://www.veidy.net/2020/12/11/%E5%BC%80%E4%B8%AA%E6%97%A9%E4%BC%9A%E6%8D%9F%E5%A4%B1%E4%B8%A4%E5%8D%83/"/>
+    <id>http://www.veidy.net/2020/12/11/%E5%BC%80%E4%B8%AA%E6%97%A9%E4%BC%9A%E6%8D%9F%E5%A4%B1%E4%B8%A4%E5%8D%83/</id>
+    <published>2020-12-11T14:04:08.000Z</published>
+    <updated>2020-12-11T14:04:08.413Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>内地开户中信国际银行</title>
+    <link href="http://www.veidy.net/2020/12/06/%E5%86%85%E5%9C%B0%E5%BC%80%E6%88%B7%E4%B8%AD%E4%BF%A1%E5%9B%BD%E9%99%85%E9%93%B6%E8%A1%8C/"/>
+    <id>http://www.veidy.net/2020/12/06/%E5%86%85%E5%9C%B0%E5%BC%80%E6%88%B7%E4%B8%AD%E4%BF%A1%E5%9B%BD%E9%99%85%E9%93%B6%E8%A1%8C/</id>
+    <published>2020-12-06T08:19:01.000Z</published>
+    <updated>2020-12-06T08:19:01.289Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>macpro数字键盘失效</title>
+    <link href="http://www.veidy.net/2020/06/22/macpro%E6%95%B0%E5%AD%97%E9%94%AE%E7%9B%98%E5%A4%B1%E6%95%88/"/>
+    <id>http://www.veidy.net/2020/06/22/macpro%E6%95%B0%E5%AD%97%E9%94%AE%E7%9B%98%E5%A4%B1%E6%95%88/</id>
+    <published>2020-06-22T04:59:56.000Z</published>
+    <updated>2020-06-22T05:01:12.188Z</updated>
+    
+    <content type="html"><![CDATA[<p>第四次了，苹果电</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第四次了，苹果电&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mac" scheme="http://www.veidy.net/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>flutter 集成到现有的项目</title>
+    <link href="http://www.veidy.net/2019/06/09/flutter-%E9%9B%86%E6%88%90%E5%88%B0%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://www.veidy.net/2019/06/09/flutter-%E9%9B%86%E6%88%90%E5%88%B0%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE/</id>
+    <published>2019-06-09T11:36:55.000Z</published>
+    <updated>2019-06-16T06:15:02.310Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>直接采用官方给出的方案</p></blockquote><h3 id="Android-集成"><a href="#Android-集成" class="headerlink" title="Android 集成"></a>Android 集成</h3><h4 id="一-创建一个Flutter-module"><a href="#一-创建一个Flutter-module" class="headerlink" title="一.创建一个Flutter module"></a>一.创建一个Flutter module</h4><p>假如:已经有一个android项目，veidy/project/flutterExistingApp</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd veidy&#x2F;project&#x2F;</span><br><span class="line"></span><br><span class="line">$ flutter create -t module my_flutter</span><br></pre></td></tr></table></figure><h4 id="二-设置Android-项目配置"><a href="#二-设置Android-项目配置" class="headerlink" title="二.设置Android 项目配置"></a>二.设置Android 项目配置</h4><p>1.app/build.gradle 配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">compileOptions &#123;</span><br><span class="line">sourceCompatibility 1.8</span><br><span class="line">targetCompatibility 1.8</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><p>2.android项目的 settings.gradle 配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;flutterExistingApp&#x2F;settings.gradle</span><br><span class="line">include &#39;:app&#39;</span><br><span class="line">setBinding(new Binding([gradle: this]))</span><br><span class="line">evaluate(new File(settingsDir.parentFile,&#39;my_flutter&#x2F;.android&#x2F;include_flutter.groovy&#39;))</span><br></pre></td></tr></table></figure><p>3.app module引入Flutter module</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;flutterExistingApp&#x2F;settings.gradle</span><br><span class="line">implementation project(&#39;:flutter&#39;)</span><br></pre></td></tr></table></figure><p>4.android项目里面使用Flutter</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;新建一个Activity</span><br><span class="line">public class FlutterIndexActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">super.onCreate(savedInstanceState);</span><br><span class="line">setContentView(R.layout.activity_flutter_index);</span><br><span class="line"></span><br><span class="line">View flutterView &#x3D; Flutter.createView(this, getLifecycle(), &quot;route_saas_home&quot;);</span><br><span class="line">FrameLayout.LayoutParams layout &#x3D; new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);</span><br><span class="line"></span><br><span class="line">addContentView(flutterView, layout);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;        new MethodChannel((BinaryMessenger) flutterView,&quot;app.channel.shared.data&quot;).setMethodCallHandler((methodCall, result) -&gt; &#123;</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;            Log.d(&quot;FlutterIndexActivity&quot;,methodCall.method);</span><br><span class="line">&#x2F;&#x2F;            result.success(&quot;android 原生 返回给 flutter 数据了&quot;);</span><br><span class="line">&#x2F;&#x2F;            Toast.makeText(this,&quot;toast 显示&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;        &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这里的”route_saas_home”对应了在Flutter模块里面lib/main.dart 配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import &#39;dart:ui&#39;;</span><br><span class="line">import &#39;package:flutter&#x2F;material.dart&#39;;</span><br><span class="line"></span><br><span class="line">void main()&#123;</span><br><span class="line">runApp(new MaterialApp(</span><br><span class="line">title: &#39;首页&#39;,</span><br><span class="line">debugShowCheckedModeBanner: false,</span><br><span class="line">home: _widgetForRoute(window.defaultRouteName),</span><br><span class="line">));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Widget _widgetForRoute(String route) &#123;</span><br><span class="line">switch (route) &#123;</span><br><span class="line">case &#39;route_saas_home&#39;:</span><br><span class="line">return SaasHome();</span><br><span class="line">case &#39;route_saas_subject&#39;:</span><br><span class="line">return SubjectActivity();</span><br><span class="line">default:</span><br><span class="line">return Center(</span><br><span class="line">child: Text(&#39;Unknown route: $route&#39;, textDirection: TextDirection.ltr),</span><br><span class="line">);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h3 id="iOS-集成"><a href="#iOS-集成" class="headerlink" title="iOS 集成"></a>iOS 集成</h3><h4 id="一-创建一个Flutter-module-1"><a href="#一-创建一个Flutter-module-1" class="headerlink" title="一.创建一个Flutter module"></a>一.创建一个Flutter module</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd veidy&#x2F;project&#x2F;flutterExistingiOS&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;如果androi项目创建过了就不用再创建了</span><br><span class="line">$ flutter create -t module my_flutter</span><br></pre></td></tr></table></figure><h4 id="二、iOS项目配置"><a href="#二、iOS项目配置" class="headerlink" title="二、iOS项目配置"></a>二、iOS项目配置</h4><p>1.如果之前没有集成 cocoapods的先初始化pod</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd veidy&#x2F;project&#x2F;flutterExistingiOS</span><br><span class="line"></span><br><span class="line">$ pod init</span><br><span class="line"></span><br><span class="line">$ pod install</span><br></pre></td></tr></table></figure><p>2.在pod文件里面添加如下代码，再执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter_application_path &#x3D; &#39;..&#x2F;my_flutter&#x2F;&#39;</span><br><span class="line">eval(File.read(File.join(flutter_application_path, &#39;.ios&#39;, &#39;Flutter&#39;, &#39;podhelper.rb&#39;)), binding)</span><br></pre></td></tr></table></figure><p>再次执行命令:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pod install</span><br></pre></td></tr></table></figure><p>最终整个pods文件配置如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># Uncomment the next line to define a global platform for your project</span><br><span class="line"># platform :ios, &#39;9.0&#39;</span><br><span class="line"></span><br><span class="line">target &#39;flutterExistingiOS&#39; do</span><br><span class="line"># Comment the next line if you&#39;re not using Swift and don&#39;t want to use dynamic frameworks</span><br><span class="line">use_frameworks!</span><br><span class="line"></span><br><span class="line"># Pods for flutterExistingiOS</span><br><span class="line"></span><br><span class="line">target &#39;flutterExistingiOSTests&#39; do</span><br><span class="line">inherit! :search_paths</span><br><span class="line"># Pods for testing</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">target &#39;flutterExistingiOSUITests&#39; do</span><br><span class="line">inherit! :search_paths</span><br><span class="line"># Pods for testing</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">flutter_application_path &#x3D; &#39;..&#x2F;my_flutter&#x2F;&#39;</span><br><span class="line">eval(File.read(File.join(flutter_application_path, &#39;.ios&#39;, &#39;Flutter&#39;, &#39;podhelper.rb&#39;)), binding)</span><br><span class="line">end</span><br></pre></td></tr></table></figure><p>3.禁用 Bitcode</p><blockquote><p>Build Settings-&gt;Build Options-&gt;Enable Bitcode  选择 NO</p></blockquote><p>4.Add a build phase for building the Dart code</p><blockquote><p>Build Phases-&gt;选择’+’ -&gt;New Run Script Phase -&gt; Run Script<br>直接粘贴如下代码:</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;$FLUTTER_ROOT&#x2F;packages&#x2F;flutter_tools&#x2F;bin&#x2F;xcode_backend.sh&quot; build</span><br><span class="line">&quot;$FLUTTER_ROOT&#x2F;packages&#x2F;flutter_tools&#x2F;bin&#x2F;xcode_backend.sh&quot; embed</span><br></pre></td></tr></table></figure><p>5.在swift代码里面使用flutter</p><p>a.AppDelegate配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import Flutter</span><br><span class="line">import FlutterPluginRegistrant &#x2F;&#x2F; Only if you have Flutter Plugins.</span><br><span class="line"></span><br><span class="line">@UIApplicationMain</span><br><span class="line">class AppDelegate: FlutterAppDelegate &#123;</span><br><span class="line">var flutterEngine : FlutterEngine?;</span><br><span class="line">&#x2F;&#x2F; Only if you have Flutter plugins.</span><br><span class="line">override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -&gt; Bool &#123;</span><br><span class="line">self.flutterEngine &#x3D; FlutterEngine(name: &quot;io.flutter&quot;, project: nil);</span><br><span class="line">self.flutterEngine?.run(withEntrypoint: nil);</span><br><span class="line">GeneratedPluginRegistrant.register(with: self.flutterEngine);</span><br><span class="line">return super.application(application, didFinishLaunchingWithOptions: launchOptions);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>如果之前项目已经有继承别的的AppDelegate，可以实现FlutterAppLifeCycleProvider来处理</p><blockquote><p>Make your app delegate implement the FlutterAppLifeCycleProvider</p></blockquote><p>b.原生 页面跳转到flutter配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import UIKit</span><br><span class="line">import Flutter</span><br><span class="line"></span><br><span class="line">class ViewController: UIViewController &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">override func viewDidLoad() &#123;</span><br><span class="line">super.viewDidLoad()</span><br><span class="line">let button &#x3D; UIButton(type:UIButton.ButtonType.custom)</span><br><span class="line">button.addTarget(self, action: #selector(handleButtonAction), for: .touchUpInside)</span><br><span class="line">button.setTitle(&quot;点击我跳转到Flutter界面&quot;, for: UIControl.State.normal)</span><br><span class="line">button.frame &#x3D; CGRect(x: 80.0, y: 210.0, width: 160.0, height: 40.0)</span><br><span class="line">button.backgroundColor &#x3D; UIColor.blue</span><br><span class="line">self.view.addSubview(button)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@objc func handleButtonAction() &#123;</span><br><span class="line">let flutterEngine &#x3D; (UIApplication.shared.delegate as? AppDelegate)?.flutterEngine;</span><br><span class="line">let flutterViewController &#x3D; FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)!;</span><br><span class="line">&#x2F;&#x2F;实际上这里面设置路径，flutter无法读取</span><br><span class="line">flutterViewController.setInitialRoute(&quot;route1&quot;);</span><br><span class="line">self.present(flutterViewController, animated: false, completion: nil)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;直接采用官方给出的方案&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Android-集成&quot;&gt;&lt;a href=&quot;#Android-集成&quot; class=&quot;headerlink&quot; title=&quot;Android 集成&quot;&gt;&lt;/a&gt;Android 集成&lt;/h3&gt;&lt;h4 id=&quot;一-创建一个Flutter-module&quot;&gt;&lt;a href=&quot;#一-创建一个Flutter-module&quot; class=&quot;headerlink&quot; title=&quot;一.创建一个Flutter module&quot;&gt;&lt;/a&gt;一.创建一个Flutter module&lt;/h4&gt;&lt;p&gt;假如:已经有一个android项目，veidy/project/flutterExistingApp&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cd veidy&amp;#x2F;project&amp;#x2F;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ flutter create -t module my_flutter&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;二-设置Android-项目配置&quot;&gt;&lt;a href=&quot;#二-设置Android-项目配置&quot; class=&quot;headerlink&quot; title=&quot;二.设置Android 项目配置&quot;&gt;&lt;/a&gt;二.设置Android 项目配置&lt;/h4&gt;&lt;p&gt;1.app/build.gradle 配置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;compileOptions &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sourceCompatibility 1.8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;targetCompatibility 1.8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="flutter" scheme="http://www.veidy.net/tags/flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>weex调用自定义原生组件</title>
+    <link href="http://www.veidy.net/2019/04/12/weex%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6/"/>
+    <id>http://www.veidy.net/2019/04/12/weex%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6/</id>
+    <published>2019-04-12T02:37:42.000Z</published>
+    <updated>2019-04-28T03:11:38.062Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、android 提供组件 WeexCircleImageView</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* 扩展给Weex 调用的显示圆形图片 组件</span><br><span class="line">* @author veidy</span><br><span class="line">*&#x2F;</span><br><span class="line">public class WeexCircleImageView extends WXComponent&lt;CircleImageView&gt; &#123;</span><br><span class="line">public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, BasicComponentData basicComponentData) &#123;</span><br><span class="line">super(instance, parent, basicComponentData);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, int type, BasicComponentData basicComponentData) &#123;</span><br><span class="line">super(instance, parent, type, basicComponentData);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">protected CircleImageView initComponentHostView(@NonNull Context context) &#123;</span><br><span class="line">return new CircleImageView(context);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@WXComponentProp(name &#x3D; &quot;src&quot;)</span><br><span class="line">public void setImage(String url)&#123;</span><br><span class="line">IAskImageLoader.displayImage(url,getHostView());</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><p>二、native 注册组件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WXSDKEngine.registerComponent(&quot;CircleImageView&quot;, WeexCircleImageView.class, false);</span><br></pre></td></tr></table></figure><p>三、 weex  JS  引用组件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;CircleImageView class&#x3D;&quot;image&quot; src&#x3D;&quot;http:&#x2F;&#x2F;ww3.sinaimg.cn&#x2F;small&#x2F;509927e5gw1eyixohfyzxj20hs0htq55.jpg&quot;&gt;&lt;&#x2F;CircleImageView&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一、android 提供组件 WeexCircleImageView&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x2F;**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* 扩展给Weex 调用的显示圆形图片 组件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* @author veidy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*&amp;#x2F;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class WeexCircleImageView extends WXComponent&amp;lt;CircleImageView&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, BasicComponentData basicComponentData) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;super(instance, parent, basicComponentData);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, int type, BasicComponentData basicComponentData) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;super(instance, parent, type, basicComponentData);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;protected CircleImageView initComponentHostView(@NonNull Context context) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;return new CircleImageView(context);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@WXComponentProp(name &amp;#x3D; &amp;quot;src&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void setImage(String url)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;IAskImageLoader.displayImage(url,getHostView());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="weex" scheme="http://www.veidy.net/tags/weex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CoordinatorLayout中的嵌套滑动和Behavior</title>
+    <link href="http://www.veidy.net/2019/03/28/CoordinatorLayout%E4%B8%AD%E7%9A%84%E5%B5%8C%E5%A5%97%E6%BB%91%E5%8A%A8%E5%92%8CBehavior/"/>
+    <id>http://www.veidy.net/2019/03/28/CoordinatorLayout%E4%B8%AD%E7%9A%84%E5%B5%8C%E5%A5%97%E6%BB%91%E5%8A%A8%E5%92%8CBehavior/</id>
+    <published>2019-03-28T06:50:27.000Z</published>
+    <updated>2019-04-28T02:53:53.962Z</updated>
+    
+    <content type="html"><![CDATA[<p>CoordinatorLayout和AppBarLayout滑动弹跳（回弹）问题解决: 核心是通过反射来解决</p><p>记录一次踩坑操作</p><blockquote><p>com.android.support:appcompat-v7:27.0.0</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object scroller &#x3D; getSuperSuperField(this, &quot;mScroller&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br></pre></td></tr></table></figure><hr><blockquote><p>com.android.support:appcompat-v7:28.0.0</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object scroller &#x3D; getSuperSuperField(this, &quot;scroller&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br></pre></td></tr></table></figure><hr><a id="more"></a><p>完整源码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.support.design.widget.AppBarLayout;</span><br><span class="line">import android.support.design.widget.CoordinatorLayout;</span><br><span class="line">import android.support.v4.view.ViewCompat;</span><br><span class="line">import android.util.AttributeSet;</span><br><span class="line">import android.view.MotionEvent;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.widget.OverScroller;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Field;</span><br><span class="line"></span><br><span class="line">import static android.view.KeyEvent.ACTION_DOWN;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">* 解决快速滑动抖动</span><br><span class="line">* &gt;&#x3D;v28: scroller</span><br><span class="line">* &lt;28 mScroller</span><br><span class="line">*&#x2F;</span><br><span class="line">public class FixAppBarLayoutBehavior extends AppBarLayout.Behavior &#123;</span><br><span class="line"></span><br><span class="line">private static final String TAG &#x3D; &quot;AppBarLayoutBehavior&quot;;</span><br><span class="line"></span><br><span class="line">public FixAppBarLayoutBehavior() &#123;</span><br><span class="line">super();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public FixAppBarLayoutBehavior(Context context, AttributeSet attrs) &#123;</span><br><span class="line">super(context, attrs);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public boolean onInterceptTouchEvent(CoordinatorLayout parent, AppBarLayout child, MotionEvent ev) &#123;</span><br><span class="line">if (ev.getAction() &#x3D;&#x3D; ACTION_DOWN) &#123;</span><br><span class="line">&#x2F;&#x2F;            Object scroller &#x3D; getSuperSuperField(this, &quot;mScroller&quot;);</span><br><span class="line">Object scroller &#x3D; getSuperSuperField(this, &quot;scroller&quot;);</span><br><span class="line">if (scroller !&#x3D; null &amp;&amp; scroller instanceof OverScroller) &#123;</span><br><span class="line">OverScroller overScroller &#x3D; (OverScroller) scroller;</span><br><span class="line">overScroller.abortAnimation();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">return super.onInterceptTouchEvent(parent, child, ev);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private Object getSuperSuperField(Object paramClass, String paramString) &#123;</span><br><span class="line">Field field &#x3D; null;</span><br><span class="line">Object object &#x3D; null;</span><br><span class="line">try &#123;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;            field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br><span class="line">field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br><span class="line">field.setAccessible(true);</span><br><span class="line">object &#x3D; field.get(paramClass);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">return object;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onNestedScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target,</span><br><span class="line">int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) &#123;</span><br><span class="line">super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed,</span><br><span class="line">dxUnconsumed, dyUnconsumed, type);</span><br><span class="line">stopNestedScrollIfNeeded(dyUnconsumed, child, target, type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child,</span><br><span class="line">View target, int dx, int dy, int[] consumed, int type) &#123;</span><br><span class="line">super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type);</span><br><span class="line">stopNestedScrollIfNeeded(dy, child, target, type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private void stopNestedScrollIfNeeded(int dy, AppBarLayout child, View target, int type) &#123;</span><br><span class="line">if (type &#x3D;&#x3D; ViewCompat.TYPE_NON_TOUCH) &#123;</span><br><span class="line">final int currOffset &#x3D; getTopAndBottomOffset();</span><br><span class="line">if ((dy &lt; 0 &amp;&amp; currOffset &#x3D;&#x3D; 0)</span><br><span class="line">|| (dy &gt; 0 &amp;&amp; currOffset &#x3D;&#x3D; -child.getTotalScrollRange())) &#123;</span><br><span class="line">ViewCompat.stopNestedScroll(target, ViewCompat.TYPE_NON_TOUCH);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CoordinatorLayout和AppBarLayout滑动弹跳（回弹）问题解决: 核心是通过反射来解决&lt;/p&gt;
+&lt;p&gt;记录一次踩坑操作&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;com.android.support:appcompat-v7:27.0.0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Object scroller &amp;#x3D; getSuperSuperField(this, &amp;quot;mScroller&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;field &amp;#x3D; paramClass.getClass().getSuperclass().getSuperclass().getDeclaredField(paramString);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;com.android.support:appcompat-v7:28.0.0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Object scroller &amp;#x3D; getSuperSuperField(this, &amp;quot;scroller&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;field &amp;#x3D; paramClass.getClass().getSuperclass().getSuperclass().getSuperclass().getDeclaredField(paramString);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+
+
+
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="AppBarLayout" scheme="http://www.veidy.net/tags/AppBarLayout/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序插件使用-抽奖助手插件</title>
+    <link href="http://www.veidy.net/2018/07/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8-%E6%8A%BD%E5%A5%96%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6/"/>
+    <id>http://www.veidy.net/2018/07/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8-%E6%8A%BD%E5%A5%96%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6/</id>
+    <published>2018-07-26T06:16:32.000Z</published>
+    <updated>2018-07-26T07:15:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在使用抽奖助手插件前都得先去小程序开放平台添加插件到自己的小程序</p><blockquote><p>设置 — 第三方服务 — 插件管理 —添加插件  — 抽奖助手 </p></blockquote><h2 id="抽奖助手插件的AppID-wx01bb1ef166cd3f4e"><a href="#抽奖助手插件的AppID-wx01bb1ef166cd3f4e" class="headerlink" title="抽奖助手插件的AppID: wx01bb1ef166cd3f4e"></a>抽奖助手插件的AppID: wx01bb1ef166cd3f4e</h2><p> 抽奖助手插件的版本号：0.1.0</p><p> 具体怎样使用抽奖助手插件呢？<br> <a id="more"></a><br> 接入步骤如下：</p><p> 1.在app.json文件加入插件引入配置</p><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;plugins&quot;: &#123;</span><br><span class="line"> &quot;lottery&quot;: &#123;</span><br><span class="line">   &quot;version&quot;: &quot;0.1.0&quot;,</span><br><span class="line">   &quot;provider&quot;: &quot;wx01bb1ef166cd3f4e&quot;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><p>  2.新建一个Page： lottery；会自动生成四个文件<br>   lottery.js,lottery.json,lottery.wxml,lottery.wxss</p><p>  3.我们在lottery.json文件里面加入如下配置：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;usingComponents&quot;: &#123;</span><br><span class="line">   &quot;lotterycard&quot;: &quot;plugin:&#x2F;&#x2F;lottery&#x2F;card&quot;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><br>  4.在lottery.wxml 中引入组件，代码如下:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;lotterycard lottery&#x3D;&#39;7EQUKGM0XRe&#39; redirect&#x3D;&#39;page&#39;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;&#x2F;lotterycard&gt;</span><br></pre></td></tr></table></figure></p><p>  注意：<br>  <blockquote><p> 1.lottery 这个值是动态配置的,需要先在“抽奖助手”小程序创建好抽奖后获得</p><p> 2.redirect 点击奖品图片跳转方式。<br>none: 不跳转；<br>page: 跳转到插件抽奖详情页面 (基础库版本 &gt;= 2.1.0)；<br>mina：跳转到抽奖助手小程序抽奖详情页（这个属于的设置前提是需要先绑定小程序 抽奖助手）</p></blockquote></p><p> 获取lottery 操作视频：</p><iframe width="720" height="1280" allowtransparency=falsesrc="https://res.cloudinary.com/veidy/video/upload/v1532586479/blog/%E6%8A%BD%E5%A5%96%E5%8A%A9%E6%89%8B%E6%93%8D%E4%BD%9C%E8%A7%86%E9%A2%91.mp4"></iframe><p>  5.运行~ </p><p>  error示例:thirdScriptError sdk uncaught third Error Page is not a function TypeError: Page is not a function</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">thirdScriptError </span><br><span class="line">sdk uncaught third Error </span><br><span class="line">Page is not a function </span><br><span class="line">TypeError: Page is not a function</span><br><span class="line">   at http:&#x2F;&#x2F;127.0.0.1:31034&#x2F;appservice&#x2F;__onlineplugin__&#x2F;wx01bb1ef166cd3f4e&#x2F;0.1.0&#x2F;appservice.js:1697:574</span><br></pre></td></tr></table></figure><p> 解决：基础库版本太低了，如官方文档设置&gt;=2.1.0 </p><blockquote><p>基础库版本:<br>目前插件支持的基础库版本为 &gt;= 2.1.0, 使用前，请在公众平台小程序后台”设置-基本设置-基础库最低版本设置”，将最低版本要求设置为 2.1.0</p></blockquote><p> 更多使用文档可以参考抽奖助手插件官方文档：<br> <a href="https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx01bb1ef166cd3f4e">https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx01bb1ef166cd3f4e</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在使用抽奖助手插件前都得先去小程序开放平台添加插件到自己的小程序&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;设置 — 第三方服务 — 插件管理 —添加插件  — 抽奖助手 &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;抽奖助手插件的AppID-wx01bb1ef166cd3f4e&quot;&gt;&lt;a href=&quot;#抽奖助手插件的AppID-wx01bb1ef166cd3f4e&quot; class=&quot;headerlink&quot; title=&quot;抽奖助手插件的AppID: wx01bb1ef166cd3f4e&quot;&gt;&lt;/a&gt;抽奖助手插件的AppID: wx01bb1ef166cd3f4e&lt;/h2&gt;&lt;p&gt; 抽奖助手插件的版本号：0.1.0&lt;/p&gt;
+&lt;p&gt; 具体怎样使用抽奖助手插件呢？&lt;br&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="小程序插件" scheme="http://www.veidy.net/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序插件使用-腾讯视频插件</title>
+    <link href="http://www.veidy.net/2018/07/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8-%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91%E6%8F%92%E4%BB%B6/"/>
+    <id>http://www.veidy.net/2018/07/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8-%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91%E6%8F%92%E4%BB%B6/</id>
+    <published>2018-07-25T08:59:47.000Z</published>
+    <updated>2018-07-25T09:30:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在使用插件前都得先去小程序开放平台添加插件到自己的小程序</p><blockquote><p>设置 — 第三方服务 — 插件管理 —添加插件  — 腾讯视频 </p></blockquote><h2 id="腾讯视频插件的AppID-wxa75efa648b60994b"><a href="#腾讯视频插件的AppID-wxa75efa648b60994b" class="headerlink" title="腾讯视频插件的AppID:wxa75efa648b60994b"></a>腾讯视频插件的AppID:wxa75efa648b60994b</h2><p> 腾讯视频插件的版本号：1.1.1</p><p> 具体怎样使用腾讯视频插件呢？<br> <a id="more"></a><br> 接入步骤如下：</p><p> 1.在app.json文件加入插件引入配置</p><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;plugins&quot;: &#123;</span><br><span class="line"> &quot;tencentvideo&quot;: &#123;</span><br><span class="line">     &quot;version&quot;: &quot;1.1.1&quot;,</span><br><span class="line">     &quot;provider&quot;: &quot;wxa75efa648b60994b&quot;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><p>  2.新建一个Page： video；会自动生成四个文件     video.js,video.json,video.wxml,video.wxss</p><p>  3.我们在video.json文件里面加入如下配置：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;usingComponents&quot;: &#123;</span><br><span class="line">  &quot;txv-video&quot;: &quot;plugin:&#x2F;&#x2F;tencentvideo&#x2F;video&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>  4.在video.wxml 中引入组件，代码如下:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;txv-video playerid&#x3D;&quot;txv1&quot; vid&#x3D;&quot;h07290i9vt0&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;txv-video&gt;</span><br></pre></td></tr></table></figure></p><p>  注意：vid 这个值是动态配置的，腾讯视频每个视频都有的</p><p>  <img src="https://ws1.sinaimg.cn/large/509927e5gy1ftm8iykpftj21hu0yg1gw.jpg" alt=""></p><p>  5.运行~视频就播放了</p><p>  error示例:<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jsEnginScriptError</span><br><span class="line">Component is not found in path &quot;plugin:&#x2F;&#x2F;wxa75efa648b60994b&#x2F;txv-video&quot; (using by &quot;pages&#x2F;video&#x2F;video&quot;)</span><br><span class="line">Error: Component is not found in path &quot;plugin:&#x2F;&#x2F;wxa75efa648b60994b&#x2F;txv-video&quot; (using by &quot;pages&#x2F;video&#x2F;video&quot;)</span><br></pre></td></tr></table></figure><br>  解决：<br>  video.json文件里面是不是写成了plugin://tencentvideo/txv-video，这样是错误的，应该是如下配置(v1.1.1)</p>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;usingComponents&quot;: &#123;</span><br><span class="line">  &quot;txv-video&quot;: &quot;plugin:&#x2F;&#x2F;tencentvideo&#x2F;video&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在使用插件前都得先去小程序开放平台添加插件到自己的小程序&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;设置 — 第三方服务 — 插件管理 —添加插件  — 腾讯视频 &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;腾讯视频插件的AppID-wxa75efa648b60994b&quot;&gt;&lt;a href=&quot;#腾讯视频插件的AppID-wxa75efa648b60994b&quot; class=&quot;headerlink&quot; title=&quot;腾讯视频插件的AppID:wxa75efa648b60994b&quot;&gt;&lt;/a&gt;腾讯视频插件的AppID:wxa75efa648b60994b&lt;/h2&gt;&lt;p&gt; 腾讯视频插件的版本号：1.1.1&lt;/p&gt;
+&lt;p&gt; 具体怎样使用腾讯视频插件呢？&lt;br&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="小程序插件" scheme="http://www.veidy.net/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何开通民生银行香港账户</title>
+    <link href="http://www.veidy.net/2018/07/12/%E9%A6%99%E6%B8%AF%E8%B4%A6%E6%88%B7/"/>
+    <id>http://www.veidy.net/2018/07/12/%E9%A6%99%E6%B8%AF%E8%B4%A6%E6%88%B7/</id>
+    <published>2018-07-12T10:06:25.000Z</published>
+    <updated>2018-07-13T01:06:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2018年7月9日，小米香港上市了，除了第一天破发，后面两天都在涨~相信雷布斯没有错</p><p>小米上市了，你有买小米的股票吗？18HK一股！</p><p>第一天小米破发，漫天的文章分析(蹭热点)，第二天就已经到了19HK，我身边的朋友已经证明了日赚1W不是梦~而我,相对来说比较淡定，还没入手。</p><p>原因有二：</p><a id="more"></a><p> 1.我的香港账户还在审核中，无法通过香港账户购买</p><p> 2.我是相信雷布斯的，不用急。虽然我不是米粉，曾经我还骂过小米，但是我刚想了下，我用过小米的产品有： </p><p> 小米手机2S (2013年入手)</p><p> 小米耳机，(2014年入手)</p><p> 小米路由器，(2015年入手)</p><p> 小米电子秤，(2017年入手)</p><p> 小米插座，(2017年入手)</p><p> 小米电饭锅，(2017年入手)</p><p> 小米盒子，(2018年入手)</p><p>今年想买个小米台灯来着，家里领导没同意，暂时的~</p><p>跑题了跑题了…明明要说香港账户的事情，说了一堆小米。</p><p>突然抛出一个问题，为什么那么多国内企业都选择在香港上市？</p><p>如果你想买港股，一个香港银行账户还是很有必要的。</p><p>Q:为什么我要开通一个香港银行账户？</p><p>A:当然是买港股，A股你还敢买吗？</p><p>Q:大陆的银行卡不可以买吗？</p><p>A:可以，但是有很高的资金驳回风险。简单点就是：入金失败，你的人名币转换成港币，都到不了你的证券账户，更别提用证券账户去买股票了。还有一点，手续费扣得你不要不要的，我一同事一顿操作，还没买入投票就已经损失1000多<del>这个中间的磨损是你想像不到的痛</del></p><p>Q:那我要开哪家银行的香港账户呢？</p><p>A:民生银行和招商银行，这两家是支持银证转账的，银证转账是玩股票很高效的一件事情，简单点就是省钱、省时间！</p><p>A:选择民生银行去开通香港账户！(我先回答了)</p><p>Q: …</p><p>A:因为开通香港账户是有门槛的，招商银行需要500W,民生银行5W，你选谁？</p><p>Q:怎么开！</p><p>A:…</p><p>A: 内地就可以开。</p><p>Q:继续！</p><p>A: 备齐如下资料：</p><pre><code>1.身份证2.港澳通行证 or 护照  (优先港澳通行证，别问为什么，照做就行)3.内地民生银行卡，并存入5W人名币！</code></pre><p>Q:继续！</p><p>A:没了，民生银行的app上预约填写资料，然后去银行办理，十分钟就给你搞定，然后只需等待审核，工作人员都会说1个月，其实看人品，你只需要记住审核期间5W不能动！</p><p>Q:就这么简单？</p><p>A:就这么简单~</p><p>Q:没有别的了？</p><p>A:没有了~</p><p>Q:那就直接讲说 准备好 身份证，港澳通行证 ，内地民生银行卡，并存入5W </p><p>就好了啊！</p><p>A: …</p><p>Q:哼！</p><p>.</p><p>.</p><p>.去申请办理之后.</p><p>.</p><p>x 天之后，收到短信</p><p><img src="https://res.cloudinary.com/veidy/image/upload/v1531390067/veidy/561531387636_.pic.jpg" alt=""></p><p>Q:！！！成功~ </p><p>然而激活又折腾许久…</p><p>踩坑之后总结如下：</p><p>一.用windows系统电脑的最老的ie 浏览器登录官网（mac上的浏览器用不了的）</p><p>二.选择首次登录，然后会让你设置用户名和密码</p><p>以上是银行工作人员在开户时也会告诉你的~</p><p>三.同名银行卡转账(继续用民生银行的app操作，而且是9:00-16:00，不要晚上弄!)</p><p>  先购外汇</p><p><img src="https://res.cloudinary.com/veidy/image/upload/v1531390068/veidy/581531388696_.pic.jpg" alt=""></p><p><img src="https://res.cloudinary.com/veidy/image/upload/v1531390068/veidy/571531388695_.pic.jpg" alt=""></p><p>然后就是正常操作啦~记得不要少于300HK!不要少于300HK!不要少于300HK! </p><p>会有一个购汇理由，脑子灵活点，因私旅游！</p><p>港币买好之后，再操作境外汇款(不截图了，就是 货币兑换 旁边)。</p><p>收款人：名字的拼音</p><p>收款账号： 香港账号，开户时工作人员就发给你了的(香港账户没有卡的，就一个虚拟账号)</p><p>swift代码：MSBCHKHHXXX  (民生的是这个，其实你在)</p><p>理由 ：因私旅游</p><p>在转账的时候应该会看到有两种方式，当然是 香港快汇！ 时间快，还不要手续费。</p><p>提交！</p><p>别急，不比国内银行转账秒到。还是要等个两三分钟的~ 你就会收到香港银行到账短信~</p><p>去登录香港分行(<a href="http://hk.cmbc.com.cn/),官网下有一个下载app的二维码，下app吧，虽然app">http://hk.cmbc.com.cn/),官网下有一个下载app的二维码，下app吧，虽然app</a> 很难用，但是你就查询下余额不影响的~</p><p>最后补充两句：<br>上面的条件并不是所有城市的，大部分吧，还是以当地为标准；<br>看完了文章之后，如果想办的，速度去办吧，因为政策是不停的变的，国家当然不希望资金留出~</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2018年7月9日，小米香港上市了，除了第一天破发，后面两天都在涨~相信雷布斯没有错&lt;/p&gt;
+&lt;p&gt;小米上市了，你有买小米的股票吗？18HK一股！&lt;/p&gt;
+&lt;p&gt;第一天小米破发，漫天的文章分析(蹭热点)，第二天就已经到了19HK，我身边的朋友已经证明了日赚1W不是梦~而我,相对来说比较淡定，还没入手。&lt;/p&gt;
+&lt;p&gt;原因有二：&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>instagram图片批量下载</title>
+    <link href="http://www.veidy.net/2018/07/11/instagram%E5%9B%BE%E7%89%87%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://www.veidy.net/2018/07/11/instagram%E5%9B%BE%E7%89%87%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD/</id>
+    <published>2018-07-11T07:14:13.000Z</published>
+    <updated>2019-04-28T03:24:39.446Z</updated>
+    
+    <content type="html"><![CDATA[<p><br>Instagram是一款晒照社交软件,以一种快速、美妙和有趣的方式将你随时抓拍下的图片分享给彼此！<br>k<br>如何下载Instagram图片呢，尤其是想一次性下载多张Instagram图片<br>这里给大家 提供一个Instagram图片批量下载的方法~</p><a id="more"></a><p>先说明一下：这些操作是有前提的，就是你能正常访问Instagram，访问不了的，提供一个可以让你访问的Instagram的利器。 <a href="https://portal.shadowsocks.la/aff.php?aff=11381">https://portal.shadowsocks.la/aff.php?aff=11381</a></p><p>第一步：<br>打开网站<br><a href="https://saveig.com/">https://saveig.com/</a></p><p>第二步：<br>输入Insgagram用户账号，比如我这里输入杨幂的Insgagram账号：yangmi_,点击GET</p><p><img src="https://res.cloudinary.com/veidy/image/upload/v1531294878/veidy/QQ20180711-153913.png" alt=""></p><p>第三步：<br>选择需要的图片，并点击 Download Selected 就会一键下载啦~<br><img src="https://res.cloudinary.com/veidy/image/upload/v1531295037/veidy/QQ20180711-154339.png" alt=""></p><p>操作视频：</p><video id="video" controls="" preload="none" poster="https://res.cloudinary.com/veidy/image/upload/v1531296486/veidy/QQ20180711-160742.png">  <source id="mp4" src="https://res.cloudinary.com/veidy/video/upload/v1531295842/veidy/instagarm%E4%B8%8B%E8%BD%BD.mov " type="video/mp4"></video>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;br&gt;Instagram是一款晒照社交软件,以一种快速、美妙和有趣的方式将你随时抓拍下的图片分享给彼此！&lt;br&gt;k&lt;br&gt;如何下载Instagram图片呢，尤其是想一次性下载多张Instagram图片&lt;br&gt;这里给大家 提供一个Instagram图片批量下载的方法~&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="instagram ins" scheme="http://www.veidy.net/tags/instagram-ins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>veidy2017.6-2018.6</title>
+    <link href="http://www.veidy.net/2018/06/15/veidy2017/"/>
+    <id>http://www.veidy.net/2018/06/15/veidy2017/</id>
+    <published>2018-06-15T03:10:28.000Z</published>
+    <updated>2018-06-15T03:43:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p> 时间：2018年6月14日 下班地铁1号线<br><br> 脑子里面突然闪出一个想法：总结2017年6月-2018年6月<br> <a id="more"></a></p><h3 id="一、团队发展"><a href="#一、团队发展" class="headerlink" title="一、团队发展"></a>一、团队发展</h3><p>  app团队人员翻倍发展(4人到了8人)…</p><h3 id="二、技术成长"><a href="#二、技术成长" class="headerlink" title="二、技术成长"></a>二、技术成长</h3><p>##2017年：</p><p>总的来说，第一件事情就是代码管理工具的迁移svn迁移到git<br><br>紧接着文档完善，尤其是app接口文档 的完善与规范<br><br>热更新的研究<br><br>项目模块化的重构<br><br>code review 尝试<br></p><h3 id="android"><a href="#android" class="headerlink" title="android:"></a>android:</h3><h5 id="1-项目模块化"><a href="#1-项目模块化" class="headerlink" title="1.项目模块化"></a>1.项目模块化</h5><p>####### 引入ARouter路由框架<br>####### 抽离 xx-android-sdk</p><h5 id="2-项目引入kotlin语言开发"><a href="#2-项目引入kotlin语言开发" class="headerlink" title="2.项目引入kotlin语言开发"></a>2.项目引入kotlin语言开发</h5><h5 id="3-网络框架引入-Retrofit-RxJava2"><a href="#3-网络框架引入-Retrofit-RxJava2" class="headerlink" title="3.网络框架引入 Retrofit+RxJava2"></a>3.网络框架引入 Retrofit+RxJava2</h5><h5 id="4-视频直播"><a href="#4-视频直播" class="headerlink" title="4.视频直播"></a>4.视频直播</h5><h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS:"></a>iOS:</h3><h5 id="1-通过人员优化的方式提高了团队开发能力"><a href="#1-通过人员优化的方式提高了团队开发能力" class="headerlink" title="1.通过人员优化的方式提高了团队开发能力"></a>1.通过人员优化的方式提高了团队开发能力</h5><h5 id="2-项目模块化"><a href="#2-项目模块化" class="headerlink" title="2.项目模块化"></a>2.项目模块化</h5><h5 id="3-视频直播"><a href="#3-视频直播" class="headerlink" title="3.视频直播"></a>3.视频直播</h5><h2 id="2018年："><a href="#2018年：" class="headerlink" title="2018年："></a>2018年：</h2><h3 id="1-code-review（大工程啊）"><a href="#1-code-review（大工程啊）" class="headerlink" title="1.code review（大工程啊）"></a>1.code review（大工程啊）</h3><p>规范项目代码分支管理<br><br>带着app团队最先开始项目code review，并对其他组员 进行code review 培训</p><h3 id="2-优化项目"><a href="#2-优化项目" class="headerlink" title="2.优化项目"></a>2.优化项目</h3><p>对android 项目 进行了图片加载框架优化</p><p>…</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 时间：2018年6月14日 下班地铁1号线&lt;br&gt;&lt;br&gt; 脑子里面突然闪出一个想法：总结2017年6月-2018年6月&lt;br&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="总结" scheme="http://www.veidy.net/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日语口语BB</title>
+    <link href="http://www.veidy.net/2017/12/09/wx_20171209/"/>
+    <id>http://www.veidy.net/2017/12/09/wx_20171209/</id>
+    <published>2017-12-09T08:25:42.000Z</published>
+    <updated>2017-12-15T01:07:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>日语口语BB是什么？</p><p>日语口语BB是微信小程序，它是学习常用日语口语的小工具~</p><p>里面全是生活常用的口语，比如 雅蠛蝶！？？？what?</p><a id="more"></a><p>go me n na sa i！</p><p><img src="http://ww1.sinaimg.cn/large/509927e5gy1fmam1uz76gj20yi116qc3.jpg" alt=""></p><p>中文+日文+罗马音+日语发音</p><p>还有理由学不会？还学不会抽你的时候可别叫雅蠛蝶哟<del>~</del></p><p>除了分场景，还提供音乐模块和视频板块~</p><p>推荐你好听的日语歌，一样的会有四件套(中文+日文+罗马音+日语发音)</p><p><img src="http://ww1.sinaimg.cn/large/509927e5gy1fmam37jae1j20yi1nedwv.jpg" alt=""></p><p>剪辑精彩的日语视频、咳咳，不要想歪，正儿八经的日语视频，日本的电影还是很精彩的，除了爱情动作片！</p><p><img src="http://ww1.sinaimg.cn/large/509927e5gy1fmam41r9bfj20yi1nfh8k.jpg" alt=""></p><p>什么波多野结衣、苍井空、武藤兰这些我一个都不认识，别说波多野结衣、苍井空、武藤兰这些我不认识，我连小泽圆，松岛枫，小泽玛利亚，饭岛爱，樱树露衣，树麻里子，星野光，白石瞳，忧木瞳，相田桃，浅仓舞，小林瞳，夕树舞子，美穗由纪，小室友里，黑木香，朝冈实岭，美里真里，北原梨奈，秋元友美，川合里美，细川百合子，松阪季实子，川岛和津实，卑弥呼，小泽奈美，丰丸，叶山丽子，金泽文子，凉木桃香，铃木麻奈美，樱井利亚，香山圣，持田薰，上原空，北原多香子，樱木亚美，小泽美，藤崎秋，原纱央莉，星野亚希，雨宫琴音，朝美穗香，森下悠里等等这些我都不认识。我只知道日语口语BB！！！</p><p>还只会“雅蠛蝶”的话你就太落伍喽<del>送你直通车，微信扫一扫下面的小程序码,学习更多常用日语</del></p><p><img src="http://ww1.sinaimg.cn/large/509927e5gy1fmam6an8hvj20by0byq51.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;日语口语BB是什么？&lt;/p&gt;
+&lt;p&gt;日语口语BB是微信小程序，它是学习常用日语口语的小工具~&lt;/p&gt;
+&lt;p&gt;里面全是生活常用的口语，比如 雅蠛蝶！？？？what?&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>本本海报</title>
+    <link href="http://www.veidy.net/2017/12/07/wx-20171207/"/>
+    <id>http://www.veidy.net/2017/12/07/wx-20171207/</id>
+    <published>2017-12-07T08:16:13.000Z</published>
+    <updated>2017-12-09T07:40:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本本海报是什么？</p><p>“本本海报” 是一款提供有趣美图下载的工具，它是一个微信小程序。</p><p>是的，美图，无版权的高清美图，想用就用~基本能够满足日常使用</p><a id="more"></a><p>本本海报有哪些功能？</p><p>找图片！下图片！用图片！</p><p>找图片！下图片！用图片！</p><p>找图片！下图片！用图片！</p><p>重要事情说三遍！</p><p>本本海报的定位和其它海报类型的小程序不一样，咱是图片下载为主！公众号全面开放原创功能，我想会有更多人加入进来，要想写好公众号图是少不了的，尤其是标准的900*500的封面图，所以，本本海报上线了“微封面”功能，所有图片都是标准的封面尺寸，而且，给你VR般的体验，上图：<br><img src="http://ww1.sinaimg.cn/large/509927e5gy1fmajv3j9pvg20a00dc4q2.gif" alt=""></p><p>上面说了这么多(其实也没讲几句)，上菜啦~微信扫一扫下方小程序码，直通车！！！</p><p><img src="http://ww1.sinaimg.cn/large/509927e5gy1fmajxwoshgj20by0by0va.jpg" alt=""></p><p>另外：<br>本本海报曾荣获第九程序 小程序小金奖。详情点击下面：<br><a href="https://www.toutiao.com/i6478886542965211662/">撒狗粮新技能：开发个小程序送女友，甜到不行</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本本海报是什么？&lt;/p&gt;
+&lt;p&gt;“本本海报” 是一款提供有趣美图下载的工具，它是一个微信小程序。&lt;/p&gt;
+&lt;p&gt;是的，美图，无版权的高清美图，想用就用~基本能够满足日常使用&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="小程序" scheme="http://www.veidy.net/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三个三(iOS篇)</title>
+    <link href="http://www.veidy.net/2017/10/30/wx-03/"/>
+    <id>http://www.veidy.net/2017/10/30/wx-03/</id>
+    <published>2017-10-30T09:09:25.000Z</published>
+    <updated>2019-04-28T03:24:29.786Z</updated>
+    
+    <content type="html"><![CDATA[<p>三个社区:</p><p>1.objc中国<br><a href="https://www.objccn.io/">https://www.objccn.io/</a><br>为中国 Apple 开发社区带来最佳实践和先进技术(<a href="https://portal.shadowsocks.ch/aff.php?aff=11381">需科学上网</a>)</p><a id="more"></a><p>2.NSHipster<br><a href="http://nshipster.cn/">http://nshipster.cn/</a><br>关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新(<a href="https://portal.shadowsocks.ch/aff.php?aff=11381">需科学上网</a>)</p><p>3.喵神<br><a href="https://onevcat.com/#blog">https://onevcat.com/#blog</a><br>圈内人称喵神</p><p>三个公众号:<br>1.ios开发精髓<br>频繁更新干货</p><p>2.iOS开发者<br>传播iOS相关优质文章</p><p>3.iOS猿吧<br>专注iOS开发实践技术分享，收录最新iOS技术优质文章</p><p>三个app:<br>1.<a href="https://www.telegram.org/">telegram</a><br>号称不会被查水表的通信APP,开源。(<a href="https://portal.shadowsocks.ch/aff.php?aff=11381">需科学上网</a>)</p><p>2.<a href="https://send-anywhere.com/">SendAnywhere</a><br>跨平台的传输分享工具</p><p>3.<a href="https://github.com/Bilibili/ijkplayer">ijkplayer</a><br>B站开源的视频播放器</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;三个社区:&lt;/p&gt;
+&lt;p&gt;1.objc中国&lt;br&gt;&lt;a href=&quot;https://www.objccn.io/&quot;&gt;https://www.objccn.io/&lt;/a&gt;&lt;br&gt;为中国 Apple 开发社区带来最佳实践和先进技术(&lt;a href=&quot;https://portal.shadowsocks.ch/aff.php?aff=11381&quot;&gt;需科学上网&lt;/a&gt;)&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>三个三(android篇)</title>
+    <link href="http://www.veidy.net/2017/09/26/wx-02/"/>
+    <id>http://www.veidy.net/2017/09/26/wx-02/</id>
+    <published>2017-09-26T03:13:08.000Z</published>
+    <updated>2019-04-28T03:24:36.187Z</updated>
+    
+    <content type="html"><![CDATA[<p>三个社区:<br>1.Android开发技术周报<br><a href="http://www.androidweekly.cn/">http://www.androidweekly.cn/</a><br>每周更新。</p><a id="more"></a><p>2.谷歌开发者中文博客<br><a href="http://developers.googleblog.cn/">http://developers.googleblog.cn/</a><br>如果你是android开发者，有什么理由不逛逛。</p><p>3.干货集中营<br><a href="http://gank.io/#jtss-tsinaf">http://gank.io/#jtss-tsinaf</a><br>每天干货更新也就算了,每天还更新妹子！</p><p>三个公众号:<br>1.stormzhang<br>帅比张没什么可说的了，屌丝逆袭高富帅，关注他，没毛病！    </p><p>2.郭霖<br>《第二行代码》极力推荐给刚入门的android开发童鞋看这本书</p><p>3.HenCoder<br>给高级 Android 工程师的进阶手册</p><p>三个app:<br>1.SQLite Editor<br><a href="http://sj.qq.com/myapp/detail.htm?apkName=com.speedsoftware.sqleditor">http://sj.qq.com/myapp/detail.htm?apkName=com.speedsoftware.sqleditor</a><br>使用sqlite开发时直接可视化操作数据库</p><p>2.ExoPlayer<br><a href="https://github.com/google/ExoPlayer">https://github.com/google/ExoPlayer</a><br>ExoPlayer是Android的应用级媒体播放器</p><p>3.shadowsocks</p><p><a href="https://portal.shadowsocks.ch/aff.php?aff=11381">https://portal.shadowsocks.ch/aff.php?aff=11381</a><br>给你解决android开发最大的痛点！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;三个社区:&lt;br&gt;1.Android开发技术周报&lt;br&gt;&lt;a href=&quot;http://www.androidweekly.cn/&quot;&gt;http://www.androidweekly.cn/&lt;/a&gt;&lt;br&gt;每周更新。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>小程序实现瀑布流</title>
+    <link href="http://www.veidy.net/2017/09/04/weixinxiao-01/"/>
+    <id>http://www.veidy.net/2017/09/04/weixinxiao-01/</id>
+    <published>2017-09-04T02:00:13.000Z</published>
+    <updated>2017-09-04T08:12:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>​最近折腾了一款小程序，之前没有js开发经验，所以小程序的开发也是边看文档边查资料，现学现卖。</p><p>今天分享的内容也是现学现卖，如果对小程序开发感兴趣的童鞋可以先收藏，说不定用得着。先看一下效果:<br><img src="http://ww1.sinaimg.cn/large/509927e5gy1fj7lkoa5gyg20a00dckjl.gif" alt=""></p><p>是的，瀑布流！<br>做为一个app开发的猿，在开发小程序时，想处理列表数据第一个脑子里面反射出来的就是Listview？  Tabview ？瀑布流 用RecyclerView？把小程序api文档查了个遍也没看到这样的组件。但是发现了一个词”列表渲染” </p><a id="more"></a><blockquote><p> wx:for</p></blockquote><p>瀑布流是一个列表数据,既然列表数据解决了那就可以定实现的思路了，我来说一下我的思路：<br>直接两个列表并排不就好了？。。。一个字，干！<br>上wxml代码(视图层布局代码):</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;view class&#x3D;&quot;item-body&quot;&gt; </span><br><span class="line">    &lt;view class&#x3D;&quot;body-left&quot; &gt;</span><br><span class="line">    &lt;image  wx:for&#x3D;&quot;&#123;&#123;left_array&#125;&#125;&quot; wx:key&#x3D;&quot;id&quot;  class&#x3D;&#39;img_item&#39; src&#x3D;&quot; &#123;&#123;item.img_url_thumb&#125;&#125;&quot; mode&#x3D;&#39;widthFix&#39; bindtap&#x3D;&#39;tap_left_img&#39;</span><br><span class="line">    data-poster&#x3D;&quot;&#123;&#123;item&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;view class&#x3D;&quot;body-right&quot;&gt;</span><br><span class="line">    &lt;image  wx:for&#x3D;&quot;&#123;&#123;right_array&#125;&#125;&quot; wx:key&#x3D;&quot;id&quot;  class&#x3D;&#39;img_item&#39; src&#x3D;&quot;&#123;&#123;item.img_url_thumb&#125;&#125;&quot;  mode&#x3D;&#39;widthFix&#39; bindtap&#x3D;&#39;tap_right_img&#39;</span><br><span class="line">    data-poster&#x3D;&quot;&#123;&#123;item&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure><p>小程序里面视图容器是View这个控件，如上代码<br>最外层一个<strong><View/></strong> item-body,里面两个<strong><View/></strong> body-left 和 body-right,然后两个View里面都各有一个显示图片的组件<strong><Image/></strong>img_item。接下来就是写CSS样式啦~</p><p>.wxss文件 里面是配置css样式。</p><p>先看item-body</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.item-body&#123;</span><br><span class="line">width:100%;</span><br><span class="line">height:100vh;</span><br><span class="line"></span><br><span class="line">&#x2F;*弹性布局*&#x2F;</span><br><span class="line">display:flex;</span><br><span class="line">&#x2F;*横向布局*&#x2F;</span><br><span class="line">flex-direction:row;</span><br><span class="line"></span><br><span class="line">margin-top: 10px;</span><br><span class="line">background-color: white;</span><br><span class="line">padding-top: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最重要的就是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*弹性布局*&#x2F;</span><br><span class="line">display:flex;</span><br><span class="line">&#x2F;*横向布局*&#x2F;</span><br><span class="line">flex-direction:row;</span><br></pre></td></tr></table></figure><p>然后再看 body-left 和 body-right</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*单列图片*&#x2F;</span><br><span class="line">.body-left&#123;</span><br><span class="line"></span><br><span class="line">text-align:center;</span><br><span class="line">flex:1;</span><br><span class="line">padding-left: 5px;</span><br><span class="line">&#x2F;* padding-top: 5px; *&#x2F;</span><br><span class="line">padding-bottom: 5px;</span><br><span class="line">&#x2F;* background-color: #000; *&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.body-right&#123;</span><br><span class="line"></span><br><span class="line">text-align:center;</span><br><span class="line">flex:1;</span><br><span class="line">&#x2F;* background-color: #000; *&#x2F;</span><br><span class="line">padding-right: 5px;</span><br><span class="line">&#x2F;* padding-top: 5px; *&#x2F;</span><br><span class="line">padding-bottom: 5px;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最重要的是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex:1;</span><br></pre></td></tr></table></figure><p>css文档上对flex的解释：<br>让所有弹性盒模型对象的子元素都有相同的长度，忽略它们内部的内容<br>是不是可以理解为android里面的权重呢？平均分，暂且就这么理解吧<del>两个子view都设置1就等分了</del></p><p>最后就img_item:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.img_item &#123;</span><br><span class="line">width:95%;</span><br><span class="line">vertical-align: top;</span><br><span class="line">margin-right: 5px;</span><br><span class="line">margin-left: 5px;</span><br><span class="line">margin-top: 5px;</span><br><span class="line">margin-bottom: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最后就轮到JS代码了：<br>js代码直接在data里面定义两个array就好啦<br>left_array:[] ，<br>right_array[]</p><p>最后贴上本本海报的二维码，欢迎体验~<br><img src="http://ww1.sinaimg.cn/large/509927e5gy1fj7l6060ggj209k09kta5.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​最近折腾了一款小程序，之前没有js开发经验，所以小程序的开发也是边看文档边查资料，现学现卖。&lt;/p&gt;
+&lt;p&gt;今天分享的内容也是现学现卖，如果对小程序开发感兴趣的童鞋可以先收藏，说不定用得着。先看一下效果:&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/509927e5gy1fj7lkoa5gyg20a00dckjl.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;是的，瀑布流！&lt;br&gt;做为一个app开发的猿，在开发小程序时，想处理列表数据第一个脑子里面反射出来的就是Listview？  Tabview ？瀑布流 用RecyclerView？把小程序api文档查了个遍也没看到这样的组件。但是发现了一个词”列表渲染” &lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="小程序" scheme="http://www.veidy.net/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android 开发之aar——本地仓库发布和引用</title>
+    <link href="http://www.veidy.net/2017/07/10/aar-02/"/>
+    <id>http://www.veidy.net/2017/07/10/aar-02/</id>
+    <published>2017-07-10T07:01:35.000Z</published>
+    <updated>2017-08-06T09:01:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在gradle 构建的android项目里面，有了一个爽得飞起的功能就是远程依赖。<br>如:我想引入okhttp 这个第三方开源网络请求框架，在eclipse开发时代，我们都是在github上要么把打包好的.jar文件下载下来导入，要么就是直接把源文件下载下来导入，一旦okhttp 在github有版本更新，我们又得进行同样的下载、导入工作。烦！在android studio 这么高大上的IDE出现之后，我们就只需一行代码搞定喽！</p><a id="more"></a><p><img src="https://static.oschina.net/uploads/img/201707/10141917_JM6U.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>如有版本更新，只需要更新版本号然后同步更新即可！简直不能再爽！既然这么好玩，那我们自己动手也玩一玩儿~在本地创建一个仓库,然后依赖导入项目！</p><blockquote><p>第一步:创建一个moudle  “aarlibrary”<br>第二步:maven发布到本地仓库<br>第三步:gradle 引入  </p></blockquote><p>第一步就不讲了，会开发android的都会<br>第二、三步是重点，如何在android studio 里面发布本地仓库？gradle 给我们提供了一个插件 “maven”!呵呵~ 好玩的来了，我们打开 aarlibrary 的build.gradle文件开始撸代码</p><p><img src="https://static.oschina.net/uploads/img/201707/10142039_XVEl.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>如上配置之后，我们会发布右侧的gradle 面板有变化：</p><p><img src="https://static.oschina.net/uploads/img/201707/10142106_1lRF.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>多了一个<strong>upload-uploadArchives</strong>!<br>离发布就只最后一步了：双击“uploadArchives” 直到稍等片刻就发布好啦~<br>注释里面已经定义仓库的地址是”file:///Users/veidy/Desktop/aar_/aar”找到本地文件夹发现有货啦！</p><p><img src="https://static.oschina.net/uploads/img/201707/10142147_HPMo.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>开始在app moudle引用：<br>两步操作：</p><p>第一步：在主项目的build.gradle里面引入仓库地址配置：</p><p><img src="https://static.oschina.net/uploads/img/201707/10142248_1lX2.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>第二步: 和其它包一样远程依赖：</p><p><img src="https://static.oschina.net/uploads/img/201707/10142319_wLOe.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>到这整个本地仓库的发布和引用就结束啦！然后就能愉快的引入aarlibrary里面的所有资源了~<br>记住是所有资源，真的是所有资源！所有资源！所有资源！就算是aarlibrary 里面有远程依赖其它的aar 一样没问题！<br>假如在aarlibrary 里面有 远程依赖  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &#39;com.squareup.okhttp3:okhttp:3.8.1&#39;</span><br></pre></td></tr></table></figure><p>如果像 android 开发之aar——本地文件引用 里面对aarlibrary进行打包然后导入到app moudle是找不到okhttp相关api的！但是如果以上面的形式发布到本地仓库然后依赖是没有问题的！</p><hr><p>如果是从上一篇文章最后抛出的问题来看这篇文章的，到这才算”正文”了!</p><p>先理一下”aarlibrary里面也有依赖另外一个moudle 如:otherLibrary” 这里有三种情况：  </p><h3 id="第一种-otherLibrary打包成一个-aar文件然后直接以文件的形式被导入到了aarlibrary-moudle的libs-文件夹"><a href="#第一种-otherLibrary打包成一个-aar文件然后直接以文件的形式被导入到了aarlibrary-moudle的libs-文件夹" class="headerlink" title="第一种:otherLibrary打包成一个.aar文件然后直接以文件的形式被导入到了aarlibrary moudle的libs 文件夹:"></a>第一种:otherLibrary打包成一个.aar文件然后直接以文件的形式被导入到了aarlibrary moudle的libs 文件夹:</h3><p><img src="https://static.oschina.net/uploads/img/201707/10142612_P92d.png" alt="输入图片说明" title="在这里输入图片标题"></p><h3 id="第二种-otherLibrary以项目moudle的形式被导入到aarlibrary："><a href="#第二种-otherLibrary以项目moudle的形式被导入到aarlibrary：" class="headerlink" title="第二种:otherLibrary以项目moudle的形式被导入到aarlibrary："></a>第二种:otherLibrary以项目moudle的形式被导入到aarlibrary：</h3><p><img src="https://static.oschina.net/uploads/img/201707/10142705_up7V.png" alt="输入图片说明" title="在这里输入图片标题"></p><h3 id="第三种-otherLibrary放在本地仓库或者仓库被导入到aarlibrary"><a href="#第三种-otherLibrary放在本地仓库或者仓库被导入到aarlibrary" class="headerlink" title="第三种:otherLibrary放在本地仓库或者仓库被导入到aarlibrary:"></a>第三种:otherLibrary放在本地仓库或者仓库被导入到aarlibrary:</h3><p><img src="https://static.oschina.net/uploads/img/201707/10142721_g9WN.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>对应第一种的解决办法:(又有三种情况)</p><p>一、如果你的app moudle的 build.gradle里面是以project的形式引用aarlibrary，可以如下解决：<br>先在aarlibrary 的build.gradle里面添加  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">flatDir &#123;</span><br><span class="line">dirs &#39;libs&#39; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>然后在app moudle 的build.gradle 里面  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">flatDir &#123;</span><br><span class="line">dirs &#39;libs&#39;,&#39;..&#x2F;aarlibrary&#x2F;libs&#39; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>二、如果你的app moudle的build.gradle里面想以.aar文件形式引用aarlibrary，那不可能！就回到了NO.1这个问题  </p><p>三、第二种情况不可能，那我们就可以用本文章的核心啊，发布本地仓库再依赖!但是,这里需要注意配置，否则，你会发现在远程依赖时失败~<br>上篇文章已经讲了怎么引用本地.aar文件:<br>先把otherlibrary-debug.aar文件放入aarlibrary的libs文件夹，然后在aarlibrary的build.gradle 的dependencies 里面新增下面配置:<br><img src="https://static.oschina.net/uploads/img/201707/10142937_aGhG.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>在这，如果我们想把aarlibrary发布到本地仓库，并在app moudle里面远程依赖，需要额外添加两个配置：<br><img src="https://static.oschina.net/uploads/img/201707/10142954_0Jp8.png" alt="输入图片说明" title="在这里输入图片标题"><br>定义group和version！</p><p>对应第二种的解决办法:  </p><blockquote><p>那就先把otherLibrary打包成.aar然后再引入到aarlibrary里面，再用上面的解决办法搞定~~哈哈哈</p></blockquote><p>对应第三种的解决办法:  </p><blockquote><p>那就是本篇文章的核心，直接把aarlibrary整个moudle发布到本地仓库!</p></blockquote><hr><h3 id="源码-https-git-oschina-net-veidy-aar-git"><a href="#源码-https-git-oschina-net-veidy-aar-git" class="headerlink" title="源码: https://git.oschina.net/veidy/aar.git"></a>源码: <a href="https://git.oschina.net/veidy/aar.git">https://git.oschina.net/veidy/aar.git</a></h3><blockquote><p>ps:如果照着文章撸的还是要注意一下，如果你的gradle版本太旧可能有些方法找不到，本文是基于gradle3.3版本撸的~</p></blockquote><hr><p>demo始终是demo,真正在项目中使用时会发现更多的问题<br>NO.2:<br>如标题“本地仓库引用”毕竟是本地，如果你们项目团队就你一个人那可以本地，反正是你自己一个人玩，但是如果不只一个人怎么办，难倒也要让别人都在本地创建一个仓库吗<del>显然不是！<br>怎么办？<br>看完下篇文章《android 开发之aar——远程仓库发布和引用》之后咱们再看这个问题</del>  </p><hr><p>最后贴一个二维码！注意不是求打赏的二维码，是本人撸了一个微信公众号！公众号会同步分享在osc上的所有文章！当然应该会有另外有趣的东西，有兴趣的可以扫描关注~</p><p><img src="https://static.oschina.net/uploads/img/201707/10145144_cC40.jpg" alt="输入图片说明" title="在这里输入图片标题"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在gradle 构建的android项目里面，有了一个爽得飞起的功能就是远程依赖。&lt;br&gt;如:我想引入okhttp 这个第三方开源网络请求框架，在eclipse开发时代，我们都是在github上要么把打包好的.jar文件下载下来导入，要么就是直接把源文件下载下来导入，一旦okhttp 在github有版本更新，我们又得进行同样的下载、导入工作。烦！在android studio 这么高大上的IDE出现之后，我们就只需一行代码搞定喽！&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="aar" scheme="http://www.veidy.net/tags/aar/"/>
+    
+      <category term="android studio" scheme="http://www.veidy.net/tags/android-studio/"/>
+    
+      <category term="maven" scheme="http://www.veidy.net/tags/maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android 开发之aar——本地文件引用</title>
+    <link href="http://www.veidy.net/2017/07/05/aar-01/"/>
+    <id>http://www.veidy.net/2017/07/05/aar-01/</id>
+    <published>2017-07-05T07:05:12.000Z</published>
+    <updated>2017-07-05T07:49:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果你知道aar文件是个什么东西，直接切到“如何引用”吧</p><a id="more"></a><h3 id="什么是aar文件："><a href="#什么是aar文件：" class="headerlink" title="什么是aar文件："></a>什么是aar文件：</h3><p><strong>官方</strong>解释:  </p><p><img src="https://static.oschina.net/uploads/img/201707/05105120_2fYT.png" alt="输入图片说明" title="在这里输入图片标题"></p><p><img src="https://static.oschina.net/uploads/img/201707/05104445_TSH1.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>我来总结一下:<br>aar首先它是一个后缀为.aar的文件，然后这个文件是在android项目里面使用的，它是一个android库文件，然后它比我们之前使用的.jar文件更强大！！！over~</p><p>###如何生成：<br>首先得创建一个库，继续官方文档走起：<br><img src="https://static.oschina.net/uploads/img/201707/05110503_9XmH.png" alt="输入图片说明" title="在这里输入图片标题"><br>example:<br><img src="https://static.oschina.net/uploads/img/201707/05111002_PZjX.png" alt="输入图片说明" title="在这里输入图片标题">  </p><p><img src="https://static.oschina.net/uploads/img/201707/05111033_Kx6r.png" alt="选择&quot;Android Library&quot;" title="Android Library">  </p><p><strong>Next</strong>一直到<strong>finish</strong>一个module就创建好了~  </p><p><img src="https://static.oschina.net/uploads/img/201707/05111241_6Fnd.png" alt="输入图片说明" title="在这里输入图片标题"></p><blockquote><p>接下来我在新建的aarlibrary 这个module里面写一个静态方法，然后在app module里面调用</p></blockquote><p>aarlibrary 的module:  </p><p><img src="https://static.oschina.net/uploads/img/201707/05111943_Ddv3.png" alt="输入图片说明" title="在这里输入图片标题">  </p><p>app的module:  </p><p><img src="https://static.oschina.net/uploads/img/201707/05112305_GnLH.png" alt="输入图片说明" title="在这里输入图片标题">   </p><p>压根找不到这个类，更别提方法了! 因为目前app没有对新建的 aarlibrary 进行<strong>依赖</strong>！  </p><p><strong>官方</strong>文档继续走起！<br><img src="https://static.oschina.net/uploads/img/201707/05112603_wVfa.png" alt="输入图片说明" title="在这里输入图片标题"><br>但是这都不是这篇文章的重点，这篇文章主要是想分享如何单独引用.aar文件，oh,忘记了我们还没看到.aar文件在哪，说好的<strong>如何生成</strong>呢！！！不急，先看官网怎么说：</p><blockquote><p>如果希望单独共享 AAR 文件，则可以在 项目名称/模块名称/build/outputs/aar/ 中找到它，也可以通过点击 Build &gt; Make Project 的方式重新生成此文件。  </p></blockquote><p><img src="https://static.oschina.net/uploads/img/201707/05113230_nnPl.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>尼玛，*<em>如何生成 *</em>这么简单 上面绕了一大堆废话!</p><p>###如何引用：</p><p>第一步:<br>之前怎么导入的.jar文件，现在就怎么导入.aar文件喽!<br><img src="https://static.oschina.net/uploads/img/201707/05115221_C0Qi.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>第二步:在app的build.gradle里面加入下面配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">flatDir &#123;</span><br><span class="line">dirs &#39;libs&#39; &#x2F;&#x2F;this way we can find the .aar file in libs folder</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://static.oschina.net/uploads/img/201707/05115901_hTR1.png" alt="输入图片说明" title="在这里输入图片标题">  </p><p>第三步:在app的build.gradle的dependencies里面加下面配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile(name: &#39;aarlibrary-debug&#39;, ext: &#39;aar&#39;)</span><br></pre></td></tr></table></figure><p><img src="https://static.oschina.net/uploads/img/201707/05120221_giw7.png" alt="输入图片说明" title="在这里输入图片标题"></p><p>三步完成！接下来在app项目里面就可以正常使用aarlibrary里面的资源喽<del>~</del><br><img src="https://static.oschina.net/uploads/img/201707/05133838_d10C.png" alt="正常调用AarUtils类的方法" title="在这里输入图片标题"></p><p>demo始终是demo,真正在项目中使用时会发现更多的问题<br>NO.1:<br>目前aarlibrary 里面可以写任意代码也可以引用任意资源文件  </p><p>但是！<br>但是！<br>但是！<br>如果我们的aarlibrary 里面也有依赖另外一个module 如：otherLibrary，在app项目里面却无法调用otherLibrary 里面的内容!!!    </p><p>怎么办？<br>看完下篇文章《android 开发之aar——本地仓库引用》之后咱们再看这个问题~</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果你知道aar文件是个什么东西，直接切到“如何引用”吧&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="aar" scheme="http://www.veidy.net/tags/aar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>App开启深度链接</title>
+    <link href="http://www.veidy.net/2017/06/12/deepLinks/"/>
+    <id>http://www.veidy.net/2017/06/12/deepLinks/</id>
+    <published>2017-06-12T06:58:19.000Z</published>
+    <updated>2018-03-16T08:17:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<!--<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>--><h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3><blockquote><p>深度链接其实就是一个可以直接打开app或者进入到app某一个落地页的url，直接在浏览器里面打开app</p></blockquote><p>oh!不就是之前百度关键词”android 浏览器启动app”吗！！！</p><a id="more"></a><h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>废话不多说直接上代码！！！<br><br>android端主要是在Manifest.xml里面配置：</p><pre><code>&lt;activity android:name=&quot;.BrowserLunchActivity&quot;&gt;        &lt;intent-filter&gt;            &lt;action android:name=&quot;android.intent.action.VIEW&quot;/&gt;            &lt;category android:name=&quot;android.intent.category.DEFAULT&quot;/&gt;            &lt;category android:name=&quot;android.intent.category.BROWSABLE&quot;/&gt;            &lt;data                android:host=&quot;blog&quot;                android:scheme=&quot;veidy&quot;&gt;            &lt;/data&gt;        &lt;/intent-filter&gt; &lt;/activity&gt;</code></pre><p> 在项目里面新建一个BrowserLunchActivity，并在注册的时候配置如上属性。</p><p> web端的url就可以直接这样写啦:</p><pre><code>&lt;a href=&quot;veidy://blog&quot;&gt;点击打开app&lt;/a&gt;</code></pre><p>OK！深度链接定制成功。<br>实现是ok了，为什么是这么配置呐？<br>首先看看 <br></p><pre><code>&lt;action android:name=&quot;android.intent.action.VIEW&quot;/&gt;&lt;category android:name=&quot;android.intent.category.DEFAULT&quot;/&gt;&lt;category android:name=&quot;android.intent.category.BROWSABLE&quot;/&gt;</code></pre><p>直接看看官网的解释:<br><img src="http://ww1.sinaimg.cn/mw690/509927e5gy1fgik4zlov8j21kg0uijyk.jpg" alt=""><br>照着撸吧~<br>然后最重要的是下面data的定义：</p><pre><code> &lt;data  android:host=&quot;blog&quot;  android:scheme=&quot;veidy&quot;&gt;&lt;/data&gt;</code></pre><h3 id="scheme"><a href="#scheme" class="headerlink" title="scheme"></a>scheme</h3><p>url之所以能定位到我们的app就是在data里面设置的scheme <br><br>如果只设置scheme=”veidy”,在url的href里面写成href=”veidy://“ 一样可能打开我们app <br></p><h3 id="host"><a href="#host" class="headerlink" title="host"></a>host</h3><p>是域名，其实就是一个适当的描述,我们可以自定义,如上我定义一个字符串”blog”,这时在url的href里面写成href=”veidy://blog”,也可以用包名定义如”com.veidy.blog.deeplinks”，那在url的href里面写成href=”veidy://com.veidy.blog.deeplinks” <br></p><h4 id="指定到单独的落地页"><a href="#指定到单独的落地页" class="headerlink" title="指定到单独的落地页"></a>指定到单独的落地页</h4><p>上面已经实现的深度链接的功能，在url里面打开我们的app，接下来需求实现的是不同的url，跳转到app不通的页面(Activity)<br><br>如果我要到SecondActivity，就如下配置:</p><pre><code>&lt;dataandroid:host=&quot;test&quot;android:path=&quot;/appsecond&quot;android:scheme=&quot;veidy&quot;&gt;&lt;/data&gt;</code></pre> <br> 如果我要到ThirdActivity,就如下配置:  <br><pre><code>&lt;dataandroid:host=&quot;test&quot;android:path=&quot;/appthird&quot;android:scheme=&quot;veidy&quot;&gt;&lt;/data&gt;                  </code></pre><br>发现我们用来区分的就是通过path！！！！ps: pathPrefix、pathPattern 一样能实现<h4 id="传值"><a href="#传值" class="headerlink" title="传值"></a>传值</h4><p>如果我在跳转到app某个落地页的时候还需要传值呢？很简单了，直接拼在url后面喽。。。<br><br><code>&lt;a href=&quot;veidy://test/appthird?key=1&amp;name=veidy&amp;sex=男&quot;&gt;进入到app指定页面ThirdActivity并传递数据 veidy://test/appthird&lt;/a&gt;</code><br> <br> <br><br> 然后我们在指定的落地页取值就好啦<del>~</del>直拉上debug时的一个图，很清楚<br><br><img src="http://ww1.sinaimg.cn/mw690/509927e5gy1fgjpue1a2yj21hm0piteu.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;!--&lt;script src=&quot;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;amp;skin=desert&quot;&gt;&lt;/script&gt;--&gt;
+&lt;h3 id=&quot;理解&quot;&gt;&lt;a href=&quot;#理解&quot; class=&quot;headerlink&quot; title=&quot;理解&quot;&gt;&lt;/a&gt;理解&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;深度链接其实就是一个可以直接打开app或者进入到app某一个落地页的url，直接在浏览器里面打开app&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;oh!不就是之前百度关键词”android 浏览器启动app”吗！！！&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="deep-links" scheme="http://www.veidy.net/tags/deep-links/"/>
+    
+      <category term="web" scheme="http://www.veidy.net/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>混淆代码恢复</title>
+    <link href="http://www.veidy.net/2017/03/09/retrace/"/>
+    <id>http://www.veidy.net/2017/03/09/retrace/</id>
+    <published>2017-03-09T03:36:02.000Z</published>
+    <updated>2018-05-21T02:46:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>  proguard 相信已经不再陌生，但是混淆代码恢复估计玩得少。</p><p>  <img src="http://p1.bpimg.com/567571/e89b9d20fdb1b3b9.png" alt=""><br>  <a id="more"></a><br>   混淆配置的时候会有这么一段，重要的文件就是 mapping.txt。注释写得很清楚，代码混淆前后的映射。<br>   可能大家都有用过友盟sdk,里面有一个功能就是分析错误，针对每一个版本都会让我们上传一个mapping.txt文件，这样<br>   收集到的错误就不会是混淆之后的代码a.b.c，而是我们真正的包名了~ </p><p>   怎么做到的呢？一顿资料查找， ReTrace!在我们SDK目录里面就有这个工具。<br>   路径: sdk/tools/proguard/bin/proguardgui.sh<br>   运行后就会打开GUI工具了。<br>   选择左边最下面的ReTrace-&gt;选择apk混淆时生成的mapping.txt文件-&gt;在”Obfuscated stack trace” 里面贴出报错的代码-&gt;点击右下角的ReTrace!<br>    <img src="http://p1.bqimg.com/567571/963ab216d6e5e23e.png" alt=""></p><pre><code>在&quot;De-obfuscated stack trace&quot; 里面就会恢复出真正的源码</code></pre><p>   代码混淆还不熟悉的童鞋可以阅读下这篇文章<a href="https://my.oschina.net/aibenben/blog/371889">Android studio 使用心得(五)—代码混淆和破解apk</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  proguard 相信已经不再陌生，但是混淆代码恢复估计玩得少。&lt;/p&gt;
+&lt;p&gt;  &lt;img src=&quot;http://p1.bpimg.com/567571/e89b9d20fdb1b3b9.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React Native</title>
+    <link href="http://www.veidy.net/2016/04/15/rn-001/"/>
+    <id>http://www.veidy.net/2016/04/15/rn-001/</id>
+    <published>2016-04-15T10:04:24.000Z</published>
+    <updated>2016-04-15T10:07:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ww3.sinaimg.cn/large/509927e5gw1f2xjowkjqij20sy1co41j.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/509927e5gw1f2xjowkjqij20sy1co41j.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="React Native" scheme="http://www.veidy.net/tags/React-Native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之网络请求NSURLSession</title>
+    <link href="http://www.veidy.net/2016/04/12/swift-009/"/>
+    <id>http://www.veidy.net/2016/04/12/swift-009/</id>
+    <published>2016-04-12T07:01:21.000Z</published>
+    <updated>2018-05-21T02:42:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h3><h4 id="1-UILabel多行显示"><a href="#1-UILabel多行显示" class="headerlink" title="1.UILabel多行显示"></a>1.UILabel多行显示</h4><h4 id="2-NSURLSession-get-post请求"><a href="#2-NSURLSession-get-post请求" class="headerlink" title="2.NSURLSession get post请求"></a>2.NSURLSession get post请求</h4><h4 id="3-异步线程与主线程的切换"><a href="#3-异步线程与主线程的切换" class="headerlink" title="3.异步线程与主线程的切换"></a>3.异步线程与主线程的切换</h4><a id="more"></a><h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h3><p><img src="http://ww1.sinaimg.cn/large/509927e5gw1f2tzk41b46j20hs0ws410.jpg" alt=""></p><h3 id="理解："><a href="#理解：" class="headerlink" title="理解："></a>理解：</h3><p>先说说NSURLSession</p><blockquote><p>NSURLSession是iOS7中新的网络接口</p></blockquote><p>没什么可说的了。。。</p><p>再提提UILabel的多行显示，UILabel默认只显示两行，所以要想多行显示需要设置<br>   <pre class="prettyprint"><br>    //设置无限换行<br>    mLabelGet?.numberOfLines=0<br>    </pre></p><p> 光设置这个还不够，还需要动态计算Label的高度<br> <pre class="prettyprint"><br>        mLabelGet?.text=strContent;<br>        //根据Label上的内容计算size<br>        let newSize:CGSize=(mLabelGet?.sizeThatFits((mLabelGet?.frame.size)!))!<br>        //重新设置Label的frame<br>        mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)<br> </pre></p><p> 最后说说子线程通知UI线程<br> android里面子线程不能直接操作UI线程的东西，ios一样，android里面子线程通知主线程是通过handler来完成的，在ios里面，也是有api能做的<br>  <pre class="prettyprint"><br> public func dispatch_async(queue: dispatch_queue_t, _ block: dispatch_block_t)<br>  </pre></p><p>  直接看代码吧。。。代码里面是通过URLSession 进行get,post请求</p><h3 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h3> <pre class="prettyprint"> ////  NSURLSessionController.swift//  VeidySwiftDemo////  Created by veidy on 16/3/31.//  Copyright © 2016年 veidy. All rights reserved.//import Foundationimport UIKitimport Alamofireclass NSURLSessionController: UIViewController {    var mLabelGet:UILabel?    var mButtonGet:UIButton?    var mButtonPost:UIButton?    var strContent:String?    var mLabelWidth:CGFloat?    var mButton_Y:CGFloat=170    override func viewDidLoad() {        super.viewDidLoad()        self.view.backgroundColor=UIColor.whiteColor()        mLabelWidth=CGFloat(self.view.frame.size.width-20)        mLabelGet=UILabel(frame:CGRect(x: 10, y: 10, width: mLabelWidth!, height: 100))        mLabelGet?.textColor=UIColor.redColor()        mLabelGet?.backgroundColor=UIColor.blueColor()        mLabelGet?.font=UIFont.systemFontOfSize(14)        //设置无限换行        mLabelGet?.numberOfLines=0        strContent="开始xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs挑选换行xxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgsxxxggxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsxxxggdgdsgdsgsdgdsgdsgs结束"        mLabelGet?.text=strContent;        //根据Label上的内容计算size        let newSize:CGSize=(mLabelGet?.sizeThatFits((mLabelGet?.frame.size)!))!        //重新设置Label的frame        mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)        mButton_Y=25+(mLabelGet?.frame.height)!+10        mButtonGet=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y, width: 100, height: 30))        mButtonGet?.setTitle("get请求", forState: UIControlState.Normal)        mButtonGet?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)        mButtonGet?.layer.cornerRadius=6;        mButtonGet?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)        mButtonPost=UIButton(frame: CGRect(x:self.view.frame.width/2-50, y: mButton_Y+40, width: 100, height: 30))        mButtonPost?.setTitle("post请求", forState: UIControlState.Normal)        mButtonPost?.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)        mButtonPost?.layer.cornerRadius=6;        mButtonPost?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)        self.view.addSubview(mLabelGet!)        self.view.addSubview(mButtonGet!)        self.view.addSubview(mButtonPost!)        mButtonGet?.addTarget(self, action: #selector(NSURLSessionController.sessionGet), forControlEvents: UIControlEvents.TouchUpInside)        mButtonPost?.addTarget(self, action: #selector(NSURLSessionController.sessionPOST), forControlEvents: UIControlEvents.TouchUpInside)     }    //get请求    func sessionGet() {        let urlString:String = "http://www.weather.com.cn/data/sk/101010100.html"        let url:NSURL=NSURL(string: urlString)!        //创建请求        let request:NSURLRequest=NSURLRequest(URL: url)       //获取SESSION        let session=NSURLSession.sharedSession()         //异步任务        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in            if error != nil{                print(error?.code)              print(error?.description)            }else{              let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String               print("服务器返回数据:"+str)                print(NSThread.currentThread())                //异步切到主线程                dispatch_async(dispatch_get_main_queue(), {                    print(NSThread.currentThread())                    self.mLabelGet?.text=str                    //重新计算label高度                    let newSize:CGSize=(self.mLabelGet?.sizeThatFits((self.mLabelGet?.frame.size)!))!                    self.mLabelGet?.frame=CGRect(x: 10, y: 25,width: newSize.width,height: newSize.height)                    self.mButton_Y=25+(self.mLabelGet?.frame.height)!+10                    self.mButtonGet?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y, width: 100, height: 30)                    self.mButtonPost?.frame=CGRect(x:self.view.frame.width/2-50, y: self.mButton_Y+40, width: 100, height: 30)                })//                print(NSThread.currentThread())            }        }        dataTask.resume()    }    //post请求    func sessionPOST() {        let urlString:String = "http://v.juhe.cn/weixin/query"        let url:NSURL=NSURL(string: urlString)!        //创建请求        let request:NSMutableURLRequest=NSMutableURLRequest(URL: url)        //设置请求方式        request.HTTPMethod="POST"        //设置请求参数        let body="pno=1&ps=15&key=760a19928b2dad2e80083c19d289a566"        //编码post数据        let postdata=body.dataUsingEncoding(NSASCIIStringEncoding)        //HTTPBody        request.HTTPBody=postdata        print("请求url"+(request.URL?.absoluteString)!)        //获取SESSION        let session=NSURLSession.sharedSession()        //异步任务        let dataTask=session.dataTaskWithRequest(request) { (data, response, error) in            if error != nil{                print(error?.code)                print(error?.description)             }else{                let str=NSString(data: data!, encoding: NSUTF8StringEncoding) as! String                print("服务器返回数据:"+str)            }        }        dataTask.resume()    }}  </pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;知识点：&quot;&gt;&lt;a href=&quot;#知识点：&quot; class=&quot;headerlink&quot; title=&quot;知识点：&quot;&gt;&lt;/a&gt;知识点：&lt;/h3&gt;&lt;h4 id=&quot;1-UILabel多行显示&quot;&gt;&lt;a href=&quot;#1-UILabel多行显示&quot; class=&quot;headerlink&quot; title=&quot;1.UILabel多行显示&quot;&gt;&lt;/a&gt;1.UILabel多行显示&lt;/h4&gt;&lt;h4 id=&quot;2-NSURLSession-get-post请求&quot;&gt;&lt;a href=&quot;#2-NSURLSession-get-post请求&quot; class=&quot;headerlink&quot; title=&quot;2.NSURLSession get post请求&quot;&gt;&lt;/a&gt;2.NSURLSession get post请求&lt;/h4&gt;&lt;h4 id=&quot;3-异步线程与主线程的切换&quot;&gt;&lt;a href=&quot;#3-异步线程与主线程的切换&quot; class=&quot;headerlink&quot; title=&quot;3.异步线程与主线程的切换&quot;&gt;&lt;/a&gt;3.异步线程与主线程的切换&lt;/h4&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="NSURLSession" scheme="http://www.veidy.net/tags/NSURLSession/"/>
+    
+      <category term="UILabel" scheme="http://www.veidy.net/tags/UILabel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我不是程序猿-《小幸运》</title>
+    <link href="http://www.veidy.net/2016/04/02/video_001/"/>
+    <id>http://www.veidy.net/2016/04/02/video_001/</id>
+    <published>2016-04-02T06:12:31.000Z</published>
+    <updated>2018-06-15T03:08:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>敲代码改BUG,加班单身狗，背程序猿要背的包包，看程序猿应该看的电影，听程序猿适合听的歌，总之做程序猿该做的事，你才能说自己是程序猿</p></blockquote><p>我不是程序猿</p><a id="more"></a><p><embed src="http://player.yinyuetai.com/video/player/2333708/v_3207182.swf" quality="high" width="800" height="480" align="middle"  allowScriptAccess="sameDomain" allowfullscreen="true" type="application/x-shockwave-flash"></embed></p><hr><p>猿在这</p><p><embed src="http://player.yinyuetai.com/playlist/player/4046363/v_3207182.swf" quality="high" width="800" height="480" align="middle"  allowScriptAccess="sameDomain" allowfullscreen="true" type="application/x-shockwave-flash"></embed></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;敲代码改BUG,加班单身狗，背程序猿要背的包包，看程序猿应该看的电影，听程序猿适合听的歌，总之做程序猿该做的事，你才能说自己是程序猿&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我不是程序猿&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="视频" scheme="http://www.veidy.net/tags/%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之UIImageView</title>
+    <link href="http://www.veidy.net/2016/03/31/swift-008/"/>
+    <id>http://www.veidy.net/2016/03/31/swift-008/</id>
+    <published>2016-03-31T06:52:29.000Z</published>
+    <updated>2018-05-21T02:42:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="1-UIImage"><a href="#1-UIImage" class="headerlink" title="1.UIImage"></a>1.UIImage</h4><h4 id="2-NSURLSession"><a href="#2-NSURLSession" class="headerlink" title="2.NSURLSession"></a>2.NSURLSession</h4><h4 id="3-UIImageView添加点击事件"><a href="#3-UIImageView添加点击事件" class="headerlink" title="3.UIImageView添加点击事件"></a>3.UIImageView添加点击事件</h4><a id="more"></a><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://ww1.sinaimg.cn/large/509927e5gw1f2g3vbonoqj20hs0wsadb.jpg" alt=""></p><h3 id="唠叨"><a href="#唠叨" class="headerlink" title="唠叨"></a>唠叨</h3><p>UIImageView 要显示图片就必须得用到UIImage，和android里面的ImageView 和Bitmap类似</p><pre class="prettyprint"> //加载本地资源图片  mImageView.image = UIImage.init(named: "icon")</pre><p>会不会太简单，“icon”就是图片的名字，但是它放在哪里呢</p><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f2g3d3gi39j21kw0ol78x.jpg" alt=""></p><blockquote><p>添加图片到资源文件： 点击Assets.xcassets,然后把要放入的图片直接往右边拖进去就好了</p></blockquote><p>加载本地图片太简单，再尝试下加载网络，用到系统API-&gt;  NSURLSession</p><blockquote><p>NSURLSession是iOS7中新的网络接口</p></blockquote><p>就是封装的一套网络请求，可以请求基本的接口返回数据，也可以下载文件，也可以上传文件，同步，异步皆可。。。完美，比安卓的api要不要好太多</p><p>这里先看一下怎么用这个加载图片，后面再详细了解NSURLSession吧</p><pre class="prettyprint">        //创建NSURL对象        let myimgUrl=NSURL(string: "http://f.hiphotos.baidu.com/image/pic/item/b17eca8065380cd70c5150cba444ad345982814d.jpg")        //创建请求对象        let request:NSURLRequest=NSURLRequest(URL: myimgUrl!)        //获取NSURLSession        let mySession=NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())        //进行一个异步任务        let dataTask=mySession.dataTaskWithRequest(request) { (imagedata, response, error) -> Void in            //UIImageView展示            mImage.image=UIImage(data: imagedata!)        }        //启动任务        dataTask.resume()</pre><blockquote><p>上面的代码有一个bug,如果使用上面的代码去加载网络图片，会发现图片要加载很久才显示，为什么呢，线程阻塞！</p></blockquote><pre class="prettyprint">    //进行一个异步任务   let dataTask=mySession.dataTaskWithRequest(request) { (imagedata, response, error) -> Void in            //UIImageView展示            mImage.image=UIImage(data: imagedata!)          }</pre><p>这个方法其实是处于子线程了，和android一线，子线程不能更新UI线程的东西。。。向我们IOS开发大神求救得到一种方法，比我们android的handler不要好太多….</p><pre class="prettyprint">   //当前处于子线程，需要回到主线程才能更新UI            dispatch_async(dispatch_get_main_queue(), {                 mImage.image=UIImage(data: imagedata!)            })</pre><blockquote><p>如何判断当前处于子线程还是主线程：<br> <pre class="prettyprint"><br>    print(NSThread.currentThread())<br> </pre><br>打印出的name为main就是主线程！</p></blockquote><h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><pre class="prettyprint">import Foundationimport UIKitclass ImageSwift: UIViewController {    override func viewDidLoad() {        super.viewDidLoad()        self.view.backgroundColor = UIColor.whiteColor()        let mImageView=UIImageView()         mImageView.frame=CGRectMake(0, 25, 300, 450)        //加载本地资源图片        mImageView.image = UIImage.init(named: "icon")        self.view.addSubview(mImageView)        //添加交互        mImageView.userInteractionEnabled=true;        let tap=UITapGestureRecognizer.init(target: self, action: #selector(ImageSwift.imgtap))        mImageView.addGestureRecognizer(tap)        //加载网络图片        showNetImg(mImageView)    }    func imgtap(){        let mVC=UITableViewSwift()        self.presentViewController(mVC, animated: false, completion: nil)    }  //异步加载网络图片    func showNetImg(mImage:UIImageView){        //创建NSURL对象        let myimgUrl=NSURL(string: "http://f.hiphotos.baidu.com/image/pic/item/b17eca8065380cd70c5150cba444ad345982814d.jpg")        //创建请求对象        let request:NSURLRequest=NSURLRequest(URL: myimgUrl!)        //获取NSURLSession        let mySession=NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())        //进行一个异步任务        let dataTask=mySession.dataTaskWithRequest(request) { (imagedata, response, error) -> Void in          //当前处于子线程，需要回到主线程才能更新UI            dispatch_async(dispatch_get_main_queue(), {                 mImage.image=UIImage(data: imagedata!)            })        }        //启动任务        dataTask.resume()    }}</pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h3&gt;&lt;h4 id=&quot;1-UIImage&quot;&gt;&lt;a href=&quot;#1-UIImage&quot; class=&quot;headerlink&quot; title=&quot;1.UIImage&quot;&gt;&lt;/a&gt;1.UIImage&lt;/h4&gt;&lt;h4 id=&quot;2-NSURLSession&quot;&gt;&lt;a href=&quot;#2-NSURLSession&quot; class=&quot;headerlink&quot; title=&quot;2.NSURLSession&quot;&gt;&lt;/a&gt;2.NSURLSession&lt;/h4&gt;&lt;h4 id=&quot;3-UIImageView添加点击事件&quot;&gt;&lt;a href=&quot;#3-UIImageView添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;3.UIImageView添加点击事件&quot;&gt;&lt;/a&gt;3.UIImageView添加点击事件&lt;/h4&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="NSURLSession" scheme="http://www.veidy.net/tags/NSURLSession/"/>
+    
+      <category term="UIImageView" scheme="http://www.veidy.net/tags/UIImageView/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之数据持久化(属性列表)</title>
+    <link href="http://www.veidy.net/2016/03/30/swift-007/"/>
+    <id>http://www.veidy.net/2016/03/30/swift-007/</id>
+    <published>2016-03-30T08:48:20.000Z</published>
+    <updated>2018-05-21T02:42:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="沙箱"><a href="#沙箱" class="headerlink" title="沙箱"></a>沙箱</h4><h4 id="NSUserDefaults"><a href="#NSUserDefaults" class="headerlink" title="NSUserDefaults"></a>NSUserDefaults</h4><h4 id="UITextField基本使用"><a href="#UITextField基本使用" class="headerlink" title="UITextField基本使用"></a>UITextField基本使用</h4><h4 id="软键盘的关闭"><a href="#软键盘的关闭" class="headerlink" title="软键盘的关闭"></a>软键盘的关闭</h4><h4 id="静态类"><a href="#静态类" class="headerlink" title="静态类"></a>静态类</h4><a id="more"></a><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f2f1dx8ec8j20hs0wsq3q.jpg" alt=""></p><h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3><p>这里只写写有关存储的属性列表，关于UITextField的看代码的注释吧</p><blockquote><p>ios数据持久化方式有: 属性列表，对象归档，SQLite,Core Data</p></blockquote><h5 id="沙箱-1"><a href="#沙箱-1" class="headerlink" title="沙箱"></a>沙箱</h5><blockquote><p>沙箱目录是一种数据安全策略，ios有一套完整的数据安全体系，ios应用程序只能访问自己的目录，这个目录称为沙箱目录。</p></blockquote><p>沙箱目录里面有几个特定的文件夹</p><pre class="prettyprint">|---Documents||---Library|     ---Caches|     ---Preferences|---tmp</pre><p>这几个文件夹需要注意的是tmp文件夹，其它文件夹里面的数据都不会自己清空，除非程序卸载掉，但是tmp文件夹里面的内容是程序每次重启都会清空的</p><pre class="prettyprint">    //获取Document目录    let documentsDirectory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,NSSearchPathDomainMask.UserDomainMask, true)    let paths = documentsDirectory[0] as String        </pre>   <pre class="prettyprint">  //获取Library目录 let paths = NSSearchPathForDirectoriesInDomains( NSSearchPathDirectory.LibraryDirectory,NSSearchPathDomainMask.UserDomainMask, true)[0] as String   </pre> <pre class="prettyprint"> //获取Cache目录 程序退出不会清空 let paths=NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String </pre> <pre class="prettyprint"> //获取tmp文件夹路径 let paths=NSTemporaryDirectory()</pre><h5 id="plist文件"><a href="#plist文件" class="headerlink" title=".plist文件"></a>.plist文件</h5><p>理解为就是一个xml文件，键值对的形式存储数据，但是对数据类型有限制了，只能是以下数据类型<br> <pre class="prettyprint"><br>NSArray;<br>NSMutableArray;<br>NSDictionary;<br>NSMutableDictionary;<br>NSData;<br>NSMutableData;<br>NSString;<br>NSMutableString;<br>NSNumber;<br>NSDate;<br></pre> </p><p>创建一个plist文件，存放 NSDictionary，调用writeToFile(path, atomically: true)</p> <pre class="prettyprint">  //新建一个plist文件  Helper.createPlistFile("veidyplist")  //创建一个plist文件    static func createPlistFile(name:String){        let dict = NSDictionary.init(object: "plist", forKey: "name")        let path=DocumentsPath()+"/"+name+".plist"        dict.writeToFile(path, atomically: true)    }  </pre><p> 打印出路径，前往文件夹就能找到这个plist文件</p><p> 读取plist<br> <pre class="prettyprint"><br>    let dic:NSDictionary = NSDictionary.init(contentsOfFile: Helper.DocumentsPath()+"/veidyplist.plist")!<br>        let value = dic.valueForKey("name")<br>        if (value != nil) {<br>            print("VALUE="+(value as! String))<br>        }<br>   </pre> </p><h4 id="NSUserDefaults-1"><a href="#NSUserDefaults-1" class="headerlink" title="NSUserDefaults"></a>NSUserDefaults</h4><p>NSUserDefaults也是一个plist文件,它在Library/Preferenes 下面<br>其实我们一般使用这个来存储一些配置信息就够用了，不需要自己再创建一个plist文件</p><p>存储使用：<br> <pre class="prettyprint"><br>   let userDefault=NSUserDefaults.standardUserDefaults()<br>    userDefault.setObject("uservalue", forKey: "key")<br>    //同步<br>    userDefault.synchronize()<br>   </pre> </p><p> 获取存储数据：<br> <pre class="prettyprint"><br>   let userDefault=NSUserDefaults.standardUserDefaults()<br>   let value = username?.objectForKey("key") as! String<br></pre>  </p><p>全文下来还没提到 属性列表 这四个字。。。其实就是指的plist文件了</p><h4 id="静态类-1"><a href="#静态类-1" class="headerlink" title="静态类"></a>静态类</h4><p>和java 没什么区别， static func name()，然后直接用类名调方法</p><h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>这里是以一个登录界面做为例子。用户进入登录界面，先帮用户查询是否有过登录记录，有则直接加载显示，没有则在用户点击登录的时候保存以便下次可以读取</p><p>先贴出一个静态帮助类Helper.swift</p><pre class="prettyprint">////  Helper.swift//  VeidySwiftDemo////  Created by veidy on 16/3/29.//  Copyright © 2016年 veidy. All rights reserved.//import Foundationclass Helper: NSObject {    static func getHomePath()->String{           let homepath=NSHomeDirectory()         return homepath    }    //Documents目录 苹果建议将程序中建立的或在程序中浏览到的文件数据保存在该目录下，iTunes备份和恢复的时候会包含此目录    static func DocumentsPath()->String{ let documentsDirectory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,NSSearchPathDomainMask.UserDomainMask, true)        let paths = documentsDirectory[0] as String        print("paths="+paths)        return paths    }    //Library目录 这个目录下有2个子目录：Caches缓存 , Preferences偏好设置,不应该直接创建偏好设置文件而使用NSUserDefaults类    static func LibraryPath()->String{         let paths = NSSearchPathForDirectoriesInDomains( NSSearchPathDirectory.LibraryDirectory,NSSearchPathDomainMask.UserDomainMask, true)[0] as String        return paths    }    //Cache目录 程序退出不会清空    static func cachePath()->String{        let paths=NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String        return paths     }    //tmp目录 存放临时文件，程序再次启动会清空    static func tmpPath()->String{    let paths=NSTemporaryDirectory()    return paths  }    //创建一个文件夹    static func createFileDirectory(path:String){        let fileManager=NSFileManager.defaultManager()        if !fileManager.fileExistsAtPath(path){             print("创建文件夹")       try! fileManager.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)        }else{          print("文件夹已经存在")        }    }    //创建一个plist文件    static func createPlistFile(name:String){        let dict = NSDictionary.init(object: "plist", forKey: "name")       let path=DocumentsPath()+"/"+name+".plist"        dict.writeToFile(path, atomically: true)        }}</pre><p>登录界面</p><pre class="prettyprint">////  LoginController.swift//  VeidySwiftDemo////  Created by veidy on 16/3/29.//  Copyright © 2016年 veidy. All rights reserved.//import Foundationimport UIKitclass LoginController: UIViewController,UITextFieldDelegate {    var mUsername:UITextField?    var mPassword:UITextField?    var mLogin:UIButton?    override func viewDidLoad() {      super.viewDidLoad()        self.view.backgroundColor=UIColor.whiteColor()        initDirConfig()        mUsername=UITextField.init(frame: CGRect.init(x: (self.view.frame.size.width/2)-130, y: 100, width: 260, height: 30))        mUsername?.backgroundColor=UIColor.whiteColor()        //设置提示语        mUsername?.placeholder="手机号"        //自定义字体//        mUsername?.font=UIFont.init(name: "STHeitiSC-Medium", size: 14)        //使用系统字体        mUsername?.font=UIFont.systemFontOfSize(14)        mUsername?.textAlignment=NSTextAlignment.Center        //自定义颜色 r:71 g:194 b:73        mUsername?.textColor=UIColor.init(red: 175/255, green:  175/255, blue:  175/255, alpha: 1.0)        //设置边框样式        mUsername?.borderStyle=UITextBorderStyle.RoundedRect        //设置弹出键盘样式        mUsername?.keyboardType=UIKeyboardType.PhonePad;         mUsername?.clearButtonMode=UITextFieldViewMode.WhileEditing;        mPassword=UITextField.init(frame:CGRect.init(x: (self.view.frame.size.width/2)-130, y: 140, width: 260, height: 30) )        mPassword?.backgroundColor=UIColor.whiteColor()        mPassword?.placeholder="密码"        mPassword?.textAlignment=NSTextAlignment.Center        mPassword?.textColor=UIColor.init(red: 175/255, green:  175/255, blue:  175/255, alpha: 1.0)        mPassword?.borderStyle=UITextBorderStyle.RoundedRect        //密码输入        mPassword?.secureTextEntry=true;        //右边出现一个可清空的按钮        mPassword?.clearButtonMode=UITextFieldViewMode.WhileEditing;        mPassword?.delegate=self;         mLogin=UIButton.init(frame: CGRect.init(x: (self.view.frame.size.width/2)-130, y:180, width: 260, height: 30) )        mLogin?.frame=CGRect.init(x: (self.view.frame.size.width/2)-130, y:180, width: 260, height: 30)        mLogin?.backgroundColor=UIColor.init(red: 71/255, green: 194/255, blue: 73/255, alpha: 1.0)        mLogin?.setTitle("登录", forState: UIControlState.Normal)        //设置圆角        mLogin?.layer.cornerRadius=6        mLogin?.highlighted=true        //设置文字大小        mLogin?.titleLabel?.font=UIFont.systemFontOfSize(14)        mLogin?.addTarget(self, action: #selector(loginOnclick), forControlEvents: .TouchUpInside)        self.view.addSubview(mUsername!)        self.view.addSubview(mPassword!)        self.view.addSubview(mLogin!)        readInfo()    }    func textFieldDidBeginEditing(textField: UITextField) {        print("监听 textFieldDidBeginEditing 点击输入框")    }    func textFieldDidEndEditing(textField: UITextField) {         print("监听  textFieldDidEndEditing 离开输入框")    }    func loginOnclick(){      //首先关闭软键盘      self.view.endEditing(true)        saveInfo()        let UITableVC=UITableViewSwift()       self.presentViewController(UITableVC, animated: true, completion: nil)     }    //放弃第一响应者    func textFieldShouldReturn(textField: UITextField) -> Bool{        print("textFieldShouldReturn")        textField.resignFirstResponder()        return true      }   override func viewWillAppear(animated: Bool){        //注册通知    }  override func viewWillDisappear(animated: Bool) {       //解除通知    }       //保存配置信息 Preference    func saveInfo(){        let userDefault=NSUserDefaults.standardUserDefaults()        userDefault.setObject(mUsername?.text, forKey: "username")        userDefault.setObject(mPassword?.text, forKey: "password")        //同步        userDefault.synchronize()    }   //读取配置信息 Preference    func readInfo(){     let userDefault=NSUserDefaults.standardUserDefaults()     let username=userDefault.objectForKey("username")     let password=userDefault.objectForKey("password")     if (username != nil){     mUsername?.text=username as? String    }    if (password != nil) {        mPassword?.text=password as? String    }   } func initDirConfig(){        print("getHomePath() "+Helper.getHomePath())        print("DocumentsPath() "+Helper.DocumentsPath())        print("LibraryPath() "+Helper.LibraryPath())        print("初始化目录。。。")        //新建一个plist文件        Helper.createPlistFile("veidyplist")        let dic:NSDictionary = NSDictionary.init(contentsOfFile: Helper.DocumentsPath()+"/veidyplist.plist")!        let value = dic.valueForKey("name")        if (value != nil) {           print("VALUE="+(value as! String))        }        }}</pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h3&gt;&lt;h4 id=&quot;沙箱&quot;&gt;&lt;a href=&quot;#沙箱&quot; class=&quot;headerlink&quot; title=&quot;沙箱&quot;&gt;&lt;/a&gt;沙箱&lt;/h4&gt;&lt;h4 id=&quot;NSUserDefaults&quot;&gt;&lt;a href=&quot;#NSUserDefaults&quot; class=&quot;headerlink&quot; title=&quot;NSUserDefaults&quot;&gt;&lt;/a&gt;NSUserDefaults&lt;/h4&gt;&lt;h4 id=&quot;UITextField基本使用&quot;&gt;&lt;a href=&quot;#UITextField基本使用&quot; class=&quot;headerlink&quot; title=&quot;UITextField基本使用&quot;&gt;&lt;/a&gt;UITextField基本使用&lt;/h4&gt;&lt;h4 id=&quot;软键盘的关闭&quot;&gt;&lt;a href=&quot;#软键盘的关闭&quot; class=&quot;headerlink&quot; title=&quot;软键盘的关闭&quot;&gt;&lt;/a&gt;软键盘的关闭&lt;/h4&gt;&lt;h4 id=&quot;静态类&quot;&gt;&lt;a href=&quot;#静态类&quot; class=&quot;headerlink&quot; title=&quot;静态类&quot;&gt;&lt;/a&gt;静态类&lt;/h4&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="NSUserDefaults" scheme="http://www.veidy.net/tags/NSUserDefaults/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之自定义UITableViewCell</title>
+    <link href="http://www.veidy.net/2016/03/25/swift-006/"/>
+    <id>http://www.veidy.net/2016/03/25/swift-006/</id>
+    <published>2016-03-25T08:56:23.000Z</published>
+    <updated>2018-05-21T02:42:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h2><h3 id="UITableView-自定义cell"><a href="#UITableView-自定义cell" class="headerlink" title="UITableView 自定义cell"></a>UITableView 自定义cell</h3><h3 id="cell高度自定义"><a href="#cell高度自定义" class="headerlink" title="cell高度自定义"></a>cell高度自定义</h3><a id="more"></a><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图:"></a>效果图:</h2><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f297oxjx6kj20k00zktar.jpg" alt="Alet text"></p><h2 id="唠叨"><a href="#唠叨" class="headerlink" title="唠叨:"></a>唠叨:</h2><blockquote><p>第一次弄这个自定义cell…宝宝心里苦啊。。。。</p></blockquote><h3 id="为什么要自定义cell？"><a href="#为什么要自定义cell？" class="headerlink" title="为什么要自定义cell？"></a>为什么要自定义cell？</h3><p>因为系统的cell就一个label和一个image，在项目里面是不够的。</p><h3 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h3><p>首先得新建一个类，继承UITableViewCell，并重写init方法</p><pre class="prettyprint">class JokeCell: UITableViewCell {    //必须重写    required init?(coder aDecoder: NSCoder) {        super.init(coder: aDecoder)    }}</pre><h3 id="然后就是定义控件布局"><a href="#然后就是定义控件布局" class="headerlink" title="然后就是定义控件布局"></a>然后就是定义控件布局</h3><p>我要放两个Label,那就定义两个Label</p><pre class="prettyprint">    var mContent:UILabel?    var mTime:UILabel?</pre><p>然后，我们要在哪里初始化这些控件呢？<br>1.先定义一个方法setUI()，把初始化这些东西都在setUI()里面处理</p><pre class="prettyprint">    func setUI(){        if(self.mContent==nil){            self.mContent=UILabel()            self.mContent!.frame=CGRect.init(x: 10, y: 0, width: 100, height: 50)            self.addSubview(self.mContent!)        }        if(self.mTime==nil){            self.mTime=UILabel()            self.mTime!.frame=CGRect.init(x: 0, y: 60, width: self.frame.size.width, height: 50)            mTime!.textAlignment=NSTextAlignment.Right            mTime!.textColor=UIColor.redColor()            self.addSubview(mTime!)        }        //50+10+50 ==110 ,所以cell高度可以设置为110    }</pre><blockquote><p>当我们在设置控件坐标的时候就能算出这个cell的高度了。mContent Y的起点为0，高度为50，mTime的Y为60，高度为50,所以就是这个cell的高度就是 60+50=110。</p></blockquote><p>在哪里设置cell的高度呢？目前我知道的有两种方法，第一种好简单，回到UIViewController</p><pre class="prettyprint">  //统一设置 tableView  行高   self.tableView?.rowHeight=110; </pre><p> 第二种也很好玩:</p><p> 在UITableViewDelegate里面找到一个方法 </p><pre class="prettyprint">func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat  </pre><p> 重写ok</p><p> 这种更适合在cell有多种布局的时候，最常用的就是聊天的界面。。。有单个的文字cell，有单个的图片cell</p><p> 好了，回到前面讲的setUI()，在哪里调用这个方法呢？</p><p> 我找到一个好地方，在自定义cell里面重写另外一个方法<br> <pre class="prettyprint"><br>    //可选重写，但是建议这么玩，把UI初始化放里面更方便<br>    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {<br>        super.init(style: style, reuseIdentifier: reuseIdentifier)<br>        setUI()<br>    }<br>  </pre></p><h3 id="setData-joke-Joke"><a href="#setData-joke-Joke" class="headerlink" title="setData(joke:Joke)"></a>setData(joke:Joke)</h3><p>把setUI()放在这个里面，不用再管了。然后再定义一个赋值的方法setData(joke:Joke)</p>  <pre class="prettyprint">      //设置数据     func setData(joke:Joke){        mTime!.text=joke.time        mContent!.text=joke.content    } </pre><p> 那么setData(joke:Joke)方法我们在哪里调呢？？？<br> 这样自定义的JokeCell就搞定了不用管了，只有一个setData()被调用了。</p><h3 id="怎么用JokeCell"><a href="#怎么用JokeCell" class="headerlink" title="怎么用JokeCell"></a>怎么用JokeCell</h3><p>回到UIViewController，<br> UITabView 初始化什么的就过了，可以看上一篇文章<a href="http://www.veidy.net/2016/03/23/swift_005/">swift学习笔记之UITableView</a>，但是使用自定义的时候有两个地方需要注意<br> 第一个地方是cell注册的时候：<br> <pre class="prettyprint"><br>    self.tableView!.registerClass(JokeCell.self, forCellReuseIdentifier: "swift_cell")<br>    </pre></p><blockquote><p>要用哪个cell就注册哪个，这里一定要记得改啊，别一直用UITableViewCell.self</p></blockquote><p>第二个注意的地方当然就是</p><pre class="prettyprint">func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell </pre><p> 这个方法里面取cell的时候<br> <pre class="prettyprint"><br>  //如果是自定义cell，记得在注册的时候改成自定义cell。<br>  let cell=tableView.dequeueReusableCellWithIdentifier(id_cell,forIndexPath: indexPath) as? JokeCell<br>  </pre></p><p>  swift语法真是骚。。。  as? JokeCell<br> 这样我们就拿到了自定义cell JokeCell.<br> 接着就是给cell赋值了<br> <pre class="prettyprint"><br>  //记得取的时候 as ? JokeCell,不要问我为什么，宝宝心里苦<br>   cell!.setData(data)<br></pre></p><p> command+R  搞定收工！</p><h2 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h2><p>实体Joke</p><pre class="prettyprint">////  Joke.swift//  VeidySwiftDemo////  Created by veidy on 16/3/21.//  Copyright © 2016年 veidy. All rights reserved.//import Foundationclass Joke: NSObject {var content:String?;var url:String?;var time:String?;}</pre><p>自定义cell JokeCell</p> <pre class="prettyprint">////  JokeCell.swift//  VeidySwiftDemo////  Created by veidy on 16/3/25.//  Copyright © 2016年 veidy. All rights reserved.//import UIKitclass JokeCell: UITableViewCell {var mContent:UILabel?var mTime:UILabel?//必须重写required init?(coder aDecoder: NSCoder) {super.init(coder: aDecoder)}//可选重写，但是建议这么玩，把UI初始化放里面更方便override init(style: UITableViewCellStyle, reuseIdentifier: String?) {super.init(style: style, reuseIdentifier: reuseIdentifier)setUI()}//初始化UIfunc setUI(){if(self.mContent==nil){self.mContent=UILabel()self.mContent!.frame=CGRect.init(x: 10, y: 0, width: 100, height: 50)self.addSubview(self.mContent!)}if(self.mTime==nil){self.mTime=UILabel()self.mTime!.frame=CGRect.init(x: 0, y: 60, width: self.frame.size.width, height: 50)mTime!.textAlignment=NSTextAlignment.RightmTime!.textColor=UIColor.redColor()self.addSubview(mTime!)}//50+10+50 ==110 ,所以cell高度可以设置为110}//设置数据func setData(joke:Joke){mTime!.text=joke.timemContent!.text=joke.content}override func setSelected(selected: Bool, animated: Bool) {super.setSelected(selected, animated: animated)}}</pre><p>UITableViewSwift.swift</p> <pre class="prettyprint">////  UITableViewSwift.swift//  VeidySwiftDemo////  Created by veidy on 16/3/21.//  Copyright © 2016年 veidy. All rights reserved.//import Foundationimport UIKitclass UITableViewSwift: UIViewController,UITableViewDelegate,UITableViewDataSource {    var tableView:UITableView?    //定义一个集合    var jokeList = [Joke]();    override func loadView() {        super.loadView()           }    override func viewDidLoad() {        super.viewDidLoad()        self.view.backgroundColor = UIColor.whiteColor()        for index in 0...15{            print(index)           let joke:Joke=Joke()            joke.time="2016-03-2\(i)"            joke.content="swift_ios_\(i)";            self.jokeList.append(joke)        }        self.tableView=UITableView(frame: self.view.frame, style: .Grouped)         //指定代理对象        self.tableView!.delegate=self        //指定代理对象        self.tableView!.dataSource=self;        self.tableView!.registerClass(JokeCell.self, forCellReuseIdentifier: "swift_cell")        self.view.addSubview(self.tableView!)        //统一设置 tableView cell 高度        self.tableView?.rowHeight=110;    }    //UITableViewDataSource 委托回调方法 必须需要实现的方法 , 可以理解为android 里面BaseAdapter 的 getView方法     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{        let id_cell="swift_cell"        //根据位置取到joke 相当于android里面的getItem(int position)        let data=self.jokeList[indexPath.row]        //通过id去取cell，这样的做法和android 里面的ViewHoler类似功能        //如果是自定义cell，记得在注册的时候改成自定义cell。         let cell=tableView.dequeueReusableCellWithIdentifier(id_cell, forIndexPath: indexPath) as? JokeCell         print("\(indexPath.row)"+data.content!)        //记得取的时候语 as ? JokeCell,不要问我为什么，宝宝心里苦         cell!.setData(data)        return cell!;    }    //UITableViewDataSource 必须需要实现的方法 可以理解为android 里面BaseAdapter 的 getcount方法     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{      return self.jokeList.count;    }    //UITableViewDelegate 可以实现方法   cell点击事件，相当于android 里面listview的 onItemClick方法    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){        let joke=self.jokeList[indexPath.row]        print("点击 ："+joke.content!)    }      //动态计算cell高度//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{//      //        return 110；//    }}</pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;知识点：&quot;&gt;&lt;a href=&quot;#知识点：&quot; class=&quot;headerlink&quot; title=&quot;知识点：&quot;&gt;&lt;/a&gt;知识点：&lt;/h2&gt;&lt;h3 id=&quot;UITableView-自定义cell&quot;&gt;&lt;a href=&quot;#UITableView-自定义cell&quot; class=&quot;headerlink&quot; title=&quot;UITableView 自定义cell&quot;&gt;&lt;/a&gt;UITableView 自定义cell&lt;/h3&gt;&lt;h3 id=&quot;cell高度自定义&quot;&gt;&lt;a href=&quot;#cell高度自定义&quot; class=&quot;headerlink&quot; title=&quot;cell高度自定义&quot;&gt;&lt;/a&gt;cell高度自定义&lt;/h3&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="UITableViewCell" scheme="http://www.veidy.net/tags/UITableViewCell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>520-程序员的浪漫表达方式</title>
+    <link href="http://www.veidy.net/2016/03/25/veidy-002/"/>
+    <id>http://www.veidy.net/2016/03/25/veidy-002/</id>
+    <published>2016-03-25T03:46:13.000Z</published>
+    <updated>2016-03-25T03:50:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文由 <a href="http://codecloud.net/">程序员的资料库</a> 整理!</p><p>下面是整理自Quora社区回答的积攒最高的程序员的浪漫表达方式。为了保持原味性，有些简短的就在就保留英文原文。</p><blockquote><p>Question</p></blockquote><p>我刚从一个我喜欢的、却还无法得到她的心的女孩那里获得一个灵感，因此我提出了这个问题。<br>她是我的源之泉。<br>Sorry for the bugs. Blame her!<br>我不知道这是否有效，但是我真的没法集中注意力写代码了，都是因为她。所以，我想听听大家喜欢的一些有关程序员浪漫编程的引用。</p><a id="more"></a><blockquote><p>1.I always thought love was an abstract class until you made an instance of it.</p></blockquote><p>(我一直以为爱是一个抽象的类，直到你实例化了它）</p><blockquote><p>2.You and svn are the only things that ill commit to</p></blockquote><blockquote><p>3.SELECT * FROM World WHERE “Someone” LIKE ‘%You%’</p></blockquote><p>（SQL查询语句）</p><blockquote><p>4.You are the {CSS} to my {/HTML}</p></blockquote><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f28yb9prddj21bq0p00ul.jpg" alt="Alt text"></p><blockquote><p>5.while无限循环</p></blockquote><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f28ybnfi99j20o00dgaay.jpg" alt="Alt text"></p><blockquote><p>6.</p></blockquote><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f28ycdyrhuj20pu0yyafg.jpg" alt="Alt text"></p><blockquote><p>7.//Love you a lot</p></blockquote><p>while (i&lt;3) you++;</p><p>英文地址：<a href="http://www.quora.com/Are-there-any-romantic-programming-programmer-quotes">Are-there-any-romantic-programming-programmer-quotes</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文由 &lt;a href=&quot;http://codecloud.net/&quot;&gt;程序员的资料库&lt;/a&gt; 整理!&lt;/p&gt;
+&lt;p&gt;下面是整理自Quora社区回答的积攒最高的程序员的浪漫表达方式。为了保持原味性，有些简短的就在就保留英文原文。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Question&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我刚从一个我喜欢的、却还无法得到她的心的女孩那里获得一个灵感，因此我提出了这个问题。&lt;br&gt;她是我的源之泉。&lt;br&gt;Sorry for the bugs. Blame her!&lt;br&gt;我不知道这是否有效，但是我真的没法集中注意力写代码了，都是因为她。所以，我想听听大家喜欢的一些有关程序员浪漫编程的引用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之UITableView</title>
+    <link href="http://www.veidy.net/2016/03/23/swift_005/"/>
+    <id>http://www.veidy.net/2016/03/23/swift_005/</id>
+    <published>2016-03-23T01:57:59.000Z</published>
+    <updated>2018-05-21T02:42:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>UITableView的简单使用</p><h2 id="一、知识点"><a href="#一、知识点" class="headerlink" title="一、知识点:"></a>一、知识点:</h2><h3 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h3><h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><h3 id="for循环使用"><a href="#for循环使用" class="headerlink" title="for循环使用"></a>for循环使用</h3><a id="more"></a><h2 id="二、效果图："><a href="#二、效果图：" class="headerlink" title="二、效果图："></a>二、效果图：</h2><p><img src="http://ww3.sinaimg.cn/large/509927e5gw1f25qi5x5xej20dc0k075f.jpg" alt="Alt text"></p><h2 id="三、我的理解"><a href="#三、我的理解" class="headerlink" title="三、我的理解"></a>三、我的理解</h2><p>1.UITabView和android里面的ListView相似，当然功能比ListViw强大得多，比Recyclerview也要厉害.</p><hr><p>2.UITableViewDataSource  和  UITableViewDelegate  协议和委托代理回调，这是ios开发里面非常重要的一个东西(之前弄OC的时候ios开发的同事跟我这样说)，swift 里面的协议其实和android java里面的接口 功能类似，重要！所以有关协议和委托代理 的使用 准备单独整理成一篇文章</p><hr><p>3.在使用UITabView的时候，controller必须要继承UITableViewDataSource<br>当你继承UITableViewDataSource的时候xcode会提示错误，因为需要我们实现其必须要实现的方法，进入源码可以看到有两个<br><img src="http://ww4.sinaimg.cn/large/509927e5gw1f25rv2jqylj21cw0lytij.jpg" alt="Alt text"></p><pre class="prettyprint">@available(iOS 2.0, *)public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int</pre> <p>这个方法可以理解为android 里面BaseAdapter 的 getcount方法,不用多说，直接返回集合的大小即可</p><hr><pre class="prettyprint">@available(iOS 2.0, *) public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell</pre><p>这个方法可以理解为android 里面BaseAdapter 的 getView方法</p><hr><blockquote><p>tip:如何知道协议的哪些方法必须要实现：public前面并没有加上 optional 就说明是必须要实现的。(这一点还是没有java的ide做得好，必须要实现的方法没实现快捷键会立刻实现)</p></blockquote><hr><p>4.demo中我还继承了一个UITableViewDelegate类，委托代理，看源码发现也是继承NSObjectProtocol，也可以理解为是一个协议(先这么理解吧)，如果要实现列表的cell点击事件，就得继承UITableViewDelegate，然后实现其一个方法</p><pre class="prettyprint">optional public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)</pre><p>这个方法和android 里面的onItemClick 类似</p><pre class="prettyprint">public void onItemClick(AdapterView<?> parent, View view, int position, long id)</pre><hr><p>5.? 和 ！ 很有意思的两个东西<br>？ 当我们声明一个变量的时候，我们并不确定给其初始化的时候就可以这么干<br>如： </p><pre class="prettyprint">var tableView:UITableView?</pre> <p>声明一个tableView,如果var tableView:UITableView 这样声明会报错，加上？就不报错了。<br>为什么呢？</p><blockquote><p>Swift语言使用var定义变量，但和别的语言不同，Swift里不会自动给变量赋初始值，也就是说变量不会有默认值，所以要求使用变量之前必须要对其初始化。如果在使用变量之前不进行初始化就会报错</p></blockquote><p>为什么加上？就不报错了，这里又得提到swift里面的一个新东西Optional ，这是个神马玩意儿，看源码发现就是一个enum！！！</p><pre class="prettyprint">public enum Optional<Wrapped> : _Reflectable, NilLiteralConvertible {case Nonecase Some(Wrapped)}</pre> <p>var tableView:UITableView? 就是 var tableView: Optional<UITableView><br>这句话我们正确的解读是：声明了一个Optional类型值，它可能包含一个UITableView值，也可能什么都不包含。本来是声明一个UITabView变成了声明了一个Optional类型。<br>一旦声明为Optional的，如果不显式的赋值就会有个默认值nil，所以就不报错啦！</p><p>！这个东西就是非空判断</p><pre class="prettyprint">self.tableView!.delegate=self</pre> <p>表示我的tableView非空的</p><p>####### 关于？和！暂时就这样理解了，以后再单独整理一篇文章深入了解</p><p>6.for循环遍历</p><blockquote><p>swift 里面的for循环有两种遍历方式，一看便知道区别</p></blockquote><p>第一种：</p><pre class="prettyprint"> for index in 0...15{              print(index)            let joke:Joke=Joke()            joke.content="swift_ios_\(index)";            self.jokeList.append(joke)          }</pre><p>打印出:</p><blockquote><p>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15</p></blockquote><p>等于集合大小为 16</p><p>第二种：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for var i&#x3D;0;i&lt;15;i++ &#123;</span><br><span class="line">              print(i)</span><br><span class="line">            let joke:Joke&#x3D;Joke()</span><br><span class="line">            joke.content&#x3D;&quot;swift_ios_\(i)&quot;;</span><br><span class="line">            self.jokeList.append(joke)</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><p> 打印出：</p><blockquote><p>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p></blockquote><p>等于集合大小为 15</p><p>区别显而易见了吧。</p><h2 id="四、代码块"><a href="#四、代码块" class="headerlink" title="四、代码块"></a>四、代码块</h2><p>Joke 是我自定义的一个实体</p><pre class="prettyprint">class Joke: NSObject {var content:String?;var url:String?;}</pre><p>由于莫名的排版问题，我先把给集合的循环赋值贴出来</p><p>//初始化数据<br>for var i=0; i&lt;15; i++ {</p><p>let joke:Joke=Joke()<br>joke.content=”swift_ios_(i)”;<br>self.jokeList.append(joke)</p><p>}</p><pre class="prettyprint">////  UITableViewSwift.swift//  VeidySwiftDemo////  Created by veidy on 16/3/21.//  Copyright © 2016年 veidy. All rights reserved.//import Foundationimport UIKitclass UITableViewSwift: UIViewController,UITableViewDelegate,UITableViewDataSource {    var tableView:UITableView?    //定义一个集合    var jokeList = [Joke]();    override func loadView() {        super.loadView()           }    override func viewDidLoad() {        super.viewDidLoad()        self.view.backgroundColor = UIColor.whiteColor()        for index in 0...15{            print(index)            let joke:Joke=Joke()            joke.content="swift_ios_\(index)";            self.jokeList.append(joke)        }        print("第一种循环遍历后 count=\(self.jokeList.count)")        //清空数组        self.jokeList.removeAll();        print("清空之后,count=\(self.jokeList.count)")        //初始化数据        //...        print("第二种循环遍历后 count=\(self.jokeList.count)")        self.tableView=UITableView(frame: self.view.frame, style: .Grouped)         //指定代理对象        self.tableView!.delegate=self        //指定代理对象        self.tableView!.dataSource=self;        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "swift_cell")        self.view.addSubview(self.tableView!)    }    //UITableViewDataSource 委托回调方法 必须需要实现的方法 , 可以理解为android 里面BaseAdapter 的 getView方法     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{        let id_cell="swift_cell"        //通过id去取cell，这样的做法和android 里面的ViewHoler类似功能        //注意这里之所以能取是前面先注册过 self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "swift_cell")        let cell=tableView.dequeueReusableCellWithIdentifier(id_cell, forIndexPath: indexPath)        //根据位置取到joke 相当于android里面的getItem(int position)        let data=self.jokeList[indexPath.row]        //给textLabel赋值        cell.textLabel?.text=data.content        return cell;    }    //UITableViewDataSource 必须需要实现的方法 可以理解为android 里面BaseAdapter 的 getcount方法     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{      return self.jokeList.count;    }    //UITableViewDelegate 可以实现方法   cell点击事件，相当于android 里面listview的 onItemClick方法    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){        let joke=self.jokeList[indexPath.row]        print("点击 ："+joke.content!)    }}</pre><blockquote><p>显然，这只是简单的使用UITableView,真正项目中是不够的，下一遍文章准备记录如何使用自定义cell。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;UITableView的简单使用&lt;/p&gt;
+&lt;h2 id=&quot;一、知识点&quot;&gt;&lt;a href=&quot;#一、知识点&quot; class=&quot;headerlink&quot; title=&quot;一、知识点:&quot;&gt;&lt;/a&gt;一、知识点:&lt;/h2&gt;&lt;h3 id=&quot;UITableView&quot;&gt;&lt;a href=&quot;#UITableView&quot; class=&quot;headerlink&quot; title=&quot;UITableView&quot;&gt;&lt;/a&gt;UITableView&lt;/h3&gt;&lt;h3 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h3&gt;&lt;h3 id=&quot;for循环使用&quot;&gt;&lt;a href=&quot;#for循环使用&quot; class=&quot;headerlink&quot; title=&quot;for循环使用&quot;&gt;&lt;/a&gt;for循环使用&lt;/h3&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="UITableView" scheme="http://www.veidy.net/tags/UITableView/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序出错后，程序员给测试人员的20条高频回复</title>
+    <link href="http://www.veidy.net/2016/03/21/veidy-01/"/>
+    <id>http://www.veidy.net/2016/03/21/veidy-01/</id>
+    <published>2016-03-21T07:07:04.000Z</published>
+    <updated>2018-05-21T02:43:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文由 <a href="http://blog.jobbole.com/606/">伯乐在线</a> - 黄利民 翻译</p><p>编者按：程序员和软件测试员之间的关系无须多言。这些经典回复是国外程序员总结分享的，“全球通用”。</p><ol start="20"><li><p>“That’s weird…” 很奇怪……</p></li><li><p>“It’s never done that before.” 以前没这样过的。</p><a id="more"></a></li><li><p>“It worked yesterday.” 昨天还好好的。</p></li><li><p>“How is that possible?” 那怎么可能？（怎么会出问题？）</p></li><li><p>“It must be a hardware problem.” 这一定是硬件问题。</p></li><li><p>“What did you type in wrong to get it to crash?” 你输入什么东西后才崩溃的？</p></li><li><p>“There is something funky in your data.” 你的数据有问题。</p></li><li><p>“I haven’t touched that module in weeks!” 我好几个礼拜没动那个程序了！</p></li><li><p>“You must have the wrong version.” 你一定在用错误的版本。</p></li><li><p>“It’s just some unlucky coincidence.” 这只是凑巧。</p></li><li><p>“I can’t test everything!” 我无法测试所有东西。（我的机器环境下，无法测试所有的可能情况。）</p></li><li><p>“THIS can’t be the source of THAT.” “这”不可能是问题的原因。</p></li><li><p>“It works, but it hasn’t been tested.” 程序能用，不过还没有测试。</p></li><li><p>“Somebody must have changed my code.” 一定有人改了我的代码。</p></li><li><p>“Did you check for a virus on your system?” 你的电脑扫描病毒了么？ </p></li><li><p>“Even though it doesn’t work, how does it feel? 即便程序不行了，（你觉得）程序写得如何？</p></li><li><p>“You can’t use that version on your system.” 你不能在你系统上使用那个版本的程序。（程序版本和系统有冲突。）</p></li><li><p>“Why do you want to do it that way?” 你怎么会想着那样操作啊？</p></li><li><p>“Where were you when the program blew up?” 程序崩溃时，你在做什么呢？（做了哪些操作？）</p></li></ol><p>第1条会是什么？猜猜看吧！:)</p><p>_</p><ol><li>“It works on my machine”   在我机器上好好的！！！（潜台词：怎么在你那就出问题了呢！！！）</li></ol><p>编者后话</p><p>虽然已经远离编程，但经常还是会用到第20、19条，当然也不会“错过”第1条。各位看过之后，不知你都用上了哪几条哦~</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文由 &lt;a href=&quot;http://blog.jobbole.com/606/&quot;&gt;伯乐在线&lt;/a&gt; - 黄利民 翻译&lt;/p&gt;
+&lt;p&gt;编者按：程序员和软件测试员之间的关系无须多言。这些经典回复是国外程序员总结分享的，“全球通用”。&lt;/p&gt;
+&lt;ol start=&quot;20&quot;&gt;
+&lt;li&gt;&lt;p&gt;“That’s weird…” 很奇怪……&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;“It’s never done that before.” 以前没这样过的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之界面之间的跳转</title>
+    <link href="http://www.veidy.net/2016/03/11/swift_004/"/>
+    <id>http://www.veidy.net/2016/03/11/swift_004/</id>
+    <published>2016-03-11T07:16:54.000Z</published>
+    <updated>2018-05-21T02:44:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Controller之间的跳转"><a href="#Controller之间的跳转" class="headerlink" title="Controller之间的跳转"></a><p>Controller之间的跳转</p></h3><h2 id="一、知识点："><a href="#一、知识点：" class="headerlink" title="一、知识点： "></a><p>一、知识点： <br></h2><p>1.api:presentViewController() , dismissViewControllerAnimated()</p></p><a id="more"></a><h2 id="二、demo场景"><a href="#二、demo场景" class="headerlink" title="二、demo场景 "></a><p>二、demo场景 <br></h2><p>A controller 上有一个按钮，点击按钮后跳转到B controller上，B controller上有一个标签，点击标签回退到A controller</p></p><h2 id="三，代码"><a href="#三，代码" class="headerlink" title="三，代码 "></a><p>三，代码 <br></h2><p>A  controller 核心代码：</p></p><hr><pre class="prettyprint hljs-dark"><code class="hljs swift">    <span class="hljs-comment">//button点击响应方法，推出SecondViewController（）</span><br><span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">btnOnClick</span><span class="hljs-params">(button:UIButton)</span></span>{        <br>    <span class="hljs-keyword">let</span> <span class="hljs-type">VC</span>=<span class="hljs-type">SecondViewController</span>()<br>    <span class="hljs-comment">//推出新的Controller</span><br>    <span class="hljs-keyword">self</span>.presentViewController(<span class="hljs-type">VC</span>, animated: <span class="hljs-literal">false</span>, completion: <span class="hljs-literal">nil</span>)<br>}<br></code></pre><p>B controller 上的Label点击返回上一个controller 核心代码</p><pre class="prettyprint hljs-dark"><code class="hljs swift">  <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">tapLabel</span><span class="hljs-params">()</span></span>{<br><br>   <span class="hljs-comment">//关掉当前dismissViewController</span><br>    <span class="hljs-keyword">self</span>.dismissViewControllerAnimated(<span class="hljs-literal">false</span>, completion: <span class="hljs-literal">nil</span>)<br><br>}<br></code></pre><p>//数据传递，待续。。。</p></div><div id="wmd-preview-section-448" class="wmd-preview-section preview-content"></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Controller之间的跳转&quot;&gt;&lt;a href=&quot;#Controller之间的跳转&quot; class=&quot;headerlink&quot; title=&quot;Controller之间的跳转&quot;&gt;&lt;/a&gt;&lt;p&gt;Controller之间的跳转&lt;/p&gt;&lt;/h3&gt;&lt;h2 id=&quot;一、知识点：&quot;&gt;&lt;a href=&quot;#一、知识点：&quot; class=&quot;headerlink&quot; title=&quot;一、知识点： &quot;&gt;&lt;/a&gt;&lt;p&gt;一、知识点： &lt;br&gt;&lt;/h2&gt;&lt;p&gt;1.api:presentViewController() , dismissViewControllerAnimated()&lt;/p&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="presentViewController" scheme="http://www.veidy.net/tags/presentViewController/"/>
+    
+      <category term="dismissViewControllerAnimated" scheme="http://www.veidy.net/tags/dismissViewControllerAnimated/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之UILabel(二)</title>
+    <link href="http://www.veidy.net/2016/03/01/swift_003/"/>
+    <id>http://www.veidy.net/2016/03/01/swift_003/</id>
+    <published>2016-03-01T10:06:21.000Z</published>
+    <updated>2018-05-21T02:41:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="UILabel添加点击事件"><a href="#UILabel添加点击事件" class="headerlink" title="UILabel添加点击事件"></a>UILabel添加点击事件</h3><h2 id="一-知识点"><a href="#一-知识点" class="headerlink" title="一.知识点"></a>一.知识点</h2><p> 1.UITapGestureRecognizer</p><a id="more"></a><h2 id="二-demo场景"><a href="#二-demo场景" class="headerlink" title="二.demo场景"></a>二.demo场景</h2><p>   点击UILabel 响应自定义方法 tapLabel()， tapLabel()里面输出日志打印</p></p><h2 id="三-代码"><a href="#三-代码" class="headerlink" title="三.代码"></a>三.代码</h2><pre class="prettyprint hljs-dark"><code class="hljs swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecondViewController</span> :<span class="hljs-title">UIViewController</span> </span>{<br><br><span class="hljs-keyword">override</span> <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">viewDidLoad</span><span class="hljs-params">()</span></span> {<br>    <span class="hljs-keyword">super</span>.viewDidLoad()<br><br>    <span class="hljs-keyword">let</span> mLabel:<span class="hljs-type">UILabel</span>=<span class="hljs-type">UILabel</span>.<span class="hljs-keyword">init</span>(frame: <span class="hljs-type">CGRectMake</span>(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>))<br>    mLabel.text=<span class="hljs-string">"点我"</span><br>    mLabel.textAlignment=<span class="hljs-type">NSTextAlignment</span>.<span class="hljs-type">Center</span><br>    mLabel.backgroundColor=<span class="hljs-type">UIColor</span>.redColor()<br>    <span class="hljs-comment">//用户交互功能打开状态</span><br>    mLabel.userInteractionEnabled=<span class="hljs-literal">true</span><br>    <span class="hljs-comment">//点击事件</span><br>    <span class="hljs-keyword">let</span> tap = <span class="hljs-type">UITapGestureRecognizer</span>.<span class="hljs-keyword">init</span>(target: <span class="hljs-keyword">self</span>, action: <span class="hljs-type">Selector</span>.<span class="hljs-keyword">init</span>(<span class="hljs-string">"tapLabel"</span>))<br>    <span class="hljs-comment">//绑定tap</span><br>    mLabel.addGestureRecognizer(tap)<br><br>    <span class="hljs-keyword">self</span>.view.addSubview(mLabel)<br><br>}<br><br><span class="hljs-comment">//定义方法，mLabel点击后调用此方法</span><br><span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">tapLabel</span><span class="hljs-params">()</span></span>{<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">"tap the label"</span>)<br><br>}}<br></code></pre></div><div id="wmd-preview-section-60" class="wmd-preview-section preview-content"></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;UILabel添加点击事件&quot;&gt;&lt;a href=&quot;#UILabel添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;UILabel添加点击事件&quot;&gt;&lt;/a&gt;UILabel添加点击事件&lt;/h3&gt;&lt;h2 id=&quot;一-知识点&quot;&gt;&lt;a href=&quot;#一-知识点&quot; class=&quot;headerlink&quot; title=&quot;一.知识点&quot;&gt;&lt;/a&gt;一.知识点&lt;/h2&gt;&lt;p&gt; 1.UITapGestureRecognizer&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="UILabel" scheme="http://www.veidy.net/tags/UILabel/"/>
+    
+      <category term="UITapGestureRecognizer" scheme="http://www.veidy.net/tags/UITapGestureRecognizer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swift学习笔记之UIButton(一)</title>
+    <link href="http://www.veidy.net/2016/02/12/swift_02/"/>
+    <id>http://www.veidy.net/2016/02/12/swift_02/</id>
+    <published>2016-02-12T15:12:40.000Z</published>
+    <updated>2018-05-21T02:41:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、知识点："><a href="#一、知识点：" class="headerlink" title="一、知识点："></a>一、知识点：</h3><h2 id="1-全局变量的定义"><a href="#1-全局变量的定义" class="headerlink" title="1.全局变量的定义"></a>1.全局变量的定义</h2><h2 id="2-UIButton添加点击事件"><a href="#2-UIButton添加点击事件" class="headerlink" title="2.UIButton添加点击事件"></a>2.UIButton添加点击事件</h2><h2 id="3-函数定义"><a href="#3-函数定义" class="headerlink" title="3.函数定义"></a>3.函数定义</h2><a id="more"></a><h3 id="二、效果图："><a href="#二、效果图：" class="headerlink" title="二、效果图："></a>二、效果图：</h3><p><img src="http://ww4.sinaimg.cn/large/509927e5gw1f24buokx7ej20ku12a75k.jpg" alt="Alt text"></p><h3 id="三、代码："><a href="#三、代码：" class="headerlink" title="三、代码："></a>三、代码：</h3><pre class="prettyprint">      import UIKit            //定义全局变量            let mLabel:UILabel=UILabel();    class ViewController: UIViewController {        override func viewDidLoad() {        super.viewDidLoad()        // Do any additional setup after loading the view, typically from a nib.        //常量定义用let 变量定义用var        //let mLabel:UILabel=UILabel();        //设置显示文字  字符串和字符串可以直接用+ 拼接，字符串和int 其它类型可以用 \() 如下，把2016放在小括号里面即可        mLabel.text="veidy"+"开始了\(2016)年的第一次swift 开发"        //设置label背景颜色        mLabel.backgroundColor=UIColor.redColor()        //设置文字颜色        mLabel.textColor=UIColor.whiteColor()        //设置文字剧中对齐        mLabel.textAlignment=NSTextAlignment.Center        //定义坐标位置 label大小        mLabel.frame=CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: 50)        //添加到view 显示，没有这一句，UI上不会显示        self.view.addSubview(mLabel)        let mButton:UIButton=UIButton()        mButton.frame=CGRect(x: 10, y: 80, width: 200, height: 50)        mButton.backgroundColor=UIColor.redColor()        mButton.setTitle("按钮", forState: .Normal)        mButton.setTitle("按钮按下", forState: .Highlighted)        //添加点击事件Selector("btnOnClick") 对应函数 func btnOnClick()        //mButton.addTarget(self, action: Selector("btnOnClick"), forControlEvents: .TouchUpInside)        //添加点击事件Selector("btnOnClick:") 对应函数 func btnOnClick(button:UIButton)        mButton.addTarget(self, action: Selector("btnOnClick:"), forControlEvents: .TouchUpInside)        self.view.addSubview(mButton)    }    //函数定义 func 开头    func btnOnClick(){        print("不带参数UIButton点击事件响应 1+1="+"\(sum(1, two: 1))")        mLabel.text="不带参数UIButton点击事件响应计算 1+1="+"\(sum(1, two: 1))";    }    //方法定义 func 开头，方法名是 btnOnClick，传的参数是一个UIButton    func btnOnClick(button:UIButton){        print("UIButton点击事件响应 1+1="+"\(sum(1, two: 1))")        mLabel.text="UIButton点击事件响应计算 1+1="+"\(sum(1, two: 1))";    }    //参数传递和返回类型 传两个Int类型的参数，返回一个Int类型      //返回类型是在（）后面使用 ->    func sum(one:Int,two:Int)->(Int){        return one+two    }    override func didReceiveMemoryWarning() {        super.didReceiveMemoryWarning()        // Dispose of any resources that can be recreated.    }    }  </pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、知识点：&quot;&gt;&lt;a href=&quot;#一、知识点：&quot; class=&quot;headerlink&quot; title=&quot;一、知识点：&quot;&gt;&lt;/a&gt;一、知识点：&lt;/h3&gt;&lt;h2 id=&quot;1-全局变量的定义&quot;&gt;&lt;a href=&quot;#1-全局变量的定义&quot; class=&quot;headerlink&quot; title=&quot;1.全局变量的定义&quot;&gt;&lt;/a&gt;1.全局变量的定义&lt;/h2&gt;&lt;h2 id=&quot;2-UIButton添加点击事件&quot;&gt;&lt;a href=&quot;#2-UIButton添加点击事件&quot; class=&quot;headerlink&quot; title=&quot;2.UIButton添加点击事件&quot;&gt;&lt;/a&gt;2.UIButton添加点击事件&lt;/h2&gt;&lt;h2 id=&quot;3-函数定义&quot;&gt;&lt;a href=&quot;#3-函数定义&quot; class=&quot;headerlink&quot; title=&quot;3.函数定义&quot;&gt;&lt;/a&gt;3.函数定义&lt;/h2&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="UIButton" scheme="http://www.veidy.net/tags/UIButton/"/>
+    
+      <category term="Selector" scheme="http://www.veidy.net/tags/Selector/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift学习笔记之UILabel</title>
+    <link href="http://www.veidy.net/2016/02/10/swift_01/"/>
+    <id>http://www.veidy.net/2016/02/10/swift_01/</id>
+    <published>2016-02-10T09:11:16.000Z</published>
+    <updated>2018-05-21T02:41:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、知识点："><a href="#一、知识点：" class="headerlink" title="一、知识点："></a>一、知识点：</h3><h2 id="1-UI控件的初始化"><a href="#1-UI控件的初始化" class="headerlink" title="1.UI控件的初始化"></a>1.UI控件的初始化</h2><h2 id="2-字符串的拼接"><a href="#2-字符串的拼接" class="headerlink" title="2.字符串的拼接"></a>2.字符串的拼接</h2><h2 id="3-变量和常量的定义"><a href="#3-变量和常量的定义" class="headerlink" title="3.变量和常量的定义"></a>3.变量和常量的定义</h2><a id="more"></a><h3 id="二、效果图："><a href="#二、效果图：" class="headerlink" title="二、效果图："></a>二、效果图：</h3><p>  <img src="http://ww1.sinaimg.cn/large/509927e5gw1f24bcvw8t3j20kk122gn6.jpg" alt="Alt text">   </p><h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码:"></a>三、代码:</h3><pre class="prettyprint">class ViewController: UIViewController {override func viewDidLoad() {super.viewDidLoad()// Do any additional setup after loading the view, typically from a nib.//常量定义用let 变量定义用varlet mLabel:UILabel=UILabel();//设置显示文字  字符串和字符串可以直接用+ 拼接，字符串和int 其它类型可以用 \() 如下，把2016放在小括号里面即可mLabel.text="veidy"+"开始了\(2016)年的第一次swift 开发"//设置label背景颜色mLabel.backgroundColor=UIColor.redColor()//设置文字颜色mLabel.textColor=UIColor.whiteColor()//设置文字剧中对齐mLabel.textAlignment=NSTextAlignment.Center//定义坐标位置 label大小mLabel.frame=CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: 50)//添加到view 显示，没有这一句，UI上不会显示self.view.addSubview(mLabel)}</pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、知识点：&quot;&gt;&lt;a href=&quot;#一、知识点：&quot; class=&quot;headerlink&quot; title=&quot;一、知识点：&quot;&gt;&lt;/a&gt;一、知识点：&lt;/h3&gt;&lt;h2 id=&quot;1-UI控件的初始化&quot;&gt;&lt;a href=&quot;#1-UI控件的初始化&quot; class=&quot;headerlink&quot; title=&quot;1.UI控件的初始化&quot;&gt;&lt;/a&gt;1.UI控件的初始化&lt;/h2&gt;&lt;h2 id=&quot;2-字符串的拼接&quot;&gt;&lt;a href=&quot;#2-字符串的拼接&quot; class=&quot;headerlink&quot; title=&quot;2.字符串的拼接&quot;&gt;&lt;/a&gt;2.字符串的拼接&lt;/h2&gt;&lt;h2 id=&quot;3-变量和常量的定义&quot;&gt;&lt;a href=&quot;#3-变量和常量的定义&quot; class=&quot;headerlink&quot; title=&quot;3.变量和常量的定义&quot;&gt;&lt;/a&gt;3.变量和常量的定义&lt;/h2&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="UILabel" scheme="http://www.veidy.net/tags/UILabel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android Studio 使用心得</title>
+    <link href="http://www.veidy.net/2016/01/21/android-studio/"/>
+    <id>http://www.veidy.net/2016/01/21/android-studio/</id>
+    <published>2016-01-21T02:19:41.000Z</published>
+    <updated>2016-03-18T08:11:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:#666666;font-family:'microsoft yahei';font-size:14px;line-height:14px;"><strong>&nbsp; &nbsp;版权声明：本文出自<a href="http://www.veidy.net/" target="_blank">veidy</a>的博客，转载必须注明出处</strong></span><span style="color:#333333;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;line-height:1.5;background-color:#FFFFFF;">&nbsp;</span></p><p><span><span style="background-color:#FFFFFF;">&nbsp; &nbsp;</span></span><span style="color:#555555;font-family:'microsoft yahei';font-size:15px;line-height:35px;">转载请注明出处</span><span style="color:#333333;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;font-size:16px;line-height:1.5;">：<a href="http://www.veidy.net/" target="_blank">http://www.veidy.net/</a></span></p><p style="color:#333333;background-color:#FFFFFF;"><span><span style="font-size:16px;line-height:24px;">&nbsp; &nbsp;</span></span><strong>之前在osc 上有整理一系列关于android studio 使用的文章</strong></p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/370678" target="_blank">Android studio 使用心得(一)---android studio快速掌握快捷键</a> </p><a id="more"></a><h1 style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/350967" target="_blank"><span></span>Android studio使用心得(二)--- 打包签名apk发布</a> </h1><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/370107" target="_blank">Android studio 使用心得(三)---从Eclipse迁移到Android&nbsp;</a> </p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/370577" target="_blank">Android studio 使用心得(四)---android studio 多渠道打包</a> </p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/370985" target="_blank">Android studio 使用心得(四)---android studio 多渠道打包(二)</a> </p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/371889" target="_blank">Android studio 使用心得(五)---代码混淆和破解apk</a> </p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/372634" target="_blank">Android studio 使用心得(六)---android studio 如何加载.so文件</a> </p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/378374" target="_blank">Android studio 使用心得(七)---如何导入library工程包</a> </p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/383068" target="_blank">Android studio 使用心得(八)----测试程序单元测试</a> </p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/402503" target="_blank">Android studio使用心得(九)------如何设置项目编码</a> </p><h1 style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><a href="http://my.oschina.net/aibenben/blog/484779" target="_blank">Android studio 使用心得(十)---android studio 多渠道打包(三)</a> </h1><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p style="font-size:22px;font-weight:normal;font-family:'Microsoft YaHei', Verdana, sans-serif, 宋体;background-color:#FFFFFF;"><span></span> </p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+&lt;span style=&quot;color:#666666;font-family:&#39;microsoft yahei&#39;;font-size:14px;line-height:14px;&quot;&gt;&lt;strong&gt;&amp;nbsp; &amp;nbsp;版权声明：本文出自&lt;a href=&quot;http://www.veidy.net/&quot; target=&quot;_blank&quot;&gt;veidy&lt;/a&gt;的博客，转载必须注明出处&lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;color:#333333;font-family:&#39;Microsoft YaHei&#39;, Verdana, sans-serif, 宋体;line-height:1.5;background-color:#FFFFFF;&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;&lt;span style=&quot;background-color:#FFFFFF;&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color:#555555;font-family:&#39;microsoft yahei&#39;;font-size:15px;line-height:35px;&quot;&gt;转载请注明出处&lt;/span&gt;&lt;span style=&quot;color:#333333;font-family:&#39;Microsoft YaHei&#39;, Verdana, sans-serif, 宋体;font-size:16px;line-height:1.5;&quot;&gt;：&lt;a href=&quot;http://www.veidy.net/&quot; target=&quot;_blank&quot;&gt;http://www.veidy.net/&lt;/a&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p style=&quot;color:#333333;background-color:#FFFFFF;&quot;&gt;
+&lt;span&gt;&lt;span style=&quot;font-size:16px;line-height:24px;&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;strong&gt;之前在osc 上有整理一系列关于android studio 使用的文章&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p style=&quot;font-size:22px;font-weight:normal;font-family:&#39;Microsoft YaHei&#39;, Verdana, sans-serif, 宋体;background-color:#FFFFFF;&quot;&gt;
+&lt;a href=&quot;http://my.oschina.net/aibenben/blog/370678&quot; target=&quot;_blank&quot;&gt;Android studio 使用心得(一)---android studio快速掌握快捷键&lt;/a&gt; 
+&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="android" scheme="http://www.veidy.net/tags/android/"/>
+    
+      <category term="studio混淆" scheme="http://www.veidy.net/tags/studio%E6%B7%B7%E6%B7%86/"/>
+    
+      <category term="多渠道打包" scheme="http://www.veidy.net/tags/%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(转)如何选择compileSdkVersion,minSdkVersion和targetSdkVersion</title>
+    <link href="http://www.veidy.net/2016/01/19/%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9compileSdkVersion-minSdkVersion%E5%92%8CtargetSdkVersion/"/>
+    <id>http://www.veidy.net/2016/01/19/%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9compileSdkVersion-minSdkVersion%E5%92%8CtargetSdkVersion/</id>
+    <published>2016-01-19T01:59:49.000Z</published>
+    <updated>2018-05-21T02:45:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/509927e5gw1f24cn316vaj21a609q0vs.jpg" alt="Alt text"></p><a id="more"></a><h3 id="compileSdkVersion"><a href="#compileSdkVersion" class="headerlink" title="compileSdkVersion"></a>compileSdkVersion</h3><p><img src="http://ww4.sinaimg.cn/large/509927e5gw1f24cnkwqi8j21a00lm7b7.jpg" alt="Alt text"></p><h3 id="minSdkVersion"><a href="#minSdkVersion" class="headerlink" title="minSdkVersion"></a>minSdkVersion</h3><p><img src="http://ww2.sinaimg.cn/large/509927e5gw1f24dfnum24j219k0s4k2g.jpg" alt="Alt text"></p><h3 id="targetSdkVersion"><a href="#targetSdkVersion" class="headerlink" title="targetSdkVersion"></a>targetSdkVersion</h3><p><img src="http://ww4.sinaimg.cn/large/509927e5gw1f24doahzhmj20mk0b8ae7.jpg" alt="Alt text"><br><img src="http://ww2.sinaimg.cn/large/509927e5gw1f24dfwc2mbj21g80yo12h.jpg" alt="Alt text"><br><img src="http://ww3.sinaimg.cn/large/509927e5gw1f24dga3mjzj21dg0pm44m.jpg" alt="Alt text"></p><p>1.翻译原文:如何选择 <a href="http://chinagdg.org/2016/01/picking-your-compilesdkversion-minsdkversion-targetsdkversion/" target="_blank">compileSdkVersion, minSdkVersion 和 targetSdkVersion</a> <br>2.英文原文：<a href="https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd#.b489du4vn" target="_blank">Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion</a> <br>3.<a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0118/3881.html" target="_blank">Android targetSdkVersion 原理</a></p></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/509927e5gw1f24cn316vaj21a609q0vs.jpg&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="compileSdkVersion" scheme="http://www.veidy.net/tags/compileSdkVersion/"/>
+    
+      <category term="minSdkVersion" scheme="http://www.veidy.net/tags/minSdkVersion/"/>
+    
+      <category term="targetSdkVersion" scheme="http://www.veidy.net/tags/targetSdkVersion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2016 计划...</title>
+    <link href="http://www.veidy.net/2015/12/25/2016%E8%AE%A1%E5%88%92/"/>
+    <id>http://www.veidy.net/2015/12/25/2016%E8%AE%A1%E5%88%92/</id>
+    <published>2015-12-25T07:18:16.000Z</published>
+    <updated>2016-01-26T08:35:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.<br /><br>2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…<br>  <a id="more"></a></p><p><br /></p>2016 要整理的几个干货。。。<br /><br /><p>&nbsp; &nbsp; &nbsp;1.图片加载框架 &nbsp;<a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank">Android-Universal-Image-Loader</a>&nbsp;&nbsp;</p><p><span>&nbsp; &nbsp; &nbsp;2.图片加载框架 &nbsp;<a href="https://github.com/facebook/fresco" target="_blank">fresco</a></span> </p><p>&nbsp; &nbsp; &nbsp;3.orm 框架 &nbsp;<a href="https://github.com/greenrobot/greenDAO" target="_blank">GreenDao</a><span></span> </p><p>&nbsp; &nbsp; &nbsp;4.网络请求框架&nbsp;<span></span><a href="https://github.com/loopj/android-async-http" target="_blank">android-async-http<span><span></span></span></a> </p><p>&nbsp; &nbsp; &nbsp;5.网络请求框架&nbsp;<a href="https://github.com/square/okhttp" target="_blank">okhttp</a> </p><p>&nbsp; &nbsp; &nbsp; 6.VRefreshView &nbsp; &nbsp; 基于google官方SpipeRefershLayout自定义的&nbsp;下拉刷新，上拉加载更多view.</p><p>&nbsp; &nbsp; &nbsp; 7.VCycleViewPager 自定义ViewPager,可以用于引导页，轮播广告自动循环播放<span></span></p><p>&nbsp; &nbsp; &nbsp; 8.VRichTextEditText 自定义EditText ，可以图文混排显示和编辑<span></span></p><p>&nbsp; &nbsp; &nbsp; 9.VScrollViewContainer &nbsp;自定义View，效果就是现在很多商城APP图文详情那种，上拉查看图文详情<span></span></p><p>&nbsp; &nbsp; &nbsp; 10.<span></span>&nbsp;VAsyncImageUpload &nbsp;通过使用线程池&nbsp;异步多张图片上传</p><p>&nbsp; &nbsp; &nbsp; ...待续</p><p><br /></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2015还没来得总结，忙里偷闲想把2016博客上的内容规划一下.&lt;br /&gt;&lt;br&gt;2014的时候有给2015规划过，然后。。。已经找不到那份规划文档…&lt;br&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
