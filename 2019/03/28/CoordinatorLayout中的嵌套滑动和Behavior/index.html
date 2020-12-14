@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://www.veidy.net/2019/03/28/CoordinatorLayout%E4%B8%AD%E7%9A%84%E5%B5%8C%E5%A5%97%E6%BB%91%E5%8A%A8%E5%92%8CBehavior/index.html">
 <meta property="og:site_name" content="Veidy">
 <meta property="og:description" content="CoordinatorLayout和AppBarLayout滑动弹跳（回弹）问题解决: 核心是通过反射来解决 记录一次踩坑操作  com.android.support:appcompat-v7:27.0.0  1234Object scroller &#x3D; getSuperSuperField(this, &quot;mScroller&quot;);field &#x3D; paramC">
-<meta property="og:locale" content="zh">
+<meta property="og:locale">
 <meta property="article:published_time" content="2019-03-28T06:50:27.000Z">
 <meta property="article:modified_time" content="2019-04-28T02:53:53.962Z">
 <meta property="article:author" content="Veidy">
@@ -56,7 +56,7 @@ var _hmt = _hmt || [];
     enable_page_level_ads: true
   });
 </script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -70,10 +70,8 @@ var _hmt = _hmt || [];
 			<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">Veidy</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">没伞的孩子要拼命的跑</p>
 		
 
 		<nav class="header-menu">
@@ -130,10 +128,8 @@ var _hmt = _hmt || [];
 				<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Veidy</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>没伞的孩子要拼命的跑<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -226,7 +222,7 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 
 <p>完整源码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.support.design.widget.AppBarLayout;</span><br><span class="line">import android.support.design.widget.CoordinatorLayout;</span><br><span class="line">import android.support.v4.view.ViewCompat;</span><br><span class="line">import android.util.AttributeSet;</span><br><span class="line">import android.view.MotionEvent;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.widget.OverScroller;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Field;</span><br><span class="line"></span><br><span class="line">import static android.view.KeyEvent.ACTION_DOWN;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">* 解决快速滑动抖动</span><br><span class="line">* &gt;&#x3D;v28: scroller</span><br><span class="line">* &lt;28 mScroller</span><br><span class="line">*&#x2F;</span><br><span class="line">public class FixAppBarLayoutBehavior extends AppBarLayout.Behavior &#123;</span><br><span class="line"></span><br><span class="line">private static final String TAG &#x3D; &quot;AppBarLayoutBehavior&quot;;</span><br><span class="line"></span><br><span class="line">public FixAppBarLayoutBehavior() &#123;</span><br><span class="line">super();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public FixAppBarLayoutBehavior(Context context, AttributeSet attrs) &#123;</span><br><span class="line">super(context, attrs);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public boolean onInterceptTouchEvent(CoordinatorLayout parent, AppBarLayout child, MotionEvent ev) &#123;</span><br><span class="line">if (ev.getAction() &#x3D;&#x3D; ACTION_DOWN) &#123;</span><br><span class="line">&#x2F;&#x2F;            Object scroller &#x3D; getSuperSuperField(this, &quot;mScroller&quot;);</span><br><span class="line">Object scroller &#x3D; getSuperSuperField(this, &quot;scroller&quot;);</span><br><span class="line">if (scroller !&#x3D; null &amp;&amp; scroller instanceof OverScroller) &#123;</span><br><span class="line">OverScroller overScroller &#x3D; (OverScroller) scroller;</span><br><span class="line">overScroller.abortAnimation();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">return super.onInterceptTouchEvent(parent, child, ev);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private Object getSuperSuperField(Object paramClass, String paramString) &#123;</span><br><span class="line">Field field &#x3D; null;</span><br><span class="line">Object object &#x3D; null;</span><br><span class="line">try &#123;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;            field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br><span class="line">field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br><span class="line">field.setAccessible(true);</span><br><span class="line">object &#x3D; field.get(paramClass);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">return object;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onNestedScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target,</span><br><span class="line">int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) &#123;</span><br><span class="line">super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed,</span><br><span class="line">dxUnconsumed, dyUnconsumed, type);</span><br><span class="line">stopNestedScrollIfNeeded(dyUnconsumed, child, target, type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child,</span><br><span class="line">View target, int dx, int dy, int[] consumed, int type) &#123;</span><br><span class="line">super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type);</span><br><span class="line">stopNestedScrollIfNeeded(dy, child, target, type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private void stopNestedScrollIfNeeded(int dy, AppBarLayout child, View target, int type) &#123;</span><br><span class="line">if (type &#x3D;&#x3D; ViewCompat.TYPE_NON_TOUCH) &#123;</span><br><span class="line">final int currOffset &#x3D; getTopAndBottomOffset();</span><br><span class="line">if ((dy &lt; 0 &amp;&amp; currOffset &#x3D;&#x3D; 0)</span><br><span class="line">|| (dy &gt; 0 &amp;&amp; currOffset &#x3D;&#x3D; -child.getTotalScrollRange())) &#123;</span><br><span class="line">ViewCompat.stopNestedScroll(target, ViewCompat.TYPE_NON_TOUCH);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.support.design.widget.AppBarLayout;</span><br><span class="line">import android.support.design.widget.CoordinatorLayout;</span><br><span class="line">import android.support.v4.view.ViewCompat;</span><br><span class="line">import android.util.AttributeSet;</span><br><span class="line">import android.view.MotionEvent;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.widget.OverScroller;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Field;</span><br><span class="line"></span><br><span class="line">import static android.view.KeyEvent.ACTION_DOWN;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">* 解决快速滑动抖动</span><br><span class="line">* &gt;&#x3D;v28: scroller</span><br><span class="line">* &lt;28 mScroller</span><br><span class="line">*&#x2F;</span><br><span class="line">public class FixAppBarLayoutBehavior extends AppBarLayout.Behavior &#123;</span><br><span class="line"></span><br><span class="line">private static final String TAG &#x3D; &quot;AppBarLayoutBehavior&quot;;</span><br><span class="line"></span><br><span class="line">public FixAppBarLayoutBehavior() &#123;</span><br><span class="line">super();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public FixAppBarLayoutBehavior(Context context, AttributeSet attrs) &#123;</span><br><span class="line">super(context, attrs);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public boolean onInterceptTouchEvent(CoordinatorLayout parent, AppBarLayout child, MotionEvent ev) &#123;</span><br><span class="line">if (ev.getAction() &#x3D;&#x3D; ACTION_DOWN) &#123;</span><br><span class="line">&#x2F;&#x2F;            Object scroller &#x3D; getSuperSuperField(this, &quot;mScroller&quot;);</span><br><span class="line">Object scroller &#x3D; getSuperSuperField(this, &quot;scroller&quot;);</span><br><span class="line">if (scroller !&#x3D; null &amp;&amp; scroller instanceof OverScroller) &#123;</span><br><span class="line">OverScroller overScroller &#x3D; (OverScroller) scroller;</span><br><span class="line">overScroller.abortAnimation();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">return super.onInterceptTouchEvent(parent, child, ev);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private Object getSuperSuperField(Object paramClass, String paramString) &#123;</span><br><span class="line">Field field &#x3D; null;</span><br><span class="line">Object object &#x3D; null;</span><br><span class="line">try &#123;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;            field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br><span class="line">field &#x3D; paramClass.getClass().getSuperclass().getSuperclass().getSuperclass().getDeclaredField(paramString);</span><br><span class="line">field.setAccessible(true);</span><br><span class="line">object &#x3D; field.get(paramClass);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">return object;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onNestedScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target,</span><br><span class="line">int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) &#123;</span><br><span class="line">super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed,</span><br><span class="line">dxUnconsumed, dyUnconsumed, type);</span><br><span class="line">stopNestedScrollIfNeeded(dyUnconsumed, child, target, type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child,</span><br><span class="line">View target, int dx, int dy, int[] consumed, int type) &#123;</span><br><span class="line">super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type);</span><br><span class="line">stopNestedScrollIfNeeded(dy, child, target, type);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private void stopNestedScrollIfNeeded(int dy, AppBarLayout child, View target, int type) &#123;</span><br><span class="line">if (type &#x3D;&#x3D; ViewCompat.TYPE_NON_TOUCH) &#123;</span><br><span class="line">final int currOffset &#x3D; getTopAndBottomOffset();</span><br><span class="line">if ((dy &lt; 0 &amp;&amp; currOffset &#x3D;&#x3D; 0)</span><br><span class="line">|| (dy &gt; 0 &amp;&amp; currOffset &#x3D;&#x3D; -child.getTotalScrollRange())) &#123;</span><br><span class="line">ViewCompat.stopNestedScroll(target, ViewCompat.TYPE_NON_TOUCH);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -540,10 +536,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
               </li>
              
@@ -552,11 +544,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
+                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
+                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -564,15 +556,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
+                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -584,11 +568,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">UIImageView</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,6 +589,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,7 +608,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">视频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -620,7 +616,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视频</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">

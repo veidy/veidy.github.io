@@ -13,18 +13,9 @@
 <meta property="og:title" content="Veidy">
 <meta property="og:url" content="http://www.veidy.net/index.html">
 <meta property="og:site_name" content="Veidy">
-<meta property="og:locale" content="zh">
+<meta property="og:locale">
 <meta property="article:author" content="Veidy">
-<meta property="article:tag" content="app">
-<meta property="article:tag" content="小程序">
-<meta property="article:tag" content="港股">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
+<meta property="article:tag" content="app,小程序,港股,程序猿,程序媛,极客,编程,代码,开源,IT网站">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Veidy" type="application/atom+xml">
@@ -61,7 +52,7 @@ var _hmt = _hmt || [];
     enable_page_level_ads: true
   });
 </script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -75,10 +66,8 @@ var _hmt = _hmt || [];
 			<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">Veidy</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">没伞的孩子要拼命的跑</p>
 		
 
 		<nav class="header-menu">
@@ -135,10 +124,8 @@ var _hmt = _hmt || [];
 				<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Veidy</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>没伞的孩子要拼命的跑<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -568,7 +555,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>一、android 提供组件 WeexCircleImageView</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* 扩展给Weex 调用的显示圆形图片 组件</span><br><span class="line">* @author veidy</span><br><span class="line">*&#x2F;</span><br><span class="line">public class WeexCircleImageView extends WXComponent&lt;CircleImageView&gt; &#123;</span><br><span class="line">public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, BasicComponentData basicComponentData) &#123;</span><br><span class="line">super(instance, parent, basicComponentData);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, int type, BasicComponentData basicComponentData) &#123;</span><br><span class="line">super(instance, parent, type, basicComponentData);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">protected CircleImageView initComponentHostView(@NonNull Context context) &#123;</span><br><span class="line">return new CircleImageView(context);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@WXComponentProp(name &#x3D; &quot;src&quot;)</span><br><span class="line">public void setImage(String url)&#123;</span><br><span class="line">IAskImageLoader.displayImage(url,getHostView());</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">* 扩展给Weex 调用的显示圆形图片 组件</span><br><span class="line">* @author veidy</span><br><span class="line">*&#x2F;</span><br><span class="line">public class WeexCircleImageView extends WXComponent&lt;CircleImageView&gt; &#123;</span><br><span class="line">public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, BasicComponentData basicComponentData) &#123;</span><br><span class="line">super(instance, parent, basicComponentData);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public WeexCircleImageView(WXSDKInstance instance, WXVContainer parent, int type, BasicComponentData basicComponentData) &#123;</span><br><span class="line">super(instance, parent, type, basicComponentData);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">protected CircleImageView initComponentHostView(@NonNull Context context) &#123;</span><br><span class="line">return new CircleImageView(context);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@WXComponentProp(name &#x3D; &quot;src&quot;)</span><br><span class="line">public void setImage(String url)&#123;</span><br><span class="line">IAskImageLoader.displayImage(url,getHostView());</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2019/04/12/weex%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6/#more">more >></a>
         
@@ -3137,10 +3124,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
               </li>
              
@@ -3149,11 +3132,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
+                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
+                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3161,15 +3144,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
+                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3181,11 +3156,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">UIImageView</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3194,6 +3177,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3209,7 +3196,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">视频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3217,7 +3204,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视频</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">

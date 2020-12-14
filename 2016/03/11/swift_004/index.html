@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://www.veidy.net/2016/03/11/swift_004/index.html">
 <meta property="og:site_name" content="Veidy">
 <meta property="og:description" content="Controller之间的跳转一、知识点： 1.api:presentViewController() , dismissViewControllerAnimated()">
-<meta property="og:locale" content="zh">
+<meta property="og:locale">
 <meta property="article:published_time" content="2016-03-11T07:16:54.000Z">
 <meta property="article:modified_time" content="2018-05-21T02:44:15.000Z">
 <meta property="article:author" content="Veidy">
@@ -57,7 +57,7 @@ var _hmt = _hmt || [];
     enable_page_level_ads: true
   });
 </script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -71,10 +71,8 @@ var _hmt = _hmt || [];
 			<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">Veidy</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">没伞的孩子要拼命的跑</p>
 		
 
 		<nav class="header-menu">
@@ -131,10 +129,8 @@ var _hmt = _hmt || [];
 				<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Veidy</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>没伞的孩子要拼命的跑<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -209,11 +205,11 @@ var _hmt = _hmt || [];
 <h2 id="二、demo场景"><a href="#二、demo场景" class="headerlink" title="二、demo场景 "></a><p>二、demo场景 <br></h2><p>A controller 上有一个按钮，点击按钮后跳转到B controller上，B controller上有一个标签，点击标签回退到A controller</p></p>
 <h2 id="三，代码"><a href="#三，代码" class="headerlink" title="三，代码 "></a><p>三，代码 <br></h2><p>A  controller 核心代码：</p></p>
 <hr>
-<pre class="prettyprint hljs-dark"><code class="hljs swift">    <span class="hljs-comment">//button点击响应方法，推出SecondViewController（）</span><br><span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">btnOnClick</span><span class="hljs-params">(button:UIButton)</span></span>{        <br>    <span class="hljs-keyword">let</span> <span class="hljs-type">VC</span>=<span class="hljs-type">SecondViewController</span>()<br>    <span class="hljs-comment">//推出新的Controller</span><br>    <span class="hljs-keyword">self</span>.presentViewController(<span class="hljs-type">VC</span>, animated: <span class="hljs-literal">false</span>, completion: <span class="hljs-literal">nil</span>)<br>}<br></code></pre>
+<pre class="prettyprint hljs-dark"><code class="hljs swift">    <span class="hljs-comment">//button点击响应方法，推出SecondViewController（）</span><br><span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">btnOnClick</span><span class="hljs-params">(button:UIButton)</span></span>&#123;        <br>    <span class="hljs-keyword">let</span> <span class="hljs-type">VC</span>=<span class="hljs-type">SecondViewController</span>()<br>    <span class="hljs-comment">//推出新的Controller</span><br>    <span class="hljs-keyword">self</span>.presentViewController(<span class="hljs-type">VC</span>, animated: <span class="hljs-literal">false</span>, completion: <span class="hljs-literal">nil</span>)<br>&#125;<br></code></pre>
 
 <p>B controller 上的Label点击返回上一个controller 核心代码</p>
 
-<pre class="prettyprint hljs-dark"><code class="hljs swift">  <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">tapLabel</span><span class="hljs-params">()</span></span>{<br><br>   <span class="hljs-comment">//关掉当前dismissViewController</span><br>    <span class="hljs-keyword">self</span>.dismissViewControllerAnimated(<span class="hljs-literal">false</span>, completion: <span class="hljs-literal">nil</span>)<br><br>}<br></code></pre>
+<pre class="prettyprint hljs-dark"><code class="hljs swift">  <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">tapLabel</span><span class="hljs-params">()</span></span>&#123;<br><br>   <span class="hljs-comment">//关掉当前dismissViewController</span><br>    <span class="hljs-keyword">self</span>.dismissViewControllerAnimated(<span class="hljs-literal">false</span>, completion: <span class="hljs-literal">nil</span>)<br><br>&#125;<br></code></pre>
 
 <p>//数据传递，待续。。。</p></div><div id="wmd-preview-section-448" class="wmd-preview-section preview-content"></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div>
 
@@ -370,9 +366,9 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Controller之间的跳转"><span class="toc-number">1.</span> <span class="toc-text">Controller之间的跳转</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、知识点："><span class="toc-number"></span> <span class="toc-text">一、知识点： 
-</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、demo场景"><span class="toc-number"></span> <span class="toc-text">二、demo场景 
-</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三，代码"><span class="toc-number"></span> <span class="toc-text">三，代码 
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Controller%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B7%B3%E8%BD%AC"><span class="toc-number">1.</span> <span class="toc-text">Controller之间的跳转</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%9A"><span class="toc-number"></span> <span class="toc-text">一、知识点： 
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81demo%E5%9C%BA%E6%99%AF"><span class="toc-number"></span> <span class="toc-text">二、demo场景 
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%EF%BC%8C%E4%BB%A3%E7%A0%81"><span class="toc-number"></span> <span class="toc-text">三，代码 
 </span></a>
                     </div>
                 </span>
@@ -529,10 +525,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
               </li>
              
@@ -541,11 +533,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
+                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
+                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,15 +545,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
+                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -573,11 +557,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">UIImageView</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -586,6 +578,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,7 +597,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">视频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -609,7 +605,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视频</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">

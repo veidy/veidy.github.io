@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://www.veidy.net/2017/07/10/aar-02/index.html">
 <meta property="og:site_name" content="Veidy">
 <meta property="og:description" content="在gradle 构建的android项目里面，有了一个爽得飞起的功能就是远程依赖。如:我想引入okhttp 这个第三方开源网络请求框架，在eclipse开发时代，我们都是在github上要么把打包好的.jar文件下载下来导入，要么就是直接把源文件下载下来导入，一旦okhttp 在github有版本更新，我们又得进行同样的下载、导入工作。烦！在android studio 这么高大上的IDE出现之后">
-<meta property="og:locale" content="zh">
+<meta property="og:locale">
 <meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10141917_JM6U.png">
 <meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142039_XVEl.png">
 <meta property="og:image" content="https://static.oschina.net/uploads/img/201707/10142106_1lRF.png">
@@ -71,7 +71,7 @@ var _hmt = _hmt || [];
     enable_page_level_ads: true
   });
 </script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -85,10 +85,8 @@ var _hmt = _hmt || [];
 			<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">Veidy</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">没伞的孩子要拼命的跑</p>
 		
 
 		<nav class="header-menu">
@@ -145,10 +143,8 @@ var _hmt = _hmt || [];
 				<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Veidy</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>没伞的孩子要拼命的跑<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -237,7 +233,7 @@ var _hmt = _hmt || [];
 <p>第二步: 和其它包一样远程依赖：</p>
 <p><img src="https://static.oschina.net/uploads/img/201707/10142319_wLOe.png" alt="输入图片说明" title="在这里输入图片标题"></p>
 <p>到这整个本地仓库的发布和引用就结束啦！然后就能愉快的引入aarlibrary里面的所有资源了~<br>记住是所有资源，真的是所有资源！所有资源！所有资源！就算是aarlibrary 里面有远程依赖其它的aar 一样没问题！<br>假如在aarlibrary 里面有 远程依赖  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &#39;com.squareup.okhttp3:okhttp:3.8.1&#39;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">compile &#39;com.squareup.okhttp3:okhttp:3.8.1&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>如果像 android 开发之aar——本地文件引用 里面对aarlibrary进行打包然后导入到app moudle是找不到okhttp相关api的！但是如果以上面的形式发布到本地仓库然后依赖是没有问题的！</p>
 <hr>
@@ -430,7 +426,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种-otherLibrary打包成一个-aar文件然后直接以文件的形式被导入到了aarlibrary-moudle的libs-文件夹"><span class="toc-number">1.</span> <span class="toc-text">第一种:otherLibrary打包成一个.aar文件然后直接以文件的形式被导入到了aarlibrary moudle的libs 文件夹:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种-otherLibrary以项目moudle的形式被导入到aarlibrary："><span class="toc-number">2.</span> <span class="toc-text">第二种:otherLibrary以项目moudle的形式被导入到aarlibrary：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三种-otherLibrary放在本地仓库或者仓库被导入到aarlibrary"><span class="toc-number">3.</span> <span class="toc-text">第三种:otherLibrary放在本地仓库或者仓库被导入到aarlibrary:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#源码-https-git-oschina-net-veidy-aar-git"><span class="toc-number">4.</span> <span class="toc-text">源码: https:&#x2F;&#x2F;git.oschina.net&#x2F;veidy&#x2F;aar.git</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D-otherLibrary%E6%89%93%E5%8C%85%E6%88%90%E4%B8%80%E4%B8%AA-aar%E6%96%87%E4%BB%B6%E7%84%B6%E5%90%8E%E7%9B%B4%E6%8E%A5%E4%BB%A5%E6%96%87%E4%BB%B6%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%A2%AB%E5%AF%BC%E5%85%A5%E5%88%B0%E4%BA%86aarlibrary-moudle%E7%9A%84libs-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.</span> <span class="toc-text">第一种:otherLibrary打包成一个.aar文件然后直接以文件的形式被导入到了aarlibrary moudle的libs 文件夹:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D-otherLibrary%E4%BB%A5%E9%A1%B9%E7%9B%AEmoudle%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%A2%AB%E5%AF%BC%E5%85%A5%E5%88%B0aarlibrary%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">第二种:otherLibrary以项目moudle的形式被导入到aarlibrary：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D-otherLibrary%E6%94%BE%E5%9C%A8%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%88%96%E8%80%85%E4%BB%93%E5%BA%93%E8%A2%AB%E5%AF%BC%E5%85%A5%E5%88%B0aarlibrary"><span class="toc-number">3.</span> <span class="toc-text">第三种:otherLibrary放在本地仓库或者仓库被导入到aarlibrary:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81-https-git-oschina-net-veidy-aar-git"><span class="toc-number">4.</span> <span class="toc-text">源码: https:&#x2F;&#x2F;git.oschina.net&#x2F;veidy&#x2F;aar.git</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -586,10 +582,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
               </li>
              
@@ -598,11 +590,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
+                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
+                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -610,15 +602,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
+                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -630,11 +614,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">UIImageView</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,6 +635,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -658,7 +654,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">视频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,7 +662,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视频</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">

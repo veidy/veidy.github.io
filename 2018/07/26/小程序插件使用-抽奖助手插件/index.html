@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://www.veidy.net/2018/07/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8-%E6%8A%BD%E5%A5%96%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Veidy">
 <meta property="og:description" content="在使用抽奖助手插件前都得先去小程序开放平台添加插件到自己的小程序 设置 — 第三方服务 — 插件管理 —添加插件  — 抽奖助手    抽奖助手插件的AppID: wx01bb1ef166cd3f4e 抽奖助手插件的版本号：0.1.0  具体怎样使用抽奖助手插件呢？">
-<meta property="og:locale" content="zh">
+<meta property="og:locale">
 <meta property="article:published_time" content="2018-07-26T06:16:32.000Z">
 <meta property="article:modified_time" content="2018-07-26T07:15:10.000Z">
 <meta property="article:author" content="Veidy">
@@ -56,7 +56,7 @@ var _hmt = _hmt || [];
     enable_page_level_ads: true
   });
 </script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -70,10 +70,8 @@ var _hmt = _hmt || [];
 			<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">Veidy</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">没伞的孩子要拼命的跑</p>
 		
 
 		<nav class="header-menu">
@@ -130,10 +128,8 @@ var _hmt = _hmt || [];
 				<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Veidy</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>没伞的孩子要拼命的跑<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -211,7 +207,7 @@ var _hmt = _hmt || [];
 <p> 具体怎样使用抽奖助手插件呢？<br> <a id="more"></a><br> 接入步骤如下：</p>
 <p> 1.在app.json文件加入插件引入配置</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;plugins&quot;: &#123;</span><br><span class="line"> &quot;lottery&quot;: &#123;</span><br><span class="line">   &quot;version&quot;: &quot;0.1.0&quot;,</span><br><span class="line">   &quot;provider&quot;: &quot;wx01bb1ef166cd3f4e&quot;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><p>  2.新建一个Page： lottery；会自动生成四个文件<br>   lottery.js,lottery.json,lottery.wxml,lottery.wxss</p>
-<p>  3.我们在lottery.json文件里面加入如下配置：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;usingComponents&quot;: &#123;</span><br><span class="line">   &quot;lotterycard&quot;: &quot;plugin:&#x2F;&#x2F;lottery&#x2F;card&quot;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><br>  4.在lottery.wxml 中引入组件，代码如下:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;lotterycard lottery&#x3D;&#39;7EQUKGM0XRe&#39; redirect&#x3D;&#39;page&#39;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;&#x2F;lotterycard&gt;</span><br></pre></td></tr></table></figure></p>
+<p>  3.我们在lottery.json文件里面加入如下配置：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;usingComponents&quot;: &#123;</span><br><span class="line">   &quot;lotterycard&quot;: &quot;plugin:&#x2F;&#x2F;lottery&#x2F;card&quot;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><br>  4.在lottery.wxml 中引入组件，代码如下:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;lotterycard lottery&#x3D;&#39;7EQUKGM0XRe&#39; redirect&#x3D;&#39;page&#39;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;&#x2F;lotterycard&gt;</span><br><span class="line"> </span><br></pre></td></tr></table></figure></p>
 <p>  注意：<br>  <blockquote><p> 1.lottery 这个值是动态配置的,需要先在“抽奖助手”小程序创建好抽奖后获得</p>
 <p> 2.redirect 点击奖品图片跳转方式。<br>none: 不跳转；<br>page: 跳转到插件抽奖详情页面 (基础库版本 &gt;= 2.1.0)；<br>mina：跳转到抽奖助手小程序抽奖详情页（这个属于的设置前提是需要先绑定小程序 抽奖助手）</p>
 </blockquote></p>
@@ -379,7 +375,7 @@ src="https://res.cloudinary.com/veidy/video/upload/v1532586479/blog/%E6%8A%BD%E5
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#抽奖助手插件的AppID-wx01bb1ef166cd3f4e"><span class="toc-number">1.</span> <span class="toc-text">抽奖助手插件的AppID: wx01bb1ef166cd3f4e</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E5%A5%96%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6%E7%9A%84AppID-wx01bb1ef166cd3f4e"><span class="toc-number">1.</span> <span class="toc-text">抽奖助手插件的AppID: wx01bb1ef166cd3f4e</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -535,10 +531,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
               </li>
              
@@ -547,11 +539,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
+                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
+                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -559,15 +551,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
+                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -579,11 +563,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">UIImageView</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,6 +584,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,7 +603,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">视频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -615,7 +611,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视频</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">

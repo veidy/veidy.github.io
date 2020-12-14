@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://www.veidy.net/2017/09/04/weixinxiao-01/index.html">
 <meta property="og:site_name" content="Veidy">
 <meta property="og:description" content="​最近折腾了一款小程序，之前没有js开发经验，所以小程序的开发也是边看文档边查资料，现学现卖。 今天分享的内容也是现学现卖，如果对小程序开发感兴趣的童鞋可以先收藏，说不定用得着。先看一下效果: 是的，瀑布流！做为一个app开发的猿，在开发小程序时，想处理列表数据第一个脑子里面反射出来的就是Listview？  Tabview ？瀑布流 用RecyclerView？把小程序api文档查了个遍也没看到">
-<meta property="og:locale" content="zh">
+<meta property="og:locale">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/509927e5gy1fj7lkoa5gyg20a00dckjl.gif">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/509927e5gy1fj7l6060ggj209k09kta5.jpg">
 <meta property="article:published_time" content="2017-09-04T02:00:13.000Z">
@@ -59,7 +59,7 @@ var _hmt = _hmt || [];
     enable_page_level_ads: true
   });
 </script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -73,10 +73,8 @@ var _hmt = _hmt || [];
 			<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">Veidy</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">没伞的孩子要拼命的跑</p>
 		
 
 		<nav class="header-menu">
@@ -133,10 +131,8 @@ var _hmt = _hmt || [];
 				<img src="http://bb.90api.com/veidy.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Veidy</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>没伞的孩子要拼命的跑<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -215,7 +211,7 @@ var _hmt = _hmt || [];
 <p> wx:for</p>
 </blockquote>
 <p>瀑布流是一个列表数据,既然列表数据解决了那就可以定实现的思路了，我来说一下我的思路：<br>直接两个列表并排不就好了？。。。一个字，干！<br>上wxml代码(视图层布局代码):</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;view class&#x3D;&quot;item-body&quot;&gt; </span><br><span class="line">    &lt;view class&#x3D;&quot;body-left&quot; &gt;</span><br><span class="line">    &lt;image  wx:for&#x3D;&quot;&#123;&#123;left_array&#125;&#125;&quot; wx:key&#x3D;&quot;id&quot;  class&#x3D;&#39;img_item&#39; src&#x3D;&quot; &#123;&#123;item.img_url_thumb&#125;&#125;&quot; mode&#x3D;&#39;widthFix&#39; bindtap&#x3D;&#39;tap_left_img&#39;</span><br><span class="line">    data-poster&#x3D;&quot;&#123;&#123;item&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;view class&#x3D;&quot;body-right&quot;&gt;</span><br><span class="line">    &lt;image  wx:for&#x3D;&quot;&#123;&#123;right_array&#125;&#125;&quot; wx:key&#x3D;&quot;id&quot;  class&#x3D;&#39;img_item&#39; src&#x3D;&quot;&#123;&#123;item.img_url_thumb&#125;&#125;&quot;  mode&#x3D;&#39;widthFix&#39; bindtap&#x3D;&#39;tap_right_img&#39;</span><br><span class="line">    data-poster&#x3D;&quot;&#123;&#123;item&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;view class&#x3D;&quot;item-body&quot;&gt; </span><br><span class="line">    &lt;view class&#x3D;&quot;body-left&quot; &gt;</span><br><span class="line">    &lt;image  wx:for&#x3D;&quot;&#123;&#123;left_array&#125;&#125;&quot; wx:key&#x3D;&quot;id&quot;  class&#x3D;&#39;img_item&#39; src&#x3D;&quot; &#123;&#123;item.img_url_thumb&#125;&#125;&quot; mode&#x3D;&#39;widthFix&#39; bindtap&#x3D;&#39;tap_left_img&#39;</span><br><span class="line">    data-poster&#x3D;&quot;&#123;&#123;item&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;view class&#x3D;&quot;body-right&quot;&gt;</span><br><span class="line">    &lt;image  wx:for&#x3D;&quot;&#123;&#123;right_array&#125;&#125;&quot; wx:key&#x3D;&quot;id&quot;  class&#x3D;&#39;img_item&#39; src&#x3D;&quot;&#123;&#123;item.img_url_thumb&#125;&#125;&quot;  mode&#x3D;&#39;widthFix&#39; bindtap&#x3D;&#39;tap_right_img&#39;</span><br><span class="line">    data-poster&#x3D;&quot;&#123;&#123;item&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;view&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 <p>小程序里面视图容器是View这个控件，如上代码<br>最外层一个<strong><View/></strong> item-body,里面两个<strong><View/></strong> body-left 和 body-right,然后两个View里面都各有一个显示图片的组件<strong><Image/></strong>img_item。接下来就是写CSS样式啦~</p>
@@ -236,7 +232,7 @@ var _hmt = _hmt || [];
 
 <p>css文档上对flex的解释：<br>让所有弹性盒模型对象的子元素都有相同的长度，忽略它们内部的内容<br>是不是可以理解为android里面的权重呢？平均分，暂且就这么理解吧<del>两个子view都设置1就等分了</del></p>
 <p>最后就img_item:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.img_item &#123;</span><br><span class="line">width:95%;</span><br><span class="line">vertical-align: top;</span><br><span class="line">margin-right: 5px;</span><br><span class="line">margin-left: 5px;</span><br><span class="line">margin-top: 5px;</span><br><span class="line">margin-bottom: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.img_item &#123;</span><br><span class="line">width:95%;</span><br><span class="line">vertical-align: top;</span><br><span class="line">margin-right: 5px;</span><br><span class="line">margin-left: 5px;</span><br><span class="line">margin-top: 5px;</span><br><span class="line">margin-bottom: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>最后就轮到JS代码了：<br>js代码直接在data里面定义两个array就好啦<br>left_array:[] ，<br>right_array[]</p>
 <p>最后贴上本本海报的二维码，欢迎体验~<br><img src="http://ww1.sinaimg.cn/large/509927e5gy1fj7l6060ggj209k09kta5.jpg" alt=""></p>
 
@@ -545,10 +541,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">deep-links</a>
               </li>
              
@@ -557,11 +549,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
+                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
+                <a href="javascript:void(0)" class="js-tag color4">instagram ins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -569,15 +561,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
+                <a href="javascript:void(0)" class="js-tag color3">React Native</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -589,11 +573,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">NSURLSession</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">UIImageView</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+                <a href="javascript:void(0)" class="js-tag color3">UILabel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UITapGestureRecognizer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -602,6 +594,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">dismissViewControllerAnimated</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -617,7 +613,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">视频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -625,7 +621,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视频</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
