@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.veidy.net/2020/12/06/%E5%86%85%E5%9C%B0%E5%BC%80%E6%88%B7%E4%B8%AD%E4%BF%A1%E5%9B%BD%E9%99%85%E9%93%B6%E8%A1%8C/</loc>
+    <lastmod>2020-12-15</lastmod>
+  </url>  <url>
     <loc>http://www.veidy.net/2020/12/13/%E6%B8%AF%E8%82%A1%E6%89%93%E6%96%B0%E7%A5%9E%E5%99%A8/</loc>
     <lastmod>2020-12-13</lastmod>
   </url>  <url>
     <loc>http://www.veidy.net/2020/12/11/%E5%BC%80%E4%B8%AA%E6%97%A9%E4%BC%9A%E6%8D%9F%E5%A4%B1%E4%B8%A4%E5%8D%83/</loc>
     <lastmod>2020-12-11</lastmod>
-  </url>  <url>
-    <loc>http://www.veidy.net/2020/12/06/%E5%86%85%E5%9C%B0%E5%BC%80%E6%88%B7%E4%B8%AD%E4%BF%A1%E5%9B%BD%E9%99%85%E9%93%B6%E8%A1%8C/</loc>
-    <lastmod>2020-12-06</lastmod>
   </url>  <url>
     <loc>http://www.veidy.net/2020/06/22/macpro%E6%95%B0%E5%AD%97%E9%94%AE%E7%9B%98%E5%A4%B1%E6%95%88/</loc>
     <lastmod>2020-06-22</lastmod>
