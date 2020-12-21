@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.veidy.net/2020/12/20/%E6%B8%AF%E8%82%A1%E6%89%93%E6%96%B0%E6%80%8E%E6%A0%B7%E6%93%8D%E4%BD%9C%E6%89%8D%E8%83%BD%E8%B5%9A%E9%92%B1/</loc>
+    <lastmod>2020-12-21</lastmod>
+  </url>  <url>
     <loc>http://www.veidy.net/2020/12/11/%E5%BC%80%E4%B8%AA%E6%97%A9%E4%BC%9A%E6%8D%9F%E5%A4%B1%E4%B8%A4%E5%8D%83/</loc>
     <lastmod>2020-12-15</lastmod>
   </url>  <url>
